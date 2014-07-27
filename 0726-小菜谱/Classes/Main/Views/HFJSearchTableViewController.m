@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-#import "HFJSearchController.h"
+#import "HFJSearchTableViewController.h"
 
-@interface HFJSearchController ()
+@interface HFJSearchTableViewController ()
 
 @end
 
-@implementation HFJSearchController
+@implementation HFJSearchTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {

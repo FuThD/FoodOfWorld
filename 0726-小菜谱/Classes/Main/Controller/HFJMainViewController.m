@@ -6,19 +6,19 @@
 //  Copyright (c) 2014年 itcast. All rights reserved.
 //
 
-#import "HFJViewController.h"
+#import "HFJMainViewController.h"
 #import "HFJGoodTableViewController.h"
 #import "HFJSortCollectionViewConrtoller.h"
 #import "HFJLikeTableViewController.h"
 #import "HFJMenuButtonView.h"
 #import "HFJTitleView.h"
-#import "HFJSearchView.h"
 
-// Controller 在HFJSearchView里面已经定义过
+
+// Controller 在HFJSearchViewController里面已经定义过
 extern NSString * const Controller;
 
 
-@interface HFJViewController ()<HFJTitleButtonViewDelegate, UIScrollViewDelegate>
+@interface HFJMainViewController ()<HFJTitleButtonViewDelegate, UIScrollViewDelegate>
 
 /**
  *  主视图的底部ScrollView
@@ -37,7 +37,7 @@ extern NSString * const Controller;
 
 @end
 
-@implementation HFJViewController
+@implementation HFJMainViewController
 
 - (void)viewDidLoad
 {
@@ -178,13 +178,6 @@ extern NSString * const Controller;
     self.menuBtnView.progress = progress;
 }
 
-#pragma mark - HFJSearchViewDelegate 代理方法
-- (void)searchView:(HFJSearchView *)searchBar addToSuperController:(UITableViewController *)tableViewController
-{
-    // 添加子控制器
-    [self addChildViewController:tableViewController];
-
-}
 
 #pragma mark - 懒加载
 - (UIScrollView *)myScrollView

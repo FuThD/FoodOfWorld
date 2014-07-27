@@ -7,7 +7,8 @@
 //
 
 #import "HFJTitleView.h"
-#import "HFJSearchView.h"
+//#import "HFJSearchView.h"
+#import "HFJSearchViewController.h"
 
 @interface HFJTitleView()
 
@@ -55,9 +56,11 @@
 // 添加搜索按钮的监听事件
 - (void)searchBtnClick
 {
-    HFJSearchView *searchView = [[HFJSearchView alloc] init];
+    HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
     
-    [self.superview addSubview:searchView];
+//    HFJSearchView *searchView = [[HFJSearchView alloc] init];
+    
+    [self.superview addSubview:searchViewController.view];
 
 }
 

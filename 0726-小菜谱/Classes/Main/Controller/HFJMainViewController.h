@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HFJViewController : UIViewController
+@interface HFJMainViewController : UIViewController
 
 @end
