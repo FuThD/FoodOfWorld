@@ -8,6 +8,7 @@
 
 #import "HFJSortCollectionViewConrtoller.h"
 #import "HFJSortCollectionViewCell.h"
+#import "HFJCuisineTableViewController.h"
 
 @implementation HFJSortCollectionViewConrtoller
 
@@ -34,19 +35,18 @@ static NSString *ID = @"sort";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     // 设置frame
     self.collectionView.y = 0;
-    self.collectionView.height = 480;
-    self.collectionView.width = 320;
+    self.collectionView.height = HFJViewFrame.size.height;
+    self.collectionView.width = HFJViewFrame.size.width;
     
     self.collectionView.bounces = NO;
 
     
     // 为CollectionView注册可重用单元格
-//    [self.collectionView registerClass:self forCellWithReuseIdentifier:ID:nib forCellWithReuseIdentifier:ID];
-    
     UINib *nib = [UINib nibWithNibName:@"cellectionViewCell" bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:ID];
 }
 
+#pragma mark - UICollectionViewController 数据源方法和代理方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 30;
@@ -58,6 +58,20 @@ static NSString *ID = @"sort";
     HFJSortCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+#warning 添加了view 看不到.....
+    HFJCuisineTableViewController *cuisineVC = [HFJCuisineTableViewController alloc];
+    cuisineVC.tableView.frame = HFJViewFrame;
+    cuisineVC.tableView.backgroundColor = [UIColor lightGrayColor];
+    [self addChildViewController:cuisineVC];
+    [self.view addSubview:cuisineVC.tableView];
+    NSLog(@"%@", NSStringFromCGRect(cuisineVC.tableView.frame));
+    NSLog(@"%@", NSStringFromClass([cuisineVC.tableView.superview class]));
+    // UICollectionViewControllerWrapperView
+
 }
 
 @end

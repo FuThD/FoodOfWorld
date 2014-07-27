@@ -43,6 +43,7 @@
         [search setImage:[UIImage imageNamed:@"06-magnify"] forState:UIControlStateNormal];
         [search setTitle:@"搜 索" forState:UIControlStateNormal];
         [search setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [search setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
         search.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
         [self addSubview:search];
 
@@ -56,9 +57,8 @@
 // 添加搜索按钮的监听事件
 - (void)searchBtnClick
 {
+    // 实例化一个搜索view的控制器
     HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
-    
-//    HFJSearchView *searchView = [[HFJSearchView alloc] init];
     
     [self.superview addSubview:searchViewController.view];
 

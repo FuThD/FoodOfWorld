@@ -7,6 +7,7 @@
 //
 
 #import "HFJSearchTableViewController.h"
+#import "HFJMainCell.h"
 
 @interface HFJSearchTableViewController ()
 
@@ -34,8 +35,8 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     // 调用代理方法, 关闭键盘
-    if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:)]) {
-        
+    if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:)])
+    {
         [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self];
     }
 }
@@ -52,11 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"search";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
     
     cell.textLabel.text = @"123";
     
@@ -69,14 +66,13 @@
 {
 
     // 调用代理方法, 关闭键盘
-    if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:)]) {
-        
+    if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:)])
+    {        
         [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self];
     }
 
 
 }
-
 
 
 

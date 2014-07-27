@@ -7,11 +7,10 @@
 //
 
 #import "HFJGoodTableViewController.h"
-//#import "HFJGoodDataSource.h"
+#import "HFJMainCell.h"
 
 @interface HFJGoodTableViewController()
 
-//@property (nonatomic, strong) HFJGoodDataSource *goodDataSource;
 
 @end
 
@@ -32,8 +31,8 @@
     
     // 设置frame
     self.tableView.y = 0;
-    self.tableView.height = 480;
-    self.tableView.width = 320;
+    self.tableView.height = HFJViewFrame.size.height;
+    self.tableView.width = HFJViewFrame.size.width;
     
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;
@@ -52,12 +51,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"Good";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
+    HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
+
     cell.textLabel.text = @"123";
     cell.detailTextLabel.text = @"abc";
     

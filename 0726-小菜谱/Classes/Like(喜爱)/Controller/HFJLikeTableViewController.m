@@ -7,11 +7,12 @@
 //
 
 #import "HFJLikeTableViewController.h"
-//#import "HFJLikeDataSource.h"
+#import "HFJMainCell.h"
+#import "HFJDishViewController.h"
 
 @interface HFJLikeTableViewController()
 
-//@property (nonatomic, strong) HFJLikeDataSource *likeDataSource;
+
 
 @end
 
@@ -32,8 +33,8 @@
     
     // 设置frame
     self.tableView.y = 0;
-    self.tableView.height = 480;
-    self.tableView.width = 320;
+    self.tableView.height = HFJViewFrame.size.height;
+    self.tableView.width = HFJViewFrame.size.width;
     
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;
@@ -49,16 +50,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#warning ID是否可以和Good/search/cuisine的设置一样的? 待加数据后测试
     static NSString *ID = @"Like";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
+    HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
     cell.textLabel.text = @"789";
     cell.detailTextLabel.text = @"hij";
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 将控制器添加到父控制器
+    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    [self.parentViewController addChildViewController:dishVC];
+    
+    // view添加到根View上面
+    [self.view.superview.superview addSubview:dishVC.view];
+    
+
+    
+    
 }
 @end
