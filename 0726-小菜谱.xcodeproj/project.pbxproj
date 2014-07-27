@@ -14,13 +14,24 @@
 		A47163051983BE5500A8B769 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163041983BE5500A8B769 /* main.m */; };
 		A47163091983BE5500A8B769 /* HFJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163081983BE5500A8B769 /* HFJAppDelegate.m */; };
 		A471630C1983BE5500A8B769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A471630A1983BE5500A8B769 /* Main.storyboard */; };
-		A471630F1983BE5500A8B769 /* HFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471630E1983BE5500A8B769 /* HFJViewController.m */; };
-		A47163111983BE5500A8B769 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A47163101983BE5500A8B769 /* Images.xcassets */; };
 		A47163181983BE5500A8B769 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47163171983BE5500A8B769 /* XCTest.framework */; };
 		A47163191983BE5500A8B769 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47162F81983BE5500A8B769 /* Foundation.framework */; };
 		A471631A1983BE5500A8B769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47162FC1983BE5500A8B769 /* UIKit.framework */; };
 		A47163221983BE5500A8B769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A47163201983BE5500A8B769 /* InfoPlist.strings */; };
 		A47163241983BE5500A8B769 /* _726____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163231983BE5500A8B769 /* _726____Tests.m */; };
+		A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */; };
+		A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */; };
+		A47163541983BF9000A8B769 /* HFJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633C1983BF9000A8B769 /* HFJViewController.m */; };
+		A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */; };
+		A47163561983BF9000A8B769 /* HFJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163411983BF9000A8B769 /* HFJTitleView.m */; };
+		A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163481983BF9000A8B769 /* UIView+NJ.m */; };
+		A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */ = {isa = PBXBuildFile; fileRef = A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */; };
+		A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A471634F1983BF9000A8B769 /* cellectionViewCell.xib */; };
+		A471635A1983BF9000A8B769 /* HFJSortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */; };
+		A471635D1983C88300A8B769 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A471635C1983C88300A8B769 /* Images.xcassets */; };
+		A47163601984D44200A8B769 /* HFJSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A471635F1984D44200A8B769 /* HFJSearchView.m */; };
+		A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163681984E15700A8B769 /* UIImage+OS6or7.m */; };
+		A471636C1984F6EC00A8B769 /* HFJSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471636B1984F6EC00A8B769 /* HFJSearchController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +56,36 @@
 		A47163071983BE5500A8B769 /* HFJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFJAppDelegate.h; sourceTree = "<group>"; };
 		A47163081983BE5500A8B769 /* HFJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFJAppDelegate.m; sourceTree = "<group>"; };
 		A471630B1983BE5500A8B769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A471630D1983BE5500A8B769 /* HFJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFJViewController.h; sourceTree = "<group>"; };
-		A471630E1983BE5500A8B769 /* HFJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFJViewController.m; sourceTree = "<group>"; };
-		A47163101983BE5500A8B769 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A47163161983BE5500A8B769 /* 0726-小菜谱Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "0726-小菜谱Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47163171983BE5500A8B769 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A471631F1983BE5500A8B769 /* 0726-小菜谱Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0726-小菜谱Tests-Info.plist"; sourceTree = "<group>"; };
 		A47163211983BE5500A8B769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A47163231983BE5500A8B769 /* _726____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_726____Tests.m"; sourceTree = "<group>"; };
+		A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJGoodTableViewController.h; sourceTree = "<group>"; };
+		A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJGoodTableViewController.m; sourceTree = "<group>"; };
+		A47163351983BF9000A8B769 /* HFJLikeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJLikeTableViewController.h; sourceTree = "<group>"; };
+		A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJLikeTableViewController.m; sourceTree = "<group>"; };
+		A471633B1983BF9000A8B769 /* HFJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJViewController.h; sourceTree = "<group>"; };
+		A471633C1983BF9000A8B769 /* HFJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJViewController.m; sourceTree = "<group>"; };
+		A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMenuButtonView.h; sourceTree = "<group>"; };
+		A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMenuButtonView.m; sourceTree = "<group>"; };
+		A47163401983BF9000A8B769 /* HFJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJTitleView.h; sourceTree = "<group>"; };
+		A47163411983BF9000A8B769 /* HFJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJTitleView.m; sourceTree = "<group>"; };
+		A47163431983BF9000A8B769 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		A47163471983BF9000A8B769 /* UIView+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NJ.h"; sourceTree = "<group>"; };
+		A47163481983BF9000A8B769 /* UIView+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NJ.m"; sourceTree = "<group>"; };
+		A471634B1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSortCollectionViewConrtoller.h; sourceTree = "<group>"; };
+		A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSortCollectionViewConrtoller.m; sourceTree = "<group>"; };
+		A471634F1983BF9000A8B769 /* cellectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellectionViewCell.xib; sourceTree = "<group>"; };
+		A47163501983BF9000A8B769 /* HFJSortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSortCollectionViewCell.h; sourceTree = "<group>"; };
+		A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSortCollectionViewCell.m; sourceTree = "<group>"; };
+		A471635C1983C88300A8B769 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A471635E1984D44200A8B769 /* HFJSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSearchView.h; sourceTree = "<group>"; };
+		A471635F1984D44200A8B769 /* HFJSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSearchView.m; sourceTree = "<group>"; };
+		A47163671984E15700A8B769 /* UIImage+OS6or7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OS6or7.h"; sourceTree = "<group>"; };
+		A47163681984E15700A8B769 /* UIImage+OS6or7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OS6or7.m"; sourceTree = "<group>"; };
+		A471636A1984F6EC00A8B769 /* HFJSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJSearchController.h; path = ../Views/HFJSearchController.h; sourceTree = "<group>"; };
+		A471636B1984F6EC00A8B769 /* HFJSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJSearchController.m; path = ../Views/HFJSearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +145,10 @@
 		A47162FE1983BE5500A8B769 /* 0726-小菜谱 */ = {
 			isa = PBXGroup;
 			children = (
+				A471632D1983BF9000A8B769 /* Classes */,
 				A47163071983BE5500A8B769 /* HFJAppDelegate.h */,
 				A47163081983BE5500A8B769 /* HFJAppDelegate.m */,
 				A471630A1983BE5500A8B769 /* Main.storyboard */,
-				A471630D1983BE5500A8B769 /* HFJViewController.h */,
-				A471630E1983BE5500A8B769 /* HFJViewController.m */,
-				A47163101983BE5500A8B769 /* Images.xcassets */,
 				A47162FF1983BE5500A8B769 /* Supporting Files */,
 			);
 			path = "0726-小菜谱";
@@ -126,6 +157,7 @@
 		A47162FF1983BE5500A8B769 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A471635C1983C88300A8B769 /* Images.xcassets */,
 				A47163001983BE5500A8B769 /* 0726-小菜谱-Info.plist */,
 				A47163011983BE5500A8B769 /* InfoPlist.strings */,
 				A47163041983BE5500A8B769 /* main.m */,
@@ -150,6 +182,190 @@
 				A47163201983BE5500A8B769 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A471632D1983BF9000A8B769 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A47163391983BF9000A8B769 /* Main */,
+				A471632E1983BF9000A8B769 /* Good(精品) */,
+				A47163491983BF9000A8B769 /* Sort(分类) */,
+				A47163331983BF9000A8B769 /* Like(喜爱) */,
+				A47163421983BF9000A8B769 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A471632E1983BF9000A8B769 /* Good(精品) */ = {
+			isa = PBXGroup;
+			children = (
+				A471635B1983C0AC00A8B769 /* Controller */,
+				A47163311983BF9000A8B769 /* Model */,
+				A47163321983BF9000A8B769 /* Views */,
+			);
+			path = "Good(精品)";
+			sourceTree = "<group>";
+		};
+		A47163311983BF9000A8B769 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A47163321983BF9000A8B769 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A47163331983BF9000A8B769 /* Like(喜爱) */ = {
+			isa = PBXGroup;
+			children = (
+				A47163341983BF9000A8B769 /* Controller */,
+				A47163371983BF9000A8B769 /* Model */,
+				A47163381983BF9000A8B769 /* Views */,
+			);
+			path = "Like(喜爱)";
+			sourceTree = "<group>";
+		};
+		A47163341983BF9000A8B769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A47163351983BF9000A8B769 /* HFJLikeTableViewController.h */,
+				A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A47163371983BF9000A8B769 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A47163381983BF9000A8B769 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A47163391983BF9000A8B769 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A471633A1983BF9000A8B769 /* Controller */,
+				A471633D1983BF9000A8B769 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A471633A1983BF9000A8B769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A471633B1983BF9000A8B769 /* HFJViewController.h */,
+				A471633C1983BF9000A8B769 /* HFJViewController.m */,
+				A471636A1984F6EC00A8B769 /* HFJSearchController.h */,
+				A471636B1984F6EC00A8B769 /* HFJSearchController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A471633D1983BF9000A8B769 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */,
+				A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */,
+				A47163401983BF9000A8B769 /* HFJTitleView.h */,
+				A47163411983BF9000A8B769 /* HFJTitleView.m */,
+				A471635E1984D44200A8B769 /* HFJSearchView.h */,
+				A471635F1984D44200A8B769 /* HFJSearchView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A47163421983BF9000A8B769 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A47163431983BF9000A8B769 /* Common.h */,
+				A47163441983BF9000A8B769 /* Lib */,
+				A47163451983BF9000A8B769 /* Tool */,
+				A47163461983BF9000A8B769 /* Category */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		A47163441983BF9000A8B769 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A47163451983BF9000A8B769 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		A47163461983BF9000A8B769 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A47163671984E15700A8B769 /* UIImage+OS6or7.h */,
+				A47163681984E15700A8B769 /* UIImage+OS6or7.m */,
+				A47163471983BF9000A8B769 /* UIView+NJ.h */,
+				A47163481983BF9000A8B769 /* UIView+NJ.m */,
+			);
+			name = Category;
+			path = "分类";
+			sourceTree = "<group>";
+		};
+		A47163491983BF9000A8B769 /* Sort(分类) */ = {
+			isa = PBXGroup;
+			children = (
+				A471634A1983BF9000A8B769 /* Controller */,
+				A471634D1983BF9000A8B769 /* Model */,
+				A471634E1983BF9000A8B769 /* Views */,
+			);
+			path = "Sort(分类)";
+			sourceTree = "<group>";
+		};
+		A471634A1983BF9000A8B769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A471634B1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.h */,
+				A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A471634D1983BF9000A8B769 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A471634E1983BF9000A8B769 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A471634F1983BF9000A8B769 /* cellectionViewCell.xib */,
+				A47163501983BF9000A8B769 /* HFJSortCollectionViewCell.h */,
+				A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A471635B1983C0AC00A8B769 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */,
+				A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +445,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47163111983BE5500A8B769 /* Images.xcassets in Resources */,
+				A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */,
+				A471635D1983C88300A8B769 /* Images.xcassets in Resources */,
 				A47163031983BE5500A8B769 /* InfoPlist.strings in Resources */,
 				A471630C1983BE5500A8B769 /* Main.storyboard in Resources */,
 			);
@@ -250,9 +467,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47163561983BF9000A8B769 /* HFJTitleView.m in Sources */,
+				A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */,
+				A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */,
+				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
+				A471636C1984F6EC00A8B769 /* HFJSearchController.m in Sources */,
+				A47163541983BF9000A8B769 /* HFJViewController.m in Sources */,
+				A471635A1983BF9000A8B769 /* HFJSortCollectionViewCell.m in Sources */,
+				A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */,
+				A47163601984D44200A8B769 /* HFJSearchView.m in Sources */,
 				A47163051983BE5500A8B769 /* main.m in Sources */,
 				A47163091983BE5500A8B769 /* HFJAppDelegate.m in Sources */,
-				A471630F1983BE5500A8B769 /* HFJViewController.m in Sources */,
+				A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */,
+				A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +684,7 @@
 				A47163291983BE5500A8B769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A471632A1983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +693,7 @@
 				A471632C1983BE5500A8B769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

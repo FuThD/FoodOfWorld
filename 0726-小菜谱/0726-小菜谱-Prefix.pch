@@ -13,4 +13,17 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+#import"Common.h"
+#import "UIView+NJ.h"
+#import "UIImage+OS6or7.h"
+
+
+#define HFJViewMovedTime 0.3
+
+
+#define HFJViewFrame CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)
+
+#define HFJBasicColor [UIColor colorWithRed:247/255. green:247/255. blue:247/255. alpha:1]
+
 #endif
