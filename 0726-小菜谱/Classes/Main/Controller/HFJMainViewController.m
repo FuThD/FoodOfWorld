@@ -12,10 +12,8 @@
 #import "HFJLikeTableViewController.h"
 #import "HFJMenuButtonView.h"
 #import "HFJTitleView.h"
+#import "HFJSearchViewController.h"
 
-
-// Controller 在HFJSearchViewController里面已经定义过
-extern NSString * const Controller;
 
 
 @interface HFJMainViewController ()<HFJTitleButtonViewDelegate, UIScrollViewDelegate>
@@ -33,7 +31,7 @@ extern NSString * const Controller;
 /**
  *  标题的view
  */
-@property (nonatomic, strong) HFJTitleView *titleView;
+//@property (nonatomic, strong) HFJTitleView *titleView;
 
 @end
 
@@ -45,8 +43,9 @@ extern NSString * const Controller;
     
     self.view.backgroundColor = HFJBasicColor;
     
+    
     // 设置最上面的标题view
-    [self setupTitleView];
+    [self setupNavBar];
     
     // 3个控制器的菜单按钮
     [self setupTitleButtonView];
@@ -56,32 +55,51 @@ extern NSString * const Controller;
     
     // 设置tableView
     [self setupTableViews];
-    
-    // 监听通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNote:) name:Controller object:nil];
-}
-
-- (void)receiveNote:(NSNotification *)note
-{
-    // 把搜索视图的tableView添加为子控制器
-    UITableViewController *tableVC = [note object];
-    
-    [self addChildViewController:tableVC];
 
 }
 
-// 取消通知的监听
-- (void)dealloc
+
+// 添加搜索按钮的监听事件
+- (void)searchBtnClick
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    // 实例化一个搜索view的控制器
+    HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
+    
+    // modal 出搜索界面
+    [self presentViewController:searchViewController animated:YES completion:nil];
+   
 }
 
 // 设置最上面的标题view
-- (void)setupTitleView
+- (void)setupNavBar
 {
-    // 标题的view 存放一个app名字图标的按钮 和一个 搜索按钮
-    self.titleView = [[HFJTitleView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 44)];
-    [self.view addSubview:self.titleView];
+    // 搜索按钮
+    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(200, 0, 120, 44)];
+    
+    // 设置按钮的属性
+    [search setImage:[UIImage imageNamed:@"06-magnify"] forState:UIControlStateNormal];
+    [search setTitle:@"搜 索" forState:UIControlStateNormal];
+    [search setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [search setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+    search.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    
+    // 添加搜索按钮的监听事件
+    [search addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:search];
+    
+    
+    // app名字的按钮
+    UIButton *nameBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    
+    // 设置nameBtn的属性
+    [nameBtn setImage:[UIImage imageNamed:@"nd_icon"] forState:UIControlStateDisabled];
+    [nameBtn setTitle:@"小  菜  谱" forState:UIControlStateNormal];
+    [nameBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    nameBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    nameBtn.enabled = NO;
+    
+    self.navigationItem.titleView = nameBtn;
    
 }
 
@@ -96,7 +114,7 @@ extern NSString * const Controller;
     self.menuBtnView.delegate = self;
     // 设置frame
     self.menuBtnView.x = 0;
-    self.menuBtnView.y = CGRectGetMaxY(self.titleView.frame);
+    self.menuBtnView.y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     self.menuBtnView.width = self.view.width;
     self.menuBtnView.height = 35;
     
@@ -145,7 +163,7 @@ extern NSString * const Controller;
     likeTabVC.tableView.x = CGRectGetMaxX(sortTabVC.collectionView.frame);
     [self.myScrollView addSubview:likeTabVC.tableView];
     [self addChildViewController:likeTabVC];
-
+    
 }
 
 

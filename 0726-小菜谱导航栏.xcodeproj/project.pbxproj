@@ -35,6 +35,7 @@
 		A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4716371198528EB00A8B769 /* HFJMainCell.m */; };
 		A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163741985316600A8B769 /* HFJCuisineTableViewController.m */; };
 		A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471637A19853BD600A8B769 /* HFJDishViewController.m */; };
+		A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A11985E40400E39B19 /* HFJNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,18 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A47162F51983BE5500A8B769 /* 0726-小菜谱.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0726-小菜谱.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47162F51983BE5500A8B769 /* 0726-小菜谱导航栏.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "0726-小菜谱导航栏.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47162F81983BE5500A8B769 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A47162FA1983BE5500A8B769 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A47162FC1983BE5500A8B769 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		A47163001983BE5500A8B769 /* 0726-小菜谱-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0726-小菜谱-Info.plist"; sourceTree = "<group>"; };
+		A47163001983BE5500A8B769 /* 0726-小菜谱导航栏-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0726-小菜谱导航栏-Info.plist"; sourceTree = "<group>"; };
 		A47163021983BE5500A8B769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A47163041983BE5500A8B769 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A47163061983BE5500A8B769 /* 0726-小菜谱-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "0726-小菜谱-Prefix.pch"; sourceTree = "<group>"; };
+		A47163061983BE5500A8B769 /* 0726-小菜谱导航栏-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "0726-小菜谱导航栏-Prefix.pch"; sourceTree = "<group>"; };
 		A47163071983BE5500A8B769 /* HFJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HFJAppDelegate.h; path = ../../HFJAppDelegate.h; sourceTree = "<group>"; };
 		A47163081983BE5500A8B769 /* HFJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HFJAppDelegate.m; path = ../../HFJAppDelegate.m; sourceTree = "<group>"; };
 		A471630B1983BE5500A8B769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A47163161983BE5500A8B769 /* 0726-小菜谱Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "0726-小菜谱Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A47163161983BE5500A8B769 /* 0726-小菜谱导航栏Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "0726-小菜谱导航栏Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A47163171983BE5500A8B769 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A471631F1983BE5500A8B769 /* 0726-小菜谱Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0726-小菜谱Tests-Info.plist"; sourceTree = "<group>"; };
 		A47163211983BE5500A8B769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -95,6 +96,8 @@
 		A47163741985316600A8B769 /* HFJCuisineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJCuisineTableViewController.m; path = ../Views/HFJCuisineTableViewController.m; sourceTree = "<group>"; };
 		A471637919853BD600A8B769 /* HFJDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJDishViewController.h; sourceTree = "<group>"; };
 		A471637A19853BD600A8B769 /* HFJDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJDishViewController.m; sourceTree = "<group>"; };
+		A498E5A01985E40400E39B19 /* HFJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJNavController.h; sourceTree = "<group>"; };
+		A498E5A11985E40400E39B19 /* HFJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,8 @@
 		A47162F61983BE5500A8B769 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A47162F51983BE5500A8B769 /* 0726-小菜谱.app */,
-				A47163161983BE5500A8B769 /* 0726-小菜谱Tests.xctest */,
+				A47162F51983BE5500A8B769 /* 0726-小菜谱导航栏.app */,
+				A47163161983BE5500A8B769 /* 0726-小菜谱导航栏Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,10 +167,10 @@
 			isa = PBXGroup;
 			children = (
 				A471635C1983C88300A8B769 /* Images.xcassets */,
-				A47163001983BE5500A8B769 /* 0726-小菜谱-Info.plist */,
+				A47163001983BE5500A8B769 /* 0726-小菜谱导航栏-Info.plist */,
 				A47163011983BE5500A8B769 /* InfoPlist.strings */,
 				A47163041983BE5500A8B769 /* main.m */,
-				A47163061983BE5500A8B769 /* 0726-小菜谱-Prefix.pch */,
+				A47163061983BE5500A8B769 /* 0726-小菜谱导航栏-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,6 +274,8 @@
 		A471633A1983BF9000A8B769 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A498E5A01985E40400E39B19 /* HFJNavController.h */,
+				A498E5A11985E40400E39B19 /* HFJNavController.m */,
 				A471633B1983BF9000A8B769 /* HFJMainViewController.h */,
 				A471633C1983BF9000A8B769 /* HFJMainViewController.m */,
 				A471636D1984FF3300A8B769 /* HFJSearchViewController.h */,
@@ -286,10 +291,10 @@
 		A471633D1983BF9000A8B769 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */,
-				A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */,
 				A47163401983BF9000A8B769 /* HFJTitleView.h */,
 				A47163411983BF9000A8B769 /* HFJTitleView.m */,
+				A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */,
+				A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */,
 				A4716370198528EB00A8B769 /* HFJMainCell.h */,
 				A4716371198528EB00A8B769 /* HFJMainCell.m */,
 			);
@@ -386,9 +391,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A47162F41983BE5500A8B769 /* 0726-小菜谱 */ = {
+		A47162F41983BE5500A8B769 /* 0726-小菜谱导航栏 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A47163271983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱" */;
+			buildConfigurationList = A47163271983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱导航栏" */;
 			buildPhases = (
 				A47162F11983BE5500A8B769 /* Sources */,
 				A47162F21983BE5500A8B769 /* Frameworks */,
@@ -398,14 +403,14 @@
 			);
 			dependencies = (
 			);
-			name = "0726-小菜谱";
+			name = "0726-小菜谱导航栏";
 			productName = "0726-小菜谱";
-			productReference = A47162F51983BE5500A8B769 /* 0726-小菜谱.app */;
+			productReference = A47162F51983BE5500A8B769 /* 0726-小菜谱导航栏.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A47163151983BE5500A8B769 /* 0726-小菜谱Tests */ = {
+		A47163151983BE5500A8B769 /* 0726-小菜谱导航栏Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A471632A1983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱Tests" */;
+			buildConfigurationList = A471632A1983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱导航栏Tests" */;
 			buildPhases = (
 				A47163121983BE5500A8B769 /* Sources */,
 				A47163131983BE5500A8B769 /* Frameworks */,
@@ -416,9 +421,9 @@
 			dependencies = (
 				A471631C1983BE5500A8B769 /* PBXTargetDependency */,
 			);
-			name = "0726-小菜谱Tests";
+			name = "0726-小菜谱导航栏Tests";
 			productName = "0726-小菜谱Tests";
-			productReference = A47163161983BE5500A8B769 /* 0726-小菜谱Tests.xctest */;
+			productReference = A47163161983BE5500A8B769 /* 0726-小菜谱导航栏Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -436,7 +441,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A47162F01983BE5500A8B769 /* Build configuration list for PBXProject "0726-小菜谱" */;
+			buildConfigurationList = A47162F01983BE5500A8B769 /* Build configuration list for PBXProject "0726-小菜谱导航栏" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -449,8 +454,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A47162F41983BE5500A8B769 /* 0726-小菜谱 */,
-				A47163151983BE5500A8B769 /* 0726-小菜谱Tests */,
+				A47162F41983BE5500A8B769 /* 0726-小菜谱导航栏 */,
+				A47163151983BE5500A8B769 /* 0726-小菜谱导航栏Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -483,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */,
+				A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */,
 				A47163561983BF9000A8B769 /* HFJTitleView.m in Sources */,
 				A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */,
 				A471636F1984FF3300A8B769 /* HFJSearchViewController.m in Sources */,
@@ -514,7 +520,7 @@
 /* Begin PBXTargetDependency section */
 		A471631C1983BE5500A8B769 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A47162F41983BE5500A8B769 /* 0726-小菜谱 */;
+			target = A47162F41983BE5500A8B769 /* 0726-小菜谱导航栏 */;
 			targetProxy = A471631B1983BE5500A8B769 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -624,10 +630,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "0726-小菜谱/0726-小菜谱-Prefix.pch";
-				INFOPLIST_FILE = "0726-小菜谱/0726-小菜谱-Info.plist";
+				GCC_PREFIX_HEADER = "0726-小菜谱/0726-小菜谱导航栏-Prefix.pch";
+				INFOPLIST_FILE = "0726-小菜谱/0726-小菜谱导航栏-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "0726-小菜谱导航栏";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -638,10 +644,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "0726-小菜谱/0726-小菜谱-Prefix.pch";
-				INFOPLIST_FILE = "0726-小菜谱/0726-小菜谱-Info.plist";
+				GCC_PREFIX_HEADER = "0726-小菜谱/0726-小菜谱导航栏-Prefix.pch";
+				INFOPLIST_FILE = "0726-小菜谱/0726-小菜谱导航栏-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "0726-小菜谱导航栏";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -662,7 +668,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "0726-小菜谱Tests/0726-小菜谱Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "0726-小菜谱导航栏Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -680,7 +686,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "0726-小菜谱/0726-小菜谱-Prefix.pch";
 				INFOPLIST_FILE = "0726-小菜谱Tests/0726-小菜谱Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "0726-小菜谱导航栏Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -689,7 +695,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A47162F01983BE5500A8B769 /* Build configuration list for PBXProject "0726-小菜谱" */ = {
+		A47162F01983BE5500A8B769 /* Build configuration list for PBXProject "0726-小菜谱导航栏" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A47163251983BE5500A8B769 /* Debug */,
@@ -698,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A47163271983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱" */ = {
+		A47163271983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱导航栏" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A47163281983BE5500A8B769 /* Debug */,
@@ -707,7 +713,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A471632A1983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱Tests" */ = {
+		A471632A1983BE5500A8B769 /* Build configuration list for PBXNativeTarget "0726-小菜谱导航栏Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A471632B1983BE5500A8B769 /* Debug */,

@@ -66,10 +66,12 @@ static NSString *ID = @"sort";
     HFJCuisineTableViewController *cuisineVC = [HFJCuisineTableViewController alloc];
     cuisineVC.tableView.frame = HFJViewFrame;
     cuisineVC.tableView.backgroundColor = [UIColor lightGrayColor];
-    [self addChildViewController:cuisineVC];
-    [self.view addSubview:cuisineVC.tableView];
-    NSLog(@"%@", NSStringFromCGRect(cuisineVC.tableView.frame));
-    NSLog(@"%@", NSStringFromClass([cuisineVC.tableView.superview class]));
+    
+    [self.navigationController pushViewController:cuisineVC animated:YES];
+//    [self addChildViewController:cuisineVC];
+//    [self.view addSubview:cuisineVC.tableView];
+//    NSLog(@"%@", NSStringFromCGRect(cuisineVC.tableView.frame));
+//    NSLog(@"%@", NSStringFromClass([cuisineVC.tableView.superview class]));
     // UICollectionViewControllerWrapperView
 
 }

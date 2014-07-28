@@ -22,14 +22,14 @@
         self.view.backgroundColor = HFJBasicColor;
         self.view.frame = HFJViewFrame;
         
-        self.view.alpha = 0;
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            // 透明度
-            self.view.alpha = 1;
-        }];
-        
+//        self.view.alpha = 0;
+//        
+//        [UIView animateWithDuration:0.5 animations:^{
+//            
+//            // 透明度
+//            self.view.alpha = 1;
+//        }];
+//        
         // 设置返回按钮
         [self setupBackButton];
     }
@@ -54,27 +54,16 @@
     // 添加监听事件
     [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:backBtn];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    
+//    [self.view addSubview:backBtn];
     
 }
 
 // 返回按钮点击事件
 - (void)back
 {
-    
-    NSLog(@"back");
-    // 动画,淡出self
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        self.view.alpha = 0;
-        
-    }completion:^(BOOL finished) {
-        
-        // 动画完成后移除self.view和控制器本身
-        [self.view removeFromSuperview];
-        [self removeFromParentViewController];
-    }];
-
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 @end

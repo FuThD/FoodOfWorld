@@ -9,11 +9,6 @@
 #import "HFJSearchViewController.h"
 #import "HFJSearchTableViewController.h"
 
-/**
- *  通知名称,发送控制器给主控制器,让主控制器添加为子控制器
- */
-NSString *const Controller = @"Controller";
-
 @interface HFJSearchViewController ()<HFJSearchTableViewControllerDelegate, UITextFieldDelegate>
 
 /**
@@ -78,9 +73,6 @@ NSString *const Controller = @"Controller";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // 发送一个通知到通知中心,传递控制器给主控制器
-    [[NSNotificationCenter defaultCenter] postNotificationName:Controller object:self];
 }
 
 
@@ -119,20 +111,10 @@ NSString *const Controller = @"Controller";
     
 }
 
-// 返回按钮点击事件
+// 取消按钮点击事件
 - (void)back
 {
-    // 动画,淡出self
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        self.view.alpha = 0;
-        
-    }completion:^(BOOL finished) {
-        
-        // 动画完成后移除self.view和控制器本身
-        [self.view removeFromSuperview];
-        [self removeFromParentViewController];
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setupSearchBar
@@ -229,7 +211,7 @@ NSString *const Controller = @"Controller";
     self.backButton.height = 34;
     
     // 设置底部灰色的先的frame
-    self.lineView.frame = CGRectMake(5, self.titleView.height - 2, self.view.width - 10, 1);
+    self.lineView.frame = CGRectMake(0, self.titleView.height - 2, self.view.width, 1);
     
     // 设置tableView的frame
     CGFloat y = CGRectGetMaxY(self.lineView.frame);
