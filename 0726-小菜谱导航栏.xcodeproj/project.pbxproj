@@ -23,7 +23,6 @@
 		A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */; };
 		A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633C1983BF9000A8B769 /* HFJMainViewController.m */; };
 		A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */; };
-		A47163561983BF9000A8B769 /* HFJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163411983BF9000A8B769 /* HFJTitleView.m */; };
 		A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163481983BF9000A8B769 /* UIView+NJ.m */; };
 		A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */ = {isa = PBXBuildFile; fileRef = A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */; };
 		A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A471634F1983BF9000A8B769 /* cellectionViewCell.xib */; };
@@ -36,6 +35,21 @@
 		A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163741985316600A8B769 /* HFJCuisineTableViewController.m */; };
 		A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471637A19853BD600A8B769 /* HFJDishViewController.m */; };
 		A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A11985E40400E39B19 /* HFJNavController.m */; };
+		A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */; };
+		A498E5A81986599500E39B19 /* HFJSearchHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A71986599500E39B19 /* HFJSearchHeadView.m */; };
+		A498E5AA19865DEA00E39B19 /* HFJSearchHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A498E5A919865DEA00E39B19 /* HFJSearchHeadView.xib */; };
+		A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5AE1986925B00E39B19 /* AFHTTPRequestOperation.m */; };
+		A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5B01986925B00E39B19 /* AFHTTPRequestOperationManager.m */; };
+		A498E5C51986925B00E39B19 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5B21986925B00E39B19 /* AFHTTPSessionManager.m */; };
+		A498E5C61986925B00E39B19 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5B51986925B00E39B19 /* AFNetworkReachabilityManager.m */; };
+		A498E5C71986925B00E39B19 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5B71986925B00E39B19 /* AFSecurityPolicy.m */; };
+		A498E5C81986925B00E39B19 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5B91986925B00E39B19 /* AFURLConnectionOperation.m */; };
+		A498E5C91986925B00E39B19 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5BB1986925B00E39B19 /* AFURLRequestSerialization.m */; };
+		A498E5CA1986925B00E39B19 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5BD1986925B00E39B19 /* AFURLResponseSerialization.m */; };
+		A498E5CB1986925B00E39B19 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5BF1986925B00E39B19 /* AFURLSessionManager.m */; };
+		A498E5CC1986925B00E39B19 /* HFJHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5C21986925B00E39B19 /* HFJHttpTool.m */; };
+		A498E5D1198698D500E39B19 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5CE198698D500E39B19 /* NSArray+Log.m */; };
+		A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5D0198698D500E39B19 /* NSDictionary+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +87,6 @@
 		A471633C1983BF9000A8B769 /* HFJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMainViewController.m; sourceTree = "<group>"; };
 		A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMenuButtonView.h; sourceTree = "<group>"; };
 		A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMenuButtonView.m; sourceTree = "<group>"; };
-		A47163401983BF9000A8B769 /* HFJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJTitleView.h; sourceTree = "<group>"; };
-		A47163411983BF9000A8B769 /* HFJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJTitleView.m; sourceTree = "<group>"; };
 		A47163431983BF9000A8B769 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		A47163471983BF9000A8B769 /* UIView+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NJ.h"; sourceTree = "<group>"; };
 		A47163481983BF9000A8B769 /* UIView+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NJ.m"; sourceTree = "<group>"; };
@@ -94,10 +106,40 @@
 		A4716371198528EB00A8B769 /* HFJMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMainCell.m; sourceTree = "<group>"; };
 		A47163731985316600A8B769 /* HFJCuisineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJCuisineTableViewController.h; path = ../Views/HFJCuisineTableViewController.h; sourceTree = "<group>"; };
 		A47163741985316600A8B769 /* HFJCuisineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJCuisineTableViewController.m; path = ../Views/HFJCuisineTableViewController.m; sourceTree = "<group>"; };
-		A471637919853BD600A8B769 /* HFJDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJDishViewController.h; sourceTree = "<group>"; };
-		A471637A19853BD600A8B769 /* HFJDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJDishViewController.m; sourceTree = "<group>"; };
+		A471637919853BD600A8B769 /* HFJDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJDishViewController.h; path = ../Main/Controller/HFJDishViewController.h; sourceTree = "<group>"; };
+		A471637A19853BD600A8B769 /* HFJDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJDishViewController.m; path = ../Main/Controller/HFJDishViewController.m; sourceTree = "<group>"; };
 		A498E5A01985E40400E39B19 /* HFJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJNavController.h; sourceTree = "<group>"; };
 		A498E5A11985E40400E39B19 /* HFJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJNavController.m; sourceTree = "<group>"; };
+		A498E5A31986099200E39B19 /* UIBarButtonItem+addItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+addItem.h"; sourceTree = "<group>"; };
+		A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+addItem.m"; sourceTree = "<group>"; };
+		A498E5A61986599500E39B19 /* HFJSearchHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJSearchHeadView.h; path = ../Views/HFJSearchHeadView.h; sourceTree = "<group>"; };
+		A498E5A71986599500E39B19 /* HFJSearchHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJSearchHeadView.m; path = ../Views/HFJSearchHeadView.m; sourceTree = "<group>"; };
+		A498E5A919865DEA00E39B19 /* HFJSearchHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HFJSearchHeadView.xib; path = ../Views/HFJSearchHeadView.xib; sourceTree = "<group>"; };
+		A498E5AD1986925B00E39B19 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		A498E5AE1986925B00E39B19 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		A498E5AF1986925B00E39B19 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		A498E5B01986925B00E39B19 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		A498E5B11986925B00E39B19 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		A498E5B21986925B00E39B19 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		A498E5B31986925B00E39B19 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		A498E5B41986925B00E39B19 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		A498E5B51986925B00E39B19 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		A498E5B61986925B00E39B19 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		A498E5B71986925B00E39B19 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		A498E5B81986925B00E39B19 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		A498E5B91986925B00E39B19 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		A498E5BA1986925B00E39B19 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		A498E5BB1986925B00E39B19 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		A498E5BC1986925B00E39B19 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		A498E5BD1986925B00E39B19 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		A498E5BE1986925B00E39B19 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		A498E5BF1986925B00E39B19 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		A498E5C11986925B00E39B19 /* HFJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJHttpTool.h; sourceTree = "<group>"; };
+		A498E5C21986925B00E39B19 /* HFJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJHttpTool.m; sourceTree = "<group>"; };
+		A498E5CD198698D500E39B19 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		A498E5CE198698D500E39B19 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		A498E5CF198698D500E39B19 /* NSDictionary+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
+		A498E5D0198698D500E39B19 /* NSDictionary+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +309,7 @@
 			children = (
 				A471633A1983BF9000A8B769 /* Controller */,
 				A471633D1983BF9000A8B769 /* Views */,
+				A498E5AB1986633500E39B19 /* Search(搜索) */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -278,12 +321,6 @@
 				A498E5A11985E40400E39B19 /* HFJNavController.m */,
 				A471633B1983BF9000A8B769 /* HFJMainViewController.h */,
 				A471633C1983BF9000A8B769 /* HFJMainViewController.m */,
-				A471636D1984FF3300A8B769 /* HFJSearchViewController.h */,
-				A471636E1984FF3300A8B769 /* HFJSearchViewController.m */,
-				A471636A1984F6EC00A8B769 /* HFJSearchTableViewController.h */,
-				A471636B1984F6EC00A8B769 /* HFJSearchTableViewController.m */,
-				A471637919853BD600A8B769 /* HFJDishViewController.h */,
-				A471637A19853BD600A8B769 /* HFJDishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,8 +328,6 @@
 		A471633D1983BF9000A8B769 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A47163401983BF9000A8B769 /* HFJTitleView.h */,
-				A47163411983BF9000A8B769 /* HFJTitleView.m */,
 				A471633E1983BF9000A8B769 /* HFJMenuButtonView.h */,
 				A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */,
 				A4716370198528EB00A8B769 /* HFJMainCell.h */,
@@ -318,6 +353,7 @@
 		A47163441983BF9000A8B769 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A498E5AC1986925B00E39B19 /* AFNetworking */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -325,6 +361,7 @@
 		A47163451983BF9000A8B769 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				A498E5C01986925B00E39B19 /* 屏蔽AFN风险 */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -332,6 +369,12 @@
 		A47163461983BF9000A8B769 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A498E5CD198698D500E39B19 /* NSArray+Log.h */,
+				A498E5CE198698D500E39B19 /* NSArray+Log.m */,
+				A498E5CF198698D500E39B19 /* NSDictionary+Log.h */,
+				A498E5D0198698D500E39B19 /* NSDictionary+Log.m */,
+				A498E5A31986099200E39B19 /* UIBarButtonItem+addItem.h */,
+				A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */,
 				A47163671984E15700A8B769 /* UIImage+OS6or7.h */,
 				A47163681984E15700A8B769 /* UIImage+OS6or7.m */,
 				A47163471983BF9000A8B769 /* UIView+NJ.h */,
@@ -384,8 +427,61 @@
 			children = (
 				A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */,
 				A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */,
+				A471637919853BD600A8B769 /* HFJDishViewController.h */,
+				A471637A19853BD600A8B769 /* HFJDishViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A498E5AB1986633500E39B19 /* Search(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				A471636D1984FF3300A8B769 /* HFJSearchViewController.h */,
+				A471636E1984FF3300A8B769 /* HFJSearchViewController.m */,
+				A471636A1984F6EC00A8B769 /* HFJSearchTableViewController.h */,
+				A471636B1984F6EC00A8B769 /* HFJSearchTableViewController.m */,
+				A498E5A61986599500E39B19 /* HFJSearchHeadView.h */,
+				A498E5A71986599500E39B19 /* HFJSearchHeadView.m */,
+				A498E5A919865DEA00E39B19 /* HFJSearchHeadView.xib */,
+			);
+			name = "Search(搜索)";
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A498E5AC1986925B00E39B19 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				A498E5AD1986925B00E39B19 /* AFHTTPRequestOperation.h */,
+				A498E5AE1986925B00E39B19 /* AFHTTPRequestOperation.m */,
+				A498E5AF1986925B00E39B19 /* AFHTTPRequestOperationManager.h */,
+				A498E5B01986925B00E39B19 /* AFHTTPRequestOperationManager.m */,
+				A498E5B11986925B00E39B19 /* AFHTTPSessionManager.h */,
+				A498E5B21986925B00E39B19 /* AFHTTPSessionManager.m */,
+				A498E5B31986925B00E39B19 /* AFNetworking.h */,
+				A498E5B41986925B00E39B19 /* AFNetworkReachabilityManager.h */,
+				A498E5B51986925B00E39B19 /* AFNetworkReachabilityManager.m */,
+				A498E5B61986925B00E39B19 /* AFSecurityPolicy.h */,
+				A498E5B71986925B00E39B19 /* AFSecurityPolicy.m */,
+				A498E5B81986925B00E39B19 /* AFURLConnectionOperation.h */,
+				A498E5B91986925B00E39B19 /* AFURLConnectionOperation.m */,
+				A498E5BA1986925B00E39B19 /* AFURLRequestSerialization.h */,
+				A498E5BB1986925B00E39B19 /* AFURLRequestSerialization.m */,
+				A498E5BC1986925B00E39B19 /* AFURLResponseSerialization.h */,
+				A498E5BD1986925B00E39B19 /* AFURLResponseSerialization.m */,
+				A498E5BE1986925B00E39B19 /* AFURLSessionManager.h */,
+				A498E5BF1986925B00E39B19 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		A498E5C01986925B00E39B19 /* 屏蔽AFN风险 */ = {
+			isa = PBXGroup;
+			children = (
+				A498E5C11986925B00E39B19 /* HFJHttpTool.h */,
+				A498E5C21986925B00E39B19 /* HFJHttpTool.m */,
+			);
+			name = "屏蔽AFN风险";
+			path = "../Lib/AFNetworking/屏蔽AFN风险";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +564,7 @@
 				A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */,
 				A471635D1983C88300A8B769 /* Images.xcassets in Resources */,
 				A47163031983BE5500A8B769 /* InfoPlist.strings in Resources */,
+				A498E5AA19865DEA00E39B19 /* HFJSearchHeadView.xib in Resources */,
 				A471630C1983BE5500A8B769 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,22 +585,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */,
+				A498E5CC1986925B00E39B19 /* HFJHttpTool.m in Sources */,
 				A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */,
-				A47163561983BF9000A8B769 /* HFJTitleView.m in Sources */,
+				A498E5C71986925B00E39B19 /* AFSecurityPolicy.m in Sources */,
+				A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */,
+				A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */,
 				A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */,
 				A471636F1984FF3300A8B769 /* HFJSearchViewController.m in Sources */,
 				A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */,
 				A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */,
+				A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */,
+				A498E5A81986599500E39B19 /* HFJSearchHeadView.m in Sources */,
 				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
+				A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */,
 				A471636C1984F6EC00A8B769 /* HFJSearchTableViewController.m in Sources */,
+				A498E5C51986925B00E39B19 /* AFHTTPSessionManager.m in Sources */,
 				A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */,
 				A471635A1983BF9000A8B769 /* HFJSortCollectionViewCell.m in Sources */,
+				A498E5C81986925B00E39B19 /* AFURLConnectionOperation.m in Sources */,
+				A498E5C91986925B00E39B19 /* AFURLRequestSerialization.m in Sources */,
+				A498E5CB1986925B00E39B19 /* AFURLSessionManager.m in Sources */,
+				A498E5CA1986925B00E39B19 /* AFURLResponseSerialization.m in Sources */,
 				A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */,
 				A47163051983BE5500A8B769 /* main.m in Sources */,
 				A47163091983BE5500A8B769 /* HFJAppDelegate.m in Sources */,
 				A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */,
 				A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */,
+				A498E5C61986925B00E39B19 /* AFNetworkReachabilityManager.m in Sources */,
 				A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */,
+				A498E5D1198698D500E39B19 /* NSArray+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

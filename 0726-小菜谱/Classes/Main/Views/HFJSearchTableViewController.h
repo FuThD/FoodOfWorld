@@ -7,10 +7,11 @@
 //  搜索视图里面的tableView控制器
 
 #import <UIKit/UIKit.h>
-@class HFJSearchTableViewController;
+@class HFJSearchTableViewController, HFJSearchHeadView;
 
 @protocol HFJSearchTableViewControllerDelegate <NSObject>
 
+// 代理通知代理方关闭键盘
 - (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController;
 
 @end
@@ -18,5 +19,12 @@
 @interface HFJSearchTableViewController : UITableViewController
 
 @property (nonatomic, weak) id<HFJSearchTableViewControllerDelegate>  searchDelegate;
+
+// tableView的头部view
+@property (nonatomic, strong) HFJSearchHeadView *headView;
+
+
+/** 隐藏表格的headview */
+- (void)hiddenHeadView;
 
 @end

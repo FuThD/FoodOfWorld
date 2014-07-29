@@ -8,6 +8,9 @@
 
 #import "HFJGoodTableViewController.h"
 #import "HFJMainCell.h"
+#import "HFJDishViewController.h"
+#import "HFJHttpTool.h"
+
 
 @interface HFJGoodTableViewController()
 
@@ -62,9 +65,28 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 将控制器添加到父控制器
+    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
     
-
-
+    [self.navigationController pushViewController:dishVC animated:YES];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    dishVC.title = cell.textLabel.text;
+    
+//    NSString *url = @"http://apis.juhe.cn/cook/category?key=d042fccba82da1d6e93f5f2e67215568";
+//    NSDictionary *params = @{@"key": @"d042fccba82da1d6e93f5f2e67215568"};
+//    
+//    [HFJHttpTool getWithUrl:url params:params success:^(id json) { 
+//        
+//        NSLog(@"%@", json);
+//        
+//    } failure:^(NSError *error) {
+//        
+//        NSLog(@"%@", error);
+//    }];
+    
+    
+    
 }
 
 @end

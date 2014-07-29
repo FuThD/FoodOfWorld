@@ -16,7 +16,7 @@
  *
  *  @param name 图片名称
  */
-+ (instancetype)imageWithNamed:(NSString *)name;
+//+ (instancetype)imageWithNamed:(NSString *)name;
 
 /**
  *  创建一个拉伸不变形的图片

@@ -63,13 +63,11 @@
 {
     // 将控制器添加到父控制器
     HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
-//    [self.parentViewController addChildViewController:dishVC];
-//    
-//    // view添加到根View上面
-//    [self.view.superview.superview addSubview:dishVC.view];
+
     [self.navigationController pushViewController:dishVC animated:YES];
     
-
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    dishVC.title = cell.textLabel.text;
     
     
 }

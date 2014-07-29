@@ -58,21 +58,20 @@ static NSString *ID = @"sort";
     HFJSortCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
     return cell;
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-#warning 添加了view 看不到.....
     HFJCuisineTableViewController *cuisineVC = [HFJCuisineTableViewController alloc];
+    
+//    UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    cuisineVC.title = @"川菜🚢";
+    
     cuisineVC.tableView.frame = HFJViewFrame;
-    cuisineVC.tableView.backgroundColor = [UIColor lightGrayColor];
     
     [self.navigationController pushViewController:cuisineVC animated:YES];
-//    [self addChildViewController:cuisineVC];
-//    [self.view addSubview:cuisineVC.tableView];
-//    NSLog(@"%@", NSStringFromCGRect(cuisineVC.tableView.frame));
-//    NSLog(@"%@", NSStringFromClass([cuisineVC.tableView.superview class]));
-    // UICollectionViewControllerWrapperView
+
 
 }
 

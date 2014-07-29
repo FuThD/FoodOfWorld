@@ -8,6 +8,7 @@
 
 #import "HFJCuisineTableViewController.h"
 #import "HFJMainCell.h"
+#import "HFJDishViewController.h"
 
 @interface HFJCuisineTableViewController ()
 
@@ -15,19 +16,12 @@
 
 @implementation HFJCuisineTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = HFJBasicColor;
 }
 
 #pragma mark - Table view data source
@@ -42,25 +36,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"cuisine";
+    
     HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
     
     cell.textLabel.text = @"0000";
-    
+
     return cell;
 }
 
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  [UIButton buttonWithType:UIButtonTypeContactAdd];
+    // 实例化菜品控制器
+    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    
+    // 取出cell模型,设置dishVC的标题
+    
+    
+    
+    // push出控制器
+    [self.navigationController pushViewController:dishVC animated:YES];
+
 }
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//
-//
-//}
-
 
 
 

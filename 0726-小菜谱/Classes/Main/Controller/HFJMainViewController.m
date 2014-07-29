@@ -11,7 +11,6 @@
 #import "HFJSortCollectionViewConrtoller.h"
 #import "HFJLikeTableViewController.h"
 #import "HFJMenuButtonView.h"
-#import "HFJTitleView.h"
 #import "HFJSearchViewController.h"
 
 
@@ -28,11 +27,6 @@
  */
 @property (nonatomic, weak) HFJMenuButtonView *menuBtnView;
 
-/**
- *  标题的view
- */
-//@property (nonatomic, strong) HFJTitleView *titleView;
-
 @end
 
 @implementation HFJMainViewController
@@ -41,8 +35,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = HFJBasicColor;
-    
+//    self.view.backgroundColor = HFJBasicColor;
     
     // 设置最上面的标题view
     [self setupNavBar];
@@ -73,34 +66,35 @@
 // 设置最上面的标题view
 - (void)setupNavBar
 {
+    // app名字的按钮
+    UIButton *nameBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 230, 44)];
+    
+    // 设置nameBtn的属性
+    [nameBtn setImage:[UIImage imageNamed:@"nd_icon"] forState:UIControlStateDisabled];
+    [nameBtn setTitle:@"食  为  天" forState:UIControlStateNormal];
+    [nameBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    // 设置标题内边距为15
+    nameBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    
+    // 设置不可交互,并设置为导航栏的标题
+    nameBtn.enabled = NO;
+    self.navigationItem.titleView = nameBtn;
+   
     // 搜索按钮
-    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(200, 0, 120, 44)];
+    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
     
     // 设置按钮的属性
     [search setImage:[UIImage imageNamed:@"06-magnify"] forState:UIControlStateNormal];
     [search setTitle:@"搜 索" forState:UIControlStateNormal];
     [search setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [search setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
+    // 设置内边距为15
     search.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
     
     // 添加搜索按钮的监听事件
     [search addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:search];
-    
-    
-    // app名字的按钮
-    UIButton *nameBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
-    
-    // 设置nameBtn的属性
-    [nameBtn setImage:[UIImage imageNamed:@"nd_icon"] forState:UIControlStateDisabled];
-    [nameBtn setTitle:@"小  菜  谱" forState:UIControlStateNormal];
-    [nameBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    nameBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
-    nameBtn.enabled = NO;
-    
-    self.navigationItem.titleView = nameBtn;
-   
 }
 
 // 3个控制器的菜单按钮

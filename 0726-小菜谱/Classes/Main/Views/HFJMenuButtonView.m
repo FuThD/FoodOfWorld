@@ -16,7 +16,6 @@
  */
 @property (nonatomic, strong) UIView *lineView;
 
-
 /**
  *  标题按钮数组 精选/分类/喜爱
  */

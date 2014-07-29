@@ -8,6 +8,7 @@
 
 #import "HFJSearchViewController.h"
 #import "HFJSearchTableViewController.h"
+#import "HFJSearchHeadView.h"
 
 @interface HFJSearchViewController ()<HFJSearchTableViewControllerDelegate, UITextFieldDelegate>
 
@@ -22,7 +23,7 @@
 @property (nonatomic, weak) UITextField * searchBar;
 
 /**
- *  返回按钮
+ *  取消按钮
  */
 @property (nonatomic, weak) UIButton * backButton;
 
@@ -35,6 +36,7 @@
  *  表格
  */
 @property (nonatomic, weak) UITableView * tableView;
+@property (nonatomic, weak) HFJSearchTableViewController *tableVC;
 
 @end
 
@@ -44,16 +46,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        self.view.alpha = 0;
+
         self.view.backgroundColor = HFJBasicColor;
         self.view.frame = HFJViewFrame;
-        
-        [UIView animateWithDuration:0.5 animations:^{
-            
-            // 透明度
-            self.view.alpha = 1;
-        }];
         
         // 设置搜索标题的View
         [self setupTitleView];
@@ -75,10 +70,10 @@
     [super viewDidLoad];
 }
 
-
+// 设置搜索标题的View
 - (void)setupTitleView
 {
-    self.titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 20, self.view.width, 44)];
+    self.titleView = [[UIView alloc] init];
     [self.view addSubview:self.titleView];
     
     // 设置返回按钮
@@ -94,10 +89,6 @@
     // 初始化按钮
     UIButton *backBtn = [[UIButton alloc] init];
     self.backButton = backBtn;
-    
-    // 设置按钮图标
-//    [backBtn setImage:[UIImage imageNamed:@"navigationbar_back"] forState:UIControlStateNormal];
-//    [backBtn setImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] forState:UIControlStateHighlighted];
     
     // 设置按钮的文字
     [backBtn setTitle:@"取消" forState:UIControlStateNormal];
@@ -170,6 +161,7 @@
     // 创建一个tableView
     HFJSearchTableViewController *tableVC = [[HFJSearchTableViewController alloc] init];
     self.tableView = tableVC.tableView;
+    self.tableVC = tableVC;
     [self.view addSubview:tableVC.tableView];
     
     // 设置代理
@@ -198,6 +190,9 @@
 // 布局子视图的frame
 - (void)setupSubviewsFrame
 {
+    // 设置标题view的frame
+    self.titleView.frame = CGRectMake(0, 20, self.view.width, 44);
+    
     // 设置搜索框的frame
     self.searchBar.x = 20;
     self.searchBar.y = 5;
@@ -221,9 +216,15 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-#warning 待实现搜索功能,或者根据搜索框的文字,通过通知搜索
+#warning 待实现搜索功能,或者根据搜索框的文字,通过通知搜索,先搜索历史记录,再搜索网上的记录
     // 关闭第一响应
     [self.searchBar resignFirstResponder];
+    
+    // 隐藏表格的headview,即清空历史记录的view
+    [self.tableVC hiddenHeadView];
+
+    
+
     return YES;
 }
 
