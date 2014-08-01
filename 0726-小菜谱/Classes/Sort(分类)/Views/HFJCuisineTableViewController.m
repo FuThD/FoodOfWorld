@@ -22,6 +22,8 @@
     [super viewDidLoad];
     
     self.tableView.backgroundColor = HFJBasicColor;
+    self.tableView.rowHeight = 80;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
 }
 
 #pragma mark - Table view data source

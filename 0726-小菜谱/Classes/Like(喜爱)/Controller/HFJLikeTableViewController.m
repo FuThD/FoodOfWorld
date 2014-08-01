@@ -39,6 +39,9 @@
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;
     
+    self.tableView.rowHeight = 80;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    
 }
 
 

@@ -12,12 +12,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    
-//    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+
     
     return YES;
 }
+
+/**
+ *  内存警告
+ */
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    
+    // 应该在该方法中释放掉不需要的内存
+    // 1.停止所有的子线程下载
+    [[SDWebImageManager sharedManager] cancelAll];
+    
+    // 2.清空SDWebImage保存的所有内存缓存
+    [[SDWebImageManager sharedManager].imageCache clearMemory];
+    
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -45,5 +59,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

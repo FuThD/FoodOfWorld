@@ -11,8 +11,8 @@
 
 @protocol HFJSearchTableViewControllerDelegate <NSObject>
 
-// 代理通知代理方关闭键盘
-- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController;
+// 代理通知代理方关闭键盘, 传递点击的推荐搜索的内容
+- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController searchText:(NSString *)menu;
 
 @end
 
@@ -23,8 +23,12 @@
 // tableView的头部view
 @property (nonatomic, strong) HFJSearchHeadView *headView;
 
+/**
+ *  网络上搜索到的表格的数据
+ */
+@property (nonatomic, strong) NSArray* dataList;
 
 /** 隐藏表格的headview */
-- (void)hiddenHeadView;
+//- (void)hiddenHeadView;
 
 @end

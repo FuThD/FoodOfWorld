@@ -17,6 +17,12 @@
 #import"Common.h"
 #import "UIView+NJ.h"
 #import "UIImage+OS6or7.h"
+#import "HFJHttpTool.h"
+#import "UIImageView+WebCache.h"
+#import"MJExtension.h"
+#import "MBProgressHUD+NJ.h"
+
+#define HFJAppkey @"d042fccba82da1d6e93f5f2e67215568"
 
 
 #define HFJViewMovedTime 0.3

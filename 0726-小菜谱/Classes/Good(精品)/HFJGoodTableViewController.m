@@ -40,6 +40,9 @@
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;
     
+    self.tableView.rowHeight = 80;
+    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    
 }
 
 
@@ -74,7 +77,7 @@
     dishVC.title = cell.textLabel.text;
     
 //    NSString *url = @"http://apis.juhe.cn/cook/category?key=d042fccba82da1d6e93f5f2e67215568";
-//    NSDictionary *params = @{@"key": @"d042fccba82da1d6e93f5f2e67215568"};
+//    NSDictionary *params = @{@"key": HFJAppkey};
 //    
 //    [HFJHttpTool getWithUrl:url params:params success:^(id json) { 
 //        

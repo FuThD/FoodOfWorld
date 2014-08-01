@@ -11,8 +11,11 @@
 
 @protocol HFJSearchHeadViewDelegate <NSObject>
 
+// 点击了清除记录按钮
 - (void)searchHeadView:(HFJSearchHeadView *)searchHeadView didClickClearBtn:(UIButton *)clearBtn;
 
+// 点击了segmentControl
+- (void)searchHeadView:(HFJSearchHeadView *)searchHeadView didSelectedIndex:(int)index;
 @end
 
 

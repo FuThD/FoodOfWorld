@@ -81,7 +81,15 @@
     
     // 设置搜索框
     [self setupSearchBar];
+    
+    // 监听键盘
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchBarTextDidChange) name:UITextFieldTextDidChangeNotification object:nil];
 }
+
+//- (void)dealloc
+//{
+//    [[NSNotificationCenter defaultCenter] removeObserver:self];
+//}
 
 // 设置返回按钮
 - (void)setupBackButtom
@@ -118,6 +126,9 @@
     
     // 设置键盘的返回按钮为搜索
     searchBar.returnKeyType = UIReturnKeySearch;
+    
+    // 如果搜索框内有文字 搜索按钮不可交互
+    self.searchBar.enablesReturnKeyAutomatically = YES;
     
     // 设置背景图片
     searchBar.background = [UIImage resizableImageNamed:@"searchbar_textfield_background"];
@@ -173,9 +184,13 @@
 }
 
 #pragma mark - HFJSearchControllerDelegate代理方法,取消搜索框的第一响应者
-- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController
+- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController searchText:(NSString *)menu
 {
     [self.searchBar resignFirstResponder];
+    
+    if (menu) {
+        [self searchMenu:menu];
+    }
 }
 
 // 视图加载完毕,搜索框成为第一响应者
@@ -209,23 +224,67 @@
     self.lineView.frame = CGRectMake(0, self.titleView.height - 2, self.view.width, 1);
     
     // 设置tableView的frame
-    CGFloat y = CGRectGetMaxY(self.lineView.frame);
-    self.tableView.frame = CGRectMake(0, 64, self.view.width, self.view.height - y);
-    
+    CGFloat y = CGRectGetMaxY(self.titleView.frame);
+    self.tableView.frame = CGRectMake(0, y, self.view.width, self.view.height - y);
+   
 }
 
+//  键盘搜索按钮的监听事件
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-#warning 待实现搜索功能,或者根据搜索框的文字,通过通知搜索,先搜索历史记录,再搜索网上的记录
     // 关闭第一响应
     [self.searchBar resignFirstResponder];
-    
+
+    // 搜索菜谱
+    [self searchMenu:self.searchBar.text];
+
     // 隐藏表格的headview,即清空历史记录的view
-    [self.tableVC hiddenHeadView];
-
-    
-
+    //    [self.tableVC hiddenHeadView];
     return YES;
+}
+
+// 搜索菜谱
+- (void)searchMenu:(NSString *)menu
+{
+
+    // 加载数据
+    NSString *url = @"http://apis.juhe.cn/cook/query?key=&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF&rn=10&pn=3";
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    params[@"menu"] = menu;
+    params[@"key"] = HFJAppkey;
+    params[@"rn"] = @15;
+    
+    // 发送一个网络请求
+    [HFJHttpTool getWithUrl:url params:params success:^(id json) {
+    
+        if ([json[@"reason"] isEqualToString:@"Success"]) {
+            
+            // 如果有有搜索到数据,就传递数据到表格中.
+            self.tableVC.dataList = json[@"result"][@"data"];
+        }else{
+        
+            // 如果没有找到菜谱数据, 就提示错误信息
+            [MBProgressHUD showError:@"没有找到数据,请重新输入"];
+            
+            // 清空输入框内容
+            // self.searchBar.text = @"";
+        }
+    
+    } failure:^(NSError *error) {
+       
+        MyLog(@"%@", error);
+    }];
+    
+    
+    // 如果表格里面有cell
+    if ([self.tableVC.tableView numberOfRowsInSection:0]) {
+        
+        // 表格滚动到最上面一行
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableVC.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+    
 }
 
 
