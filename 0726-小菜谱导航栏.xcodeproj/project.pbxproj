@@ -34,6 +34,8 @@
 		A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4716371198528EB00A8B769 /* HFJMainCell.m */; };
 		A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163741985316600A8B769 /* HFJCuisineTableViewController.m */; };
 		A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471637A19853BD600A8B769 /* HFJDishViewController.m */; };
+		A48FB36C198CB845004AE50C /* HFJSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB369198CB845004AE50C /* HFJSegment.m */; };
+		A48FB36D198CB845004AE50C /* HFJSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB36B198CB845004AE50C /* HFJSegmentControl.m */; };
 		A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A11985E40400E39B19 /* HFJNavController.m */; };
 		A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */; };
 		A498E5A81986599500E39B19 /* HFJSearchHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A71986599500E39B19 /* HFJSearchHeadView.m */; };
@@ -138,6 +140,10 @@
 		A47163741985316600A8B769 /* HFJCuisineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJCuisineTableViewController.m; path = ../Views/HFJCuisineTableViewController.m; sourceTree = "<group>"; };
 		A471637919853BD600A8B769 /* HFJDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJDishViewController.h; sourceTree = "<group>"; };
 		A471637A19853BD600A8B769 /* HFJDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJDishViewController.m; sourceTree = "<group>"; };
+		A48FB368198CB845004AE50C /* HFJSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSegment.h; sourceTree = "<group>"; };
+		A48FB369198CB845004AE50C /* HFJSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSegment.m; sourceTree = "<group>"; };
+		A48FB36A198CB845004AE50C /* HFJSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSegmentControl.h; sourceTree = "<group>"; };
+		A48FB36B198CB845004AE50C /* HFJSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSegmentControl.m; sourceTree = "<group>"; };
 		A498E5A01985E40400E39B19 /* HFJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJNavController.h; sourceTree = "<group>"; };
 		A498E5A11985E40400E39B19 /* HFJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJNavController.m; sourceTree = "<group>"; };
 		A498E5A31986099200E39B19 /* UIBarButtonItem+addItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+addItem.h"; sourceTree = "<group>"; };
@@ -538,6 +544,10 @@
 				A498E5A61986599500E39B19 /* HFJSearchHeadView.h */,
 				A498E5A71986599500E39B19 /* HFJSearchHeadView.m */,
 				A498E5A919865DEA00E39B19 /* HFJSearchHeadView.xib */,
+				A48FB368198CB845004AE50C /* HFJSegment.h */,
+				A48FB369198CB845004AE50C /* HFJSegment.m */,
+				A48FB36A198CB845004AE50C /* HFJSegmentControl.h */,
+				A48FB36B198CB845004AE50C /* HFJSegmentControl.m */,
 			);
 			name = "Search(搜索)";
 			path = Controller;
@@ -778,6 +788,8 @@
 				A498FD2119888394007CD71B /* UIImageView+HighlightedWebCache.m in Sources */,
 				A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */,
 				A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */,
+				A48FB36D198CB845004AE50C /* HFJSegmentControl.m in Sources */,
+				A48FB36C198CB845004AE50C /* HFJSegment.m in Sources */,
 				A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */,
 				A498FD2019888394007CD71B /* UIImage+WebP.m in Sources */,
 				A498FD1819888394007CD71B /* SDWebImageDecoder.m in Sources */,

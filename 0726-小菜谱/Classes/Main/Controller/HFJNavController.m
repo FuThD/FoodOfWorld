@@ -20,9 +20,9 @@
 + (void)initialize
 {
     // 设置导航栏
-//    [self setupNavThem];
-//    // 设置导航栏按钮
-//    [self setupButtonThem];
+    [self setupNavThem];
+    // 设置导航栏按钮
+    [self setupButtonThem];
 
     
     // 拿到主题对象
