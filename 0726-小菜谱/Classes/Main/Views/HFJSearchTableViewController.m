@@ -31,18 +31,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.tableHeaderView = self.headView;
+    
     // 表格的下边,内边距设置为10
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
  
-    // 设置tableView头部标题代理
+    // 设置tableView头部标题以及他的代理
+    self.tableView.tableHeaderView = self.headView;
     self.headView.delegate = self;
     
-    // 去除cell的分割线
+    // 去除cell的分割线和垂直方向的指示线
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    
+    self.tableView.showsVerticalScrollIndicator = NO;
     // 简单粗暴的指定几个推荐搜索菜品
-    self.recommendedMenu = @[@{@"title":@"西米露", @"burden":@"温中健脾，治脾胃虚弱、和消化不良的功效", @"albums": @[@"http://img.juhe.cn/cookbook/t/22/21832_980436.jpg"]}, @{@"title":@"西瓜", @"burden":@"清热解暑、生津止渴、利尿除烦", @"albums": @[@"http://img.juhe.cn/cookbook/t/3/3035_694440.jpg"]}, @{@"title":@"粥", @"burden":@"夏天没胃口,那就来碗粥吧", @"albums": @[@"http://img.juhe.cn/cookbook/t/4/3090_420856.jpg"]}, @{@"title":@"红烧肉", @"burden":@"肥瘦相间，香甜松软，入口即化", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/92_512827.jpg"]}, @{@"title":@"小龙虾", @"burden":@"肉质肥美,香辣可口", @"albums": @[@"http://img.juhe.cn/cookbook/t/22/21832_980436.jpg"]},  @{@"title":@"苦瓜", @"burden":@"苦瓜具有降血糖、血脂、抗炎等作用", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/746_256043.jpg"]}];
+    self.recommendedMenu = @[@{@"title":@"西米露", @"burden":@"温中健脾，治脾胃虚弱、和消化不良的功效", @"albums": @[@"http://img.juhe.cn/cookbook/t/13/12384_477090.jpg"]}, @{@"title":@"西瓜", @"burden":@"清热解暑、生津止渴、利尿除烦", @"albums": @[@"http://img.juhe.cn/cookbook/t/3/3035_694440.jpg"]}, @{@"title":@"粥", @"burden":@"夏天没胃口,那就来碗粥吧", @"albums": @[@"http://img.juhe.cn/cookbook/t/4/3090_420856.jpg"]}, @{@"title":@"红烧肉", @"burden":@"肥瘦相间，香甜松软，入口即化", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/92_512827.jpg"]}, @{@"title":@"小龙虾", @"burden":@"肉质肥美,香辣可口", @"albums": @[@"http://img.juhe.cn/cookbook/t/22/21832_980436.jpg"]},  @{@"title":@"苦瓜", @"burden":@"苦瓜具有降血糖、血脂、抗炎等作用", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/746_256043.jpg"]}];
     
     self.menuList = self.recommendedMenu;
 }
@@ -82,6 +83,9 @@
 // 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 蒙版提示正在加载
+    [MBProgressHUD showMessage:@"正在加载中..."];
+
     // 如果有搜索数据
     if (self.dataList.count) {
         
@@ -95,6 +99,10 @@
         
         
         
+        
+        // 隐藏蒙版
+        [MBProgressHUD hideHUD];
+        
     }else{
         
         // 调用代理方法, 关闭键盘 如果没有搜索数据,并搜索推荐搜索的内容
@@ -103,19 +111,10 @@
             [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:self.recommendedMenu[indexPath.row][@"title"]];
         }
     }
+    
+    
 }
 
-// 设置tableView头部的view
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    return self.headView;
-//}
-
-// 设置tableView头部的高度
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-//{
-//    return 50;
-//}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80;
@@ -140,11 +139,14 @@
         [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:nil];
     }
     
+    // 清空当前的搜索内容
+    self.dataList = [NSArray array];
+    
     // segmentControl选中的1
     if (index == 1) {
         
         //  显示历史记录
-        self.menuList = self.dataList;
+//        self.menuList = self.dataList;
         
     }else{
         
@@ -164,6 +166,9 @@
 
     // 刷新数据
     [self.tableView reloadData];
+    
+    // 隐藏蒙版
+    [MBProgressHUD hideHUD];
     
 }
 

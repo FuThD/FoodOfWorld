@@ -32,13 +32,15 @@
     
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HFJMainCell" owner:nil options:nil] lastObject];
-        
-        cell.contentView.backgroundColor = [UIColor colorWithRed:250/255. green:250/255. blue:250/255. alpha:1];
-        
     }
     
     return cell;
 
+}
+
+- (void)awakeFromNib
+{
+    
 }
 
 // 重写数据的set方法
@@ -52,9 +54,9 @@
     // 如果有图片才加载图片
     if (dict[@"albums"]) {
         
-        [self.menuIcon sd_setImageWithURL:dict[@"albums"][0] placeholderImage:[UIImage imageNamed:@"holder"]];
+        [self.menuIcon sd_setImageWithURL:dict[@"albums"][0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
     }
-
 }
+
 
 @end

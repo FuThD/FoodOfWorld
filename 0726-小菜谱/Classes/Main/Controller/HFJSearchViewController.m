@@ -53,16 +53,25 @@
         // 设置搜索标题的View
         [self setupTitleView];
         
-        // 设置底部灰色的线
-        [self setButtomLine];
-        
         // 设置搜索的tableView
         [self setupTableView];
         
         // 设置子视图的frame
         [self setupSubviewsFrame];
+        
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 隐藏系统的3个按钮,后面自己定义
+    self.navigationItem.leftBarButtonItem = nil;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.rightBarButtonItem = nil;
+
 }
 
 - (void)viewDidLoad
@@ -74,46 +83,17 @@
 - (void)setupTitleView
 {
     self.titleView = [[UIView alloc] init];
-    [self.view addSubview:self.titleView];
-    
-    // 设置返回按钮
-    [self setupBackButtom];
+//    [self.view addSubview:self.titleView];
     
     // 设置搜索框
     [self setupSearchBar];
     
-    // 监听键盘
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchBarTextDidChange) name:UITextFieldTextDidChangeNotification object:nil];
-}
-
-//- (void)dealloc
-//{
-//    [[NSNotificationCenter defaultCenter] removeObserver:self];
-//}
-
-// 设置返回按钮
-- (void)setupBackButtom
-{
-    // 初始化按钮
-    UIButton *backBtn = [[UIButton alloc] init];
-    self.backButton = backBtn;
+    // 设置返回按钮
+    [self setupBackButtom];
     
-    // 设置按钮的文字
-    [backBtn setTitle:@"取消" forState:UIControlStateNormal];
-    backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
-    [backBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    // 添加监听事件
-    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.titleView addSubview:backBtn];
-    
-}
+    // 将自定义的titleView 设置为导航栏的titleView
+    self.navigationItem.titleView = self.titleView;
 
-// 取消按钮点击事件
-- (void)back
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setupSearchBar
@@ -157,14 +137,32 @@
     
 }
 
-// 设置底部灰色的先
-- (void)setButtomLine
+// 设置返回按钮
+- (void)setupBackButtom
 {
-    self.lineView = [[UIView alloc] init];
-    self.lineView.backgroundColor = [UIColor lightGrayColor];
-    [self.titleView addSubview:self.lineView];
+    // 初始化按钮
+    UIButton *backBtn = [[UIButton alloc] init];
+    self.backButton = backBtn;
+    
+    // 设置按钮的文字
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    backBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    [backBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    // 添加监听事件
+    [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.titleView addSubview:backBtn];
     
 }
+
+// 取消按钮点击事件
+- (void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 
 // 设置tableView
 - (void)setupTableView
@@ -209,22 +207,26 @@
     self.titleView.frame = CGRectMake(0, 20, self.view.width, 44);
     
     // 设置搜索框的frame
-    self.searchBar.x = 20;
+    self.searchBar.x = 10;
     self.searchBar.y = 5;
-    self.searchBar.width = 240;
+    self.searchBar.width = 230;
     self.searchBar.height = 34;
     
     // 设置取消按钮的frame
-    self.backButton.x = 275;
+    self.backButton.x = 260;
     self.backButton.y = 5;
     self.backButton.width = 34;
     self.backButton.height = 34;
-    
-    // 设置底部灰色的先的frame
-    self.lineView.frame = CGRectMake(0, self.titleView.height - 2, self.view.width, 1);
+
     
     // 设置tableView的frame
-    CGFloat y = CGRectGetMaxY(self.titleView.frame);
+    CGFloat y = 0;
+    if (iOS7) {
+        
+        y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    }
+    
+    NSLog(@"%f",y);
     self.tableView.frame = CGRectMake(0, y, self.view.width, self.view.height - y);
    
 }

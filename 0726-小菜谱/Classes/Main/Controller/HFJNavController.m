@@ -82,61 +82,61 @@
 /**
  *  设置导航栏按钮
  */
-//+ (void)setupButtonThem
-//{
-//    // 取得全局的nav的item属性 拿到主题对象
-//    UIBarButtonItem *item = [UIBarButtonItem appearance];
-//    
-//    if (!iOS7) {
-//        // 设置ios6的背景图片
-//        [item setBackgroundImage:[UIImage imageNamed:@"navigationbar_button_background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-//    }
-//    
-//    // 设置文字字体,颜色,无阴影
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//    dict[UITextAttributeFont] = [UIFont systemFontOfSize:16];
-//    dict[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
-//    dict[UITextAttributeTextColor] = [UIColor orangeColor];
-//    
-//    [item setTitleTextAttributes:dict forState:UIControlStateNormal];
-//    
-//    
-//    // 设置文字高亮状态的字体颜色和去阴影效果
-//    NSMutableDictionary *dictH = [NSMutableDictionary dictionary];
-//    dictH[UITextAttributeTextColor] = [UIColor redColor];
-//    dictH[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
-//    
-//    [item setTitleTextAttributes:dictH forState:UIControlStateHighlighted];
-//    
-//    // 设置不可点击状态下的文字属性
-//    NSMutableDictionary *mddisabled = [NSMutableDictionary dictionaryWithDictionary:dict];
-//    mddisabled[UITextAttributeTextColor] = [UIColor lightGrayColor];
-//    [item setTitleTextAttributes:mddisabled forState:UIControlStateDisabled];
-//    
-//}
++ (void)setupButtonThem
+{
+    // 取得全局的nav的item属性 拿到主题对象
+    UIBarButtonItem *item = [UIBarButtonItem appearance];
+    
+    if (!iOS7) {
+        // 设置ios6的背景图片
+        [item setBackgroundImage:[UIImage imageNamed:@"navigationbar_button_background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    }
+    
+    // 设置文字字体,颜色,无阴影
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[UITextAttributeFont] = [UIFont systemFontOfSize:16];
+    dict[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
+    dict[UITextAttributeTextColor] = [UIColor orangeColor];
+    
+    [item setTitleTextAttributes:dict forState:UIControlStateNormal];
+    
+    
+    // 设置文字高亮状态的字体颜色和去阴影效果
+    NSMutableDictionary *dictH = [NSMutableDictionary dictionary];
+    dictH[UITextAttributeTextColor] = [UIColor redColor];
+    dictH[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
+    
+    [item setTitleTextAttributes:dictH forState:UIControlStateHighlighted];
+    
+    // 设置不可点击状态下的文字属性
+    NSMutableDictionary *mddisabled = [NSMutableDictionary dictionaryWithDictionary:dict];
+    mddisabled[UITextAttributeTextColor] = [UIColor lightGrayColor];
+    [item setTitleTextAttributes:mddisabled forState:UIControlStateDisabled];
+    
+}
 
 /**
  *  设置导航栏
  */
-//+ (void)setupNavThem
-//{
-//    // 拿到主题对象
-//    UINavigationBar *navBar = [UINavigationBar appearance];
-//    
-//    // 设置背景颜色和字体颜色
-//    if (!iOS7) {
-//        // 设置背景颜色
-//        [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forBarMetrics:UIBarMetricsDefault];
-//        
-//        // 设置文字字体,颜色,无阴影
-//        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-//        dict[UITextAttributeFont] = [UIFont systemFontOfSize:20];
-//        dict[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
-//        dict[UITextAttributeTextColor] = [UIColor blackColor];
-//        
-//        [navBar setTitleTextAttributes:dict];
-//    }
-//}
++ (void)setupNavThem
+{
+    // 拿到主题对象
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    
+    // 设置背景颜色和字体颜色
+    if (!iOS7) {
+        // 设置背景颜色
+        [navBar setBackgroundImage:[UIImage imageNamed:@"navigationbar_background"] forBarMetrics:UIBarMetricsDefault];
+        
+        // 设置文字字体,颜色,无阴影
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[UITextAttributeFont] = [UIFont systemFontOfSize:20];
+        dict[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetMake(0, 0)];
+        dict[UITextAttributeTextColor] = [UIColor blackColor];
+        
+        [navBar setTitleTextAttributes:dict];
+    }
+}
 
 
 

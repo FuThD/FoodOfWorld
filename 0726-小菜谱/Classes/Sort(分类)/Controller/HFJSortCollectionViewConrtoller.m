@@ -39,6 +39,7 @@ static NSString *ID = @"sort";
     self.collectionView.width = HFJViewFrame.size.width;
     
     self.collectionView.bounces = NO;
+    self.collectionView.showsVerticalScrollIndicator = NO;
 
     
     // 为CollectionView注册可重用单元格

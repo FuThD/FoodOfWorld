@@ -41,6 +41,7 @@
     
     self.tableView.rowHeight = 80;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
     
 }
 
@@ -56,8 +57,8 @@
 #warning ID是否可以和Good/search/cuisine的设置一样的? 待加数据后测试
     static NSString *ID = @"Like";
     HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
-    cell.textLabel.text = @"789";
-    cell.detailTextLabel.text = @"hij";
+    cell.textLabel.text = @"111";
+    cell.detailTextLabel.text = @"222";
     
     return cell;
 }

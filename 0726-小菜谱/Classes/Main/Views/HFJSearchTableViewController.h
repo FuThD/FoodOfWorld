@@ -28,7 +28,5 @@
  */
 @property (nonatomic, strong) NSArray* dataList;
 
-/** 隐藏表格的headview */
-//- (void)hiddenHeadView;
 
 @end

@@ -58,8 +58,8 @@
     // 实例化一个搜索view的控制器
     HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
     
-    // modal 出搜索界面
-    [self presentViewController:searchViewController animated:YES completion:nil];
+    // push出新界面
+    [self.navigationController pushViewController:searchViewController animated:YES];
    
 }
 
@@ -81,7 +81,7 @@
     self.navigationItem.titleView = nameBtn;
    
     // 搜索按钮
-    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
+    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 90, 44)];
     
     // 设置按钮的属性
     [search setImage:[UIImage imageNamed:@"06-magnify"] forState:UIControlStateNormal];
@@ -108,9 +108,15 @@
     self.menuBtnView.delegate = self;
     // 设置frame
     self.menuBtnView.x = 0;
-    self.menuBtnView.y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     self.menuBtnView.width = self.view.width;
-    self.menuBtnView.height = 35;
+    self.menuBtnView.height = 40;
+    if (iOS7) {
+        
+        self.menuBtnView.y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    }else{
+        
+        self.menuBtnView.y = 0;
+    }
     
     // 添加到父视图中
     [self.view addSubview:titleBtnView];

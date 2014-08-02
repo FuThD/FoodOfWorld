@@ -42,6 +42,7 @@
     
     self.tableView.rowHeight = 80;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
     
 }
 

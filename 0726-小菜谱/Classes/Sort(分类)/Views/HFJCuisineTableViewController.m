@@ -24,6 +24,7 @@
     self.tableView.backgroundColor = HFJBasicColor;
     self.tableView.rowHeight = 80;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
 
 #pragma mark - Table view data source
