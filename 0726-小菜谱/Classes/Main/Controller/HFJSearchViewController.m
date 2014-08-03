@@ -9,6 +9,8 @@
 #import "HFJSearchViewController.h"
 #import "HFJSearchTableViewController.h"
 #import "HFJSearchHeadView.h"
+#import "HFJSearchResultController.h"
+#import "HFJHistoryCacheTool.h"
 
 @interface HFJSearchViewController ()<HFJSearchTableViewControllerDelegate, UITextFieldDelegate>
 
@@ -74,6 +76,16 @@
 
 }
 
+
+// 视图加载完毕,搜索框成为第一响应者
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.searchBar becomeFirstResponder];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -83,7 +95,6 @@
 - (void)setupTitleView
 {
     self.titleView = [[UIView alloc] init];
-//    [self.view addSubview:self.titleView];
     
     // 设置搜索框
     [self setupSearchBar];
@@ -191,14 +202,6 @@
     }
 }
 
-// 视图加载完毕,搜索框成为第一响应者
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self.searchBar becomeFirstResponder];
-
-}
 
 // 布局子视图的frame
 - (void)setupSubviewsFrame
@@ -209,11 +212,11 @@
     // 设置搜索框的frame
     self.searchBar.x = 10;
     self.searchBar.y = 5;
-    self.searchBar.width = 230;
+    self.searchBar.width = 245;
     self.searchBar.height = 34;
     
     // 设置取消按钮的frame
-    self.backButton.x = 260;
+    self.backButton.x = 265;
     self.backButton.y = 5;
     self.backButton.width = 34;
     self.backButton.height = 34;
@@ -226,7 +229,6 @@
         y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
     }
     
-    NSLog(@"%f",y);
     self.tableView.frame = CGRectMake(0, y, self.view.width, self.view.height - y);
    
 }
@@ -248,14 +250,25 @@
 // 搜索菜谱
 - (void)searchMenu:(NSString *)menu
 {
-
+    // 搜索结果的表格控制器
+    HFJSearchResultController *searchResutlController = [[HFJSearchResultController alloc] init];
+    [self.navigationController pushViewController:searchResutlController animated:YES];
+    searchResutlController.title = menu;
+    
+    // 存储为历史搜索, 并存到数据库中
+    if (![self.tableVC.historyMenuList containsObject:menu]) {
+        
+        [self.tableVC.historyMenuList addObject:menu];
+        [HFJHistoryCacheTool saveHistorySearchKeyWord:menu];        
+    }
+    
     // 加载数据
     NSString *url = @"http://apis.juhe.cn/cook/query?key=&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF&rn=10&pn=3";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     
     params[@"menu"] = menu;
     params[@"key"] = HFJAppkey;
-    params[@"rn"] = @15;
+    params[@"rn"] = @20;
     
     // 发送一个网络请求
     [HFJHttpTool getWithUrl:url params:params success:^(id json) {
@@ -263,29 +276,18 @@
         if ([json[@"reason"] isEqualToString:@"Success"]) {
             
             // 如果有有搜索到数据,就传递数据到表格中.
-            self.tableVC.dataList = json[@"result"][@"data"];
+            searchResutlController.dataList = json[@"result"][@"data"];
         }else{
         
             // 如果没有找到菜谱数据, 就提示错误信息
             [MBProgressHUD showError:@"没有找到数据,请重新输入"];
-            
-            // 清空输入框内容
-            // self.searchBar.text = @"";
         }
-    
+        
     } failure:^(NSError *error) {
        
         MyLog(@"%@", error);
     }];
-    
-    
-    // 如果表格里面有cell
-    if ([self.tableVC.tableView numberOfRowsInSection:0]) {
-        
-        // 表格滚动到最上面一行
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-        [self.tableVC.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-    }
+
     
 }
 

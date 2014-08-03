@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HFJMainTableViewController.h"
 
-@interface HFJGoodTableViewController : UITableViewController
+@interface HFJGoodTableViewController : HFJMainTableViewController
 
 @end

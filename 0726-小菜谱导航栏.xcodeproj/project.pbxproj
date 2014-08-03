@@ -36,6 +36,8 @@
 		A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471637A19853BD600A8B769 /* HFJDishViewController.m */; };
 		A48FB36C198CB845004AE50C /* HFJSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB369198CB845004AE50C /* HFJSegment.m */; };
 		A48FB36D198CB845004AE50C /* HFJSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB36B198CB845004AE50C /* HFJSegmentControl.m */; };
+		A48FB39B198D1BCE004AE50C /* HFJSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB39A198D1BCE004AE50C /* HFJSearchResultController.m */; };
+		A48FB39E198D1CDE004AE50C /* HFJMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB39D198D1CDE004AE50C /* HFJMainTableViewController.m */; };
 		A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A11985E40400E39B19 /* HFJNavController.m */; };
 		A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */; };
 		A498E5A81986599500E39B19 /* HFJSearchHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A71986599500E39B19 /* HFJSearchHeadView.m */; };
@@ -68,6 +70,15 @@
 		A498FD2119888394007CD71B /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A498FD0F19888394007CD71B /* UIImageView+HighlightedWebCache.m */; };
 		A498FD2219888394007CD71B /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A498FD1119888394007CD71B /* UIImageView+WebCache.m */; };
 		A498FD2319888394007CD71B /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A498FD1319888394007CD71B /* UIView+WebCacheOperation.m */; };
+		A4A69AFF198DD2E8003A30A2 /* HFJHistoryCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69AFE198DD2E8003A30A2 /* HFJHistoryCacheTool.m */; };
+		A4A69B01198DD3BD003A30A2 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A69B00198DD3BD003A30A2 /* libsqlite3.0.dylib */; };
+		A4A69B0E198DD4D1003A30A2 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B04198DD4D1003A30A2 /* FMDatabase.m */; };
+		A4A69B0F198DD4D1003A30A2 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B06198DD4D1003A30A2 /* FMDatabaseAdditions.m */; };
+		A4A69B10198DD4D1003A30A2 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B08198DD4D1003A30A2 /* FMDatabasePool.m */; };
+		A4A69B11198DD4D1003A30A2 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B0A198DD4D1003A30A2 /* FMDatabaseQueue.m */; };
+		A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B0D198DD4D1003A30A2 /* FMResultSet.m */; };
+		A4A69B15198DF316003A30A2 /* HFJSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B14198DF316003A30A2 /* HFJSearchCell.m */; };
+		A4A69B17198DF3CF003A30A2 /* HFJSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A69B16198DF3CF003A30A2 /* HFJSearchCell.xib */; };
 		A4BF7D8E19888CE50055CA95 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D7C19888CE50055CA95 /* MJArgument.m */; };
 		A4BF7D8F19888CE50055CA95 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D7F19888CE50055CA95 /* MJIvar.m */; };
 		A4BF7D9019888CE50055CA95 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D8119888CE50055CA95 /* MJMember.m */; };
@@ -144,6 +155,10 @@
 		A48FB369198CB845004AE50C /* HFJSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSegment.m; sourceTree = "<group>"; };
 		A48FB36A198CB845004AE50C /* HFJSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSegmentControl.h; sourceTree = "<group>"; };
 		A48FB36B198CB845004AE50C /* HFJSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSegmentControl.m; sourceTree = "<group>"; };
+		A48FB399198D1BCE004AE50C /* HFJSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSearchResultController.h; sourceTree = "<group>"; };
+		A48FB39A198D1BCE004AE50C /* HFJSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSearchResultController.m; sourceTree = "<group>"; };
+		A48FB39C198D1CDE004AE50C /* HFJMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMainTableViewController.h; sourceTree = "<group>"; };
+		A48FB39D198D1CDE004AE50C /* HFJMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMainTableViewController.m; sourceTree = "<group>"; };
 		A498E5A01985E40400E39B19 /* HFJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJNavController.h; sourceTree = "<group>"; };
 		A498E5A11985E40400E39B19 /* HFJNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJNavController.m; sourceTree = "<group>"; };
 		A498E5A31986099200E39B19 /* UIBarButtonItem+addItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+addItem.h"; sourceTree = "<group>"; };
@@ -209,6 +224,23 @@
 		A498FD1119888394007CD71B /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		A498FD1219888394007CD71B /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		A498FD1319888394007CD71B /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		A4A69AFD198DD2E8003A30A2 /* HFJHistoryCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJHistoryCacheTool.h; sourceTree = "<group>"; };
+		A4A69AFE198DD2E8003A30A2 /* HFJHistoryCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJHistoryCacheTool.m; sourceTree = "<group>"; };
+		A4A69B00198DD3BD003A30A2 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A4A69B03198DD4D1003A30A2 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A4A69B04198DD4D1003A30A2 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A4A69B05198DD4D1003A30A2 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A4A69B06198DD4D1003A30A2 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A4A69B07198DD4D1003A30A2 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A4A69B08198DD4D1003A30A2 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A4A69B09198DD4D1003A30A2 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A4A69B0A198DD4D1003A30A2 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A4A69B0B198DD4D1003A30A2 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A4A69B0C198DD4D1003A30A2 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A4A69B0D198DD4D1003A30A2 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A4A69B13198DF316003A30A2 /* HFJSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSearchCell.h; sourceTree = "<group>"; };
+		A4A69B14198DF316003A30A2 /* HFJSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSearchCell.m; sourceTree = "<group>"; };
+		A4A69B16198DF3CF003A30A2 /* HFJSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFJSearchCell.xib; sourceTree = "<group>"; };
 		A4BF7D7B19888CE50055CA95 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
 		A4BF7D7C19888CE50055CA95 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
 		A4BF7D7D19888CE50055CA95 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -243,6 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A69B01198DD3BD003A30A2 /* libsqlite3.0.dylib in Frameworks */,
 				A47162FB1983BE5500A8B769 /* CoreGraphics.framework in Frameworks */,
 				A47162FD1983BE5500A8B769 /* UIKit.framework in Frameworks */,
 				A47162F91983BE5500A8B769 /* Foundation.framework in Frameworks */,
@@ -284,6 +317,7 @@
 		A47162F71983BE5500A8B769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4A69B00198DD3BD003A30A2 /* libsqlite3.0.dylib */,
 				A47162F81983BE5500A8B769 /* Foundation.framework */,
 				A47162FA1983BE5500A8B769 /* CoreGraphics.framework */,
 				A47162FC1983BE5500A8B769 /* UIKit.framework */,
@@ -418,6 +452,8 @@
 				A498E5A11985E40400E39B19 /* HFJNavController.m */,
 				A471633B1983BF9000A8B769 /* HFJMainViewController.h */,
 				A471633C1983BF9000A8B769 /* HFJMainViewController.m */,
+				A48FB39C198D1CDE004AE50C /* HFJMainTableViewController.h */,
+				A48FB39D198D1CDE004AE50C /* HFJMainTableViewController.m */,
 				A471637919853BD600A8B769 /* HFJDishViewController.h */,
 				A471637A19853BD600A8B769 /* HFJDishViewController.m */,
 			);
@@ -453,6 +489,7 @@
 		A47163441983BF9000A8B769 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A4A69B02198DD4D1003A30A2 /* fmdb */,
 				A4BF7D9B19890D9B0055CA95 /* MBProgressHUD */,
 				A4BF7D7A19888CE50055CA95 /* MJExtension字典转模型 */,
 				A498FCF219888394007CD71B /* SDWebImage2 */,
@@ -465,6 +502,8 @@
 			isa = PBXGroup;
 			children = (
 				A498E5C01986925B00E39B19 /* 屏蔽AFN风险 */,
+				A4A69AFD198DD2E8003A30A2 /* HFJHistoryCacheTool.h */,
+				A4A69AFE198DD2E8003A30A2 /* HFJHistoryCacheTool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -534,20 +573,41 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		A498E5AB1986633500E39B19 /* Search(搜索) */ = {
+		A48FB39F198D1EE7004AE50C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				A471636D1984FF3300A8B769 /* HFJSearchViewController.h */,
 				A471636E1984FF3300A8B769 /* HFJSearchViewController.m */,
 				A471636A1984F6EC00A8B769 /* HFJSearchTableViewController.h */,
 				A471636B1984F6EC00A8B769 /* HFJSearchTableViewController.m */,
+				A48FB399198D1BCE004AE50C /* HFJSearchResultController.h */,
+				A48FB39A198D1BCE004AE50C /* HFJSearchResultController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A48FB3A0198D1EFA004AE50C /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				A498E5A61986599500E39B19 /* HFJSearchHeadView.h */,
 				A498E5A71986599500E39B19 /* HFJSearchHeadView.m */,
 				A498E5A919865DEA00E39B19 /* HFJSearchHeadView.xib */,
-				A48FB368198CB845004AE50C /* HFJSegment.h */,
-				A48FB369198CB845004AE50C /* HFJSegment.m */,
 				A48FB36A198CB845004AE50C /* HFJSegmentControl.h */,
 				A48FB36B198CB845004AE50C /* HFJSegmentControl.m */,
+				A48FB368198CB845004AE50C /* HFJSegment.h */,
+				A48FB369198CB845004AE50C /* HFJSegment.m */,
+				A4A69B13198DF316003A30A2 /* HFJSearchCell.h */,
+				A4A69B14198DF316003A30A2 /* HFJSearchCell.m */,
+				A4A69B16198DF3CF003A30A2 /* HFJSearchCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A498E5AB1986633500E39B19 /* Search(搜索) */ = {
+			isa = PBXGroup;
+			children = (
+				A48FB39F198D1EE7004AE50C /* Controller */,
+				A48FB3A0198D1EFA004AE50C /* Views */,
 			);
 			name = "Search(搜索)";
 			path = Controller;
@@ -627,6 +687,24 @@
 				A498FD1319888394007CD71B /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage2;
+			sourceTree = "<group>";
+		};
+		A4A69B02198DD4D1003A30A2 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A4A69B03198DD4D1003A30A2 /* FMDatabase.h */,
+				A4A69B04198DD4D1003A30A2 /* FMDatabase.m */,
+				A4A69B05198DD4D1003A30A2 /* FMDatabaseAdditions.h */,
+				A4A69B06198DD4D1003A30A2 /* FMDatabaseAdditions.m */,
+				A4A69B07198DD4D1003A30A2 /* FMDatabasePool.h */,
+				A4A69B08198DD4D1003A30A2 /* FMDatabasePool.m */,
+				A4A69B09198DD4D1003A30A2 /* FMDatabaseQueue.h */,
+				A4A69B0A198DD4D1003A30A2 /* FMDatabaseQueue.m */,
+				A4A69B0B198DD4D1003A30A2 /* FMDB.h */,
+				A4A69B0C198DD4D1003A30A2 /* FMResultSet.h */,
+				A4A69B0D198DD4D1003A30A2 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		A4BF7D7A19888CE50055CA95 /* MJExtension字典转模型 */ = {
@@ -753,6 +831,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4A69B17198DF3CF003A30A2 /* HFJSearchCell.xib in Resources */,
 				A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */,
 				A471635D1983C88300A8B769 /* Images.xcassets in Resources */,
 				A47163031983BE5500A8B769 /* InfoPlist.strings in Resources */,
@@ -786,12 +865,14 @@
 				A498E5C71986925B00E39B19 /* AFSecurityPolicy.m in Sources */,
 				A498FD1A19888394007CD71B /* SDWebImageDownloaderOperation.m in Sources */,
 				A498FD2119888394007CD71B /* UIImageView+HighlightedWebCache.m in Sources */,
+				A48FB39B198D1BCE004AE50C /* HFJSearchResultController.m in Sources */,
 				A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */,
 				A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */,
 				A48FB36D198CB845004AE50C /* HFJSegmentControl.m in Sources */,
 				A48FB36C198CB845004AE50C /* HFJSegment.m in Sources */,
 				A471637B19853BD600A8B769 /* HFJDishViewController.m in Sources */,
 				A498FD2019888394007CD71B /* UIImage+WebP.m in Sources */,
+				A4A69B0E198DD4D1003A30A2 /* FMDatabase.m in Sources */,
 				A498FD1819888394007CD71B /* SDWebImageDecoder.m in Sources */,
 				A4BF7D8F19888CE50055CA95 /* MJIvar.m in Sources */,
 				A498FD1F19888394007CD71B /* UIImage+MultiFormat.m in Sources */,
@@ -806,10 +887,12 @@
 				A498FD1B19888394007CD71B /* SDWebImageManager.m in Sources */,
 				A498E5A81986599500E39B19 /* HFJSearchHeadView.m in Sources */,
 				A4BF7DA119890D9B0055CA95 /* MBProgressHUD+NJ.m in Sources */,
+				A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */,
 				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
 				A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */,
 				A471636C1984F6EC00A8B769 /* HFJSearchTableViewController.m in Sources */,
 				A4BF7D9A19888E050055CA95 /* HFJDish.m in Sources */,
+				A4A69B0F198DD4D1003A30A2 /* FMDatabaseAdditions.m in Sources */,
 				A4BF7D9319888CE50055CA95 /* MJTypeEncoding.m in Sources */,
 				A498E5C51986925B00E39B19 /* AFHTTPSessionManager.m in Sources */,
 				A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */,
@@ -824,17 +907,22 @@
 				A4BF7D8E19888CE50055CA95 /* MJArgument.m in Sources */,
 				A498E5CA1986925B00E39B19 /* AFURLResponseSerialization.m in Sources */,
 				A4BF7D9519888CE50055CA95 /* NSObject+MJKeyValue.m in Sources */,
+				A4A69B10198DD4D1003A30A2 /* FMDatabasePool.m in Sources */,
 				A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */,
 				A47163051983BE5500A8B769 /* main.m in Sources */,
 				A498FD1919888394007CD71B /* SDWebImageDownloader.m in Sources */,
 				A47163091983BE5500A8B769 /* HFJAppDelegate.m in Sources */,
 				A498FD1519888394007CD71B /* NSData+ImageContentType.m in Sources */,
 				A4BF7D9119888CE50055CA95 /* MJMethod.m in Sources */,
+				A4A69B11198DD4D1003A30A2 /* FMDatabaseQueue.m in Sources */,
+				A48FB39E198D1CDE004AE50C /* HFJMainTableViewController.m in Sources */,
 				A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */,
 				A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */,
 				A4BF7D9219888CE50055CA95 /* MJType.m in Sources */,
 				A498E5C61986925B00E39B19 /* AFNetworkReachabilityManager.m in Sources */,
 				A498FD1D19888394007CD71B /* UIButton+WebCache.m in Sources */,
+				A4A69AFF198DD2E8003A30A2 /* HFJHistoryCacheTool.m in Sources */,
+				A4A69B15198DF316003A30A2 /* HFJSearchCell.m in Sources */,
 				A4BF7D9619888CE50055CA95 /* NSObject+MJMember.m in Sources */,
 				A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */,
 				A498E5D1198698D500E39B19 /* NSArray+Log.m in Sources */,

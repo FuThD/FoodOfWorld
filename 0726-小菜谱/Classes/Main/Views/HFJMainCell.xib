@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UaD-PL-IsL">
-                        <rect key="frame" x="120" y="78" width="300" height="1"/>
+                        <rect key="frame" x="120" y="78" width="190" height="1"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

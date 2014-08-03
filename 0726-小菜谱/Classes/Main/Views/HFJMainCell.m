@@ -34,14 +34,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"HFJMainCell" owner:nil options:nil] lastObject];
     }
     
+    // 设置cell的选中状态
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    
     return cell;
 
 }
 
-- (void)awakeFromNib
-{
-    
-}
+- (void)awakeFromNib{}
 
 // 重写数据的set方法
 - (void)setDict:(NSDictionary *)dict
@@ -49,13 +49,8 @@
     _dict = dict;
 
     self.menuTitle.text = dict[@"title"];
-    self.menuBurden.text = dict[@"burden"];
-
-    // 如果有图片才加载图片
-    if (dict[@"albums"]) {
-        
-        [self.menuIcon sd_setImageWithURL:dict[@"albums"][0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
-    }
+    self.menuBurden.text = dict[@"imtro"];
+    [self.menuIcon sd_setImageWithURL:dict[@"albums"][0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
 }
 
 

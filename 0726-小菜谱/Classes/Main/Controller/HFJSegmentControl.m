@@ -19,6 +19,7 @@
 
 @implementation HFJSegmentControl
 
+// 设置按钮标题
 - (void)setItems:(NSArray *)items
 {
     _items = items;
@@ -40,9 +41,9 @@
         { // 最右边
             bgName = @"SegmentedControl_Right_Normal";
             selectedBgName = @"SegmentedControl_Right_Selected";
-        } else { // 中间
-            bgName = @"SegmentedControl_Normal";
-            selectedBgName = @"SegmentedControl_Selected";
+//        } else { // 中间
+//            bgName = @"SegmentedControl_Normal";
+//            selectedBgName = @"SegmentedControl_Selected";
         }
         [btn setBackgroundImage:[UIImage resizableImageNamed:bgName] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage resizableImageNamed:selectedBgName] forState:UIControlStateSelected];
@@ -52,17 +53,25 @@
         
         // 设置文字颜色
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:16];
+        btn.titleLabel.font = [UIFont systemFontOfSize:15];
     }
 }
 
+// 按钮的点击时间
 - (void)segmentClick:(HFJSegment *)btn
 {
     self.currentSelectedBtn.selected = NO;
     btn.selected = YES;
     self.currentSelectedBtn = btn;
+    
+    // 调用代理方法, 隐藏/显示 清除记录按钮
+    if ([self.selectedDelegate respondsToSelector:@selector(segmentControl:didSelectedSegmentIndex:)]) {
+        
+        [self.selectedDelegate segmentControl:self didSelectedSegmentIndex:btn.tag];
+    }
 }
 
+// 布局子视图, 设置frame
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -76,9 +85,9 @@
         btn.y = 0;
         btn.x = i * btnW;
     }
-    
 }
 
+// 按钮的选中index的set方法
 - (void)setSelectedSegmentIndex:(int)selectedSegmentIndex
 {
     _selectedSegmentIndex = selectedSegmentIndex;
@@ -91,6 +100,7 @@
     }
 }
 
+// 按钮的选中index的get方法
 - (int)selectedSegmentIndex
 {
     return self.currentSelectedBtn.tag;

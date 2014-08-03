@@ -33,9 +33,7 @@
     
 }
 
-
-
-
+// 设置导航栏的左右按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     // 1.覆盖返回按钮
@@ -72,11 +70,6 @@
         self.interactivePopGestureRecognizer.delegate = nil;
     }
 }
-
-
-
-
-
 
 
 /**

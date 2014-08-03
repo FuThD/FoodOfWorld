@@ -24,9 +24,10 @@
 @property (nonatomic, strong) HFJSearchHeadView *headView;
 
 /**
- *  网络上搜索到的表格的数据
+ *  历史搜索记录数据数组
  */
-@property (nonatomic, strong) NSArray* dataList;
+@property (nonatomic, strong) NSMutableArray *historyMenuList;
+
 
 
 @end

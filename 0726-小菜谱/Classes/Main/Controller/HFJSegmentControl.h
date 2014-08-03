@@ -7,6 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HFJSegmentControl;
+
+/**
+ *  按钮点击代理,传递按钮的角标给代理方
+ */
+@protocol HFJSegmentControlDelegate <NSObject>
+
+- (void)segmentControl:(HFJSegmentControl *)segementControl didSelectedSegmentIndex:(int)index;
+
+@end
 
 @interface HFJSegmentControl : UIView
 /**
@@ -17,4 +27,6 @@
  *  当前选中的索引
  */
 @property(nonatomic,assign) int selectedSegmentIndex;
+
+@property (nonatomic, weak) id<HFJSegmentControlDelegate> selectedDelegate;
 @end

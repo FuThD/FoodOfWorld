@@ -7,21 +7,22 @@
 //
 
 #import "HFJSearchTableViewController.h"
-#import "HFJMainCell.h"
 #import "HFJSearchHeadView.h"
-#import "HFJDish.h"
+#import "HFJHistoryCacheTool.h"
+#import "HFJSearchCell.h"
+
 
 @interface HFJSearchTableViewController ()<HFJSearchHeadViewDelegate>
-
-/**
- *  菜谱表格数据数组
- */
-@property (nonatomic, strong) NSArray *menuList;
 
 /**
  *  推荐搜索菜品
  */
 @property (nonatomic, strong) NSArray *recommendedMenu;
+
+/**
+ *  表格的数据数组
+ */
+@property (nonatomic, strong) NSArray *menuList;
 
 
 @end
@@ -39,13 +40,14 @@
     self.tableView.tableHeaderView = self.headView;
     self.headView.delegate = self;
     
-    // 去除cell的分割线和垂直方向的指示线
-    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    // 去除cell垂直方向的指示线
     self.tableView.showsVerticalScrollIndicator = NO;
-    // 简单粗暴的指定几个推荐搜索菜品
-    self.recommendedMenu = @[@{@"title":@"西米露", @"burden":@"温中健脾，治脾胃虚弱、和消化不良的功效", @"albums": @[@"http://img.juhe.cn/cookbook/t/13/12384_477090.jpg"]}, @{@"title":@"西瓜", @"burden":@"清热解暑、生津止渴、利尿除烦", @"albums": @[@"http://img.juhe.cn/cookbook/t/3/3035_694440.jpg"]}, @{@"title":@"粥", @"burden":@"夏天没胃口,那就来碗粥吧", @"albums": @[@"http://img.juhe.cn/cookbook/t/4/3090_420856.jpg"]}, @{@"title":@"红烧肉", @"burden":@"肥瘦相间，香甜松软，入口即化", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/92_512827.jpg"]}, @{@"title":@"小龙虾", @"burden":@"肉质肥美,香辣可口", @"albums": @[@"http://img.juhe.cn/cookbook/t/22/21832_980436.jpg"]},  @{@"title":@"苦瓜", @"burden":@"苦瓜具有降血糖、血脂、抗炎等作用", @"albums": @[@"http://img.juhe.cn/cookbook/t/1/746_256043.jpg"]}];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    self.menuList = self.recommendedMenu;
+    // 简单粗暴的指定几个推荐搜索菜品
+     self.recommendedMenu = @[@"西米露", @"红烧肉", @"西瓜", @"小龙虾", @"土豆排骨", @"粥", @"苦瓜", @"油焖大虾"];
+
+
 }
 
 
@@ -69,65 +71,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *ID = @"search";
+    HFJSearchCell *cell = [HFJSearchCell cellWithTableView:tableView reuseIdentifier:ID];
     
-    HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
+    // 设置cell的选中状态为灰色
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.textLabel.text = self.menuList[indexPath.row];
     
-    NSDictionary *dict = self.menuList[indexPath.row];
-    
-    cell.dict = dict;
     return cell;
-    
 }
 
 
 // 点击cell
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 蒙版提示正在加载
-    [MBProgressHUD showMessage:@"正在加载中..."];
-
-    // 如果有搜索数据
-    if (self.dataList.count) {
-        
-        // 调用代理方法, 关闭键盘
-        if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:searchText:)])
-        {
-            [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:nil];
-        }
-        
-        // 转跳到菜品的界面
-        
-        
-        
-        
-        // 隐藏蒙版
-        [MBProgressHUD hideHUD];
-        
-    }else{
-        
-        // 调用代理方法, 关闭键盘 如果没有搜索数据,并搜索推荐搜索的内容
-        if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:searchText:)])
-        {
-            [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:self.recommendedMenu[indexPath.row][@"title"]];
-        }
+    // 调用代理方法, 关闭键盘 如果没有搜索数据,并搜索推荐搜索的内容
+    if ([self.searchDelegate respondsToSelector:@selector(searchControllerBeginDraggingORDidSelectedCell:searchText:)])
+    {
+        [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:self.menuList[indexPath.row]];
     }
-    
-    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 80;
-}
 #pragma mark - HFJSearchHeadViewDelegate 代理方法
 // 点击了清理记录按钮
 - (void)searchHeadView:(HFJSearchHeadView *)searchHeadView didClickClearBtn:(UIButton *)clearBtn
-{    
-#warning 检查加了数据库之后,是否有BUG
+{
     // 清理历史搜索记录
-    self.dataList = [NSArray array];
+    [HFJHistoryCacheTool clearHistorySearchKeyWord];
+    [self.historyMenuList removeAllObjects];
     [self.tableView reloadData];
-
 
 }
 // 点击了segmentControl
@@ -139,14 +110,12 @@
         [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:nil];
     }
     
-    // 清空当前的搜索内容
-    self.dataList = [NSArray array];
     
     // segmentControl选中的1
     if (index == 1) {
         
         //  显示历史记录
-//        self.menuList = self.dataList;
+        self.menuList = self.historyMenuList;
         
     }else{
         
@@ -155,21 +124,6 @@
     
     // 刷新表格
     [self.tableView reloadData];
-}
-
-
-// 重写数据数组的set方法
-- (void)setDataList:(NSArray *)dataList
-{
-    _dataList = dataList;
-    self.menuList = dataList;
-
-    // 刷新数据
-    [self.tableView reloadData];
-    
-    // 隐藏蒙版
-    [MBProgressHUD hideHUD];
-    
 }
 
 #pragma mark - 懒加载
@@ -181,15 +135,23 @@
     return _headView;
 }
 
+- (NSMutableArray *)historyMenuList
+{
+    if (_historyMenuList == nil) {
+
+        // 从数据库取数据
+        _historyMenuList = [HFJHistoryCacheTool searchKeyWord];
+    }
+    return _historyMenuList;
+}
+
 - (NSArray *)menuList
 {
     if (_menuList == nil) {
-
-        _menuList = [NSArray array];
+        
+        _menuList = self.recommendedMenu;
     }
     return _menuList;
 }
-
-
 
 @end

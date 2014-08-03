@@ -34,9 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.view.backgroundColor = HFJBasicColor;
-    
+
     // 设置最上面的标题view
     [self setupNavBar];
     
@@ -49,18 +47,6 @@
     // 设置tableView
     [self setupTableViews];
 
-}
-
-
-// 添加搜索按钮的监听事件
-- (void)searchBtnClick
-{
-    // 实例化一个搜索view的控制器
-    HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
-    
-    // push出新界面
-    [self.navigationController pushViewController:searchViewController animated:YES];
-   
 }
 
 // 设置最上面的标题view
@@ -81,21 +67,33 @@
     self.navigationItem.titleView = nameBtn;
    
     // 搜索按钮
-    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 90, 44)];
+    UIButton *search = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 110, 44)];
     
     // 设置按钮的属性
     [search setImage:[UIImage imageNamed:@"06-magnify"] forState:UIControlStateNormal];
     [search setTitle:@"搜 索" forState:UIControlStateNormal];
     [search setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [search setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
-    // 设置内边距为15
-    search.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    // 设置内边距为
+    search.titleEdgeInsets = UIEdgeInsetsMake(0, 15, 0, 5);
     
     // 添加搜索按钮的监听事件
     [search addTarget:self action:@selector(searchBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:search];
 }
+
+
+// 添加搜索按钮的监听事件
+- (void)searchBtnClick
+{
+    // 实例化一个搜索view的控制器
+    HFJSearchViewController *searchViewController = [[HFJSearchViewController alloc] init];
+    
+    // push出新界面
+    [self.navigationController pushViewController:searchViewController animated:YES];
+}
+
 
 // 3个控制器的菜单按钮
 - (void)setupTitleButtonView

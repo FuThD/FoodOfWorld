@@ -30,21 +30,11 @@
                         <action selector="clearBtnClick:" destination="0aj-yq-2jN" eventType="touchUpInside" id="Hnf-qH-i4R"/>
                     </connections>
                 </button>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-p7-TJP">
-                    <rect key="frame" x="75" y="11" width="170" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="热 门 搜 索"/>
-                        <segment title="历 史 搜 索"/>
-                    </segments>
-                    <color key="tintColor" red="0.23178739065315132" green="0.39283833683705988" blue="0.96596891983695654" alpha="1" colorSpace="calibratedRGB"/>
-                </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="clearBtn" destination="9et-8A-WVY" id="EfB-Vv-quH"/>
-                <outlet property="segmentControl" destination="Nxa-p7-TJP" id="krr-WA-QxS"/>
                 <outlet property="titleBtn" destination="9et-8A-WVY" id="gWM-Kd-DF6"/>
             </connections>
         </view>
