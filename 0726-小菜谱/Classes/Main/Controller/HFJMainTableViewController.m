@@ -18,10 +18,8 @@
 {
     [super viewDidLoad];
     
-    // 设置frame
+    // 设置表格的y值
     self.tableView.y = 0;
-    self.tableView.height = HFJViewFrame.size.height;
-    self.tableView.width = HFJViewFrame.size.width;
     
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;

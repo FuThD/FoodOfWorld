@@ -22,15 +22,7 @@
     // 设置导航栏
     [self setupNavThem];
     // 设置导航栏按钮
-    [self setupButtonThem];
-
-    
-    // 拿到主题对象
-      UINavigationBar *navBar = [UINavigationBar appearance];
-    // 设置背景颜色和字体颜色
-    navBar.backgroundColor = HFJBasicColor;
-    
-    
+    [self setupButtonThem]; 
 }
 
 // 设置导航栏的左右按钮

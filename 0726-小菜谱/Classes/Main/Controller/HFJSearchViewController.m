@@ -272,11 +272,14 @@
     
     // 发送一个网络请求
     [HFJHttpTool getWithUrl:url params:params success:^(id json) {
-    
+#warning 访问是否受限了?
+        
+        MyLog(@"%@", json);
         if ([json[@"reason"] isEqualToString:@"Success"]) {
             
             // 如果有有搜索到数据,就传递数据到表格中.
             searchResutlController.dataList = json[@"result"][@"data"];
+            
         }else{
         
             // 如果没有找到菜谱数据, 就提示错误信息

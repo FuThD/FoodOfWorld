@@ -21,4 +21,7 @@
  */
 + (UIBarButtonItem *)itemImage:(NSString *)image highlightedImage:(NSString *)highlightedImage target:(id)target action:(SEL)action;
 
+// 返回一个按钮
++ (UIButton *)buttonImage:(NSString *)image highlightedImage:(NSString *)highlightedImage target:(id)target action:(SEL)action;
+
 @end

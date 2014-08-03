@@ -12,6 +12,13 @@
 
 + (UIBarButtonItem *)itemImage:(NSString *)image highlightedImage:(NSString *)highlightedImage target:(id)target action:(SEL)action
 {
+    UIButton *btn = [UIBarButtonItem buttonImage:image highlightedImage:highlightedImage target:target action:action];
+    // 生成UIBarButtonItem
+    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+}
+
++ (UIButton *)buttonImage:(NSString *)image highlightedImage:(NSString *)highlightedImage target:(id)target action:(SEL)action
+{
     // 1.创建一个UIButton
     UIButton *btn = [[UIButton alloc] init];
     // 设置默认状态图片
@@ -21,12 +28,12 @@
     // 设置size
     btn.size = btn.currentImage.size;
     
-//    MyLog(@"%@,%@", @"UIBarButtonItem+addItem.h", self.);
+    //    MyLog(@"%@,%@", @"UIBarButtonItem+addItem.h", self.);
     
     // 监听点击事件
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     // 生成UIBarButtonItem
-    return [[UIBarButtonItem alloc] initWithCustomView:btn];
+    return btn;
 }
 
 @end

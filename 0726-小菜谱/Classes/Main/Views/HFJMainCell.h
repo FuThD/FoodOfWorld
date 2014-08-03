@@ -16,6 +16,7 @@
  */
 + (instancetype)cellWithTableView:(UITableView *)tableView reuseIdentifier:( NSString *)ID ;
 
+
 @property (nonatomic, strong) NSDictionary *dict;
 
 @end

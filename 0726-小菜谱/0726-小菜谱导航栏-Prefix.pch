@@ -22,6 +22,8 @@
 #import"MJExtension.h"
 #import "MBProgressHUD+NJ.h"
 
+// 2e6d924974f9dc108c04c9c5ff1491cb
+// d042fccba82da1d6e93f5f2e67215568  me
 #define HFJAppkey @"d042fccba82da1d6e93f5f2e67215568"
 
 

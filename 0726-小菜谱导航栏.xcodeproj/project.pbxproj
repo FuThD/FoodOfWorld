@@ -79,6 +79,9 @@
 		A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B0D198DD4D1003A30A2 /* FMResultSet.m */; };
 		A4A69B15198DF316003A30A2 /* HFJSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B14198DF316003A30A2 /* HFJSearchCell.m */; };
 		A4A69B17198DF3CF003A30A2 /* HFJSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4A69B16198DF3CF003A30A2 /* HFJSearchCell.xib */; };
+		A4A69B25198E279A003A30A2 /* CPAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B20198E279A003A30A2 /* CPAlbum.m */; };
+		A4A69B26198E279A003A30A2 /* CPData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B22198E279A003A30A2 /* CPData.m */; };
+		A4A69B27198E279A003A30A2 /* CPStep.m in Sources */ = {isa = PBXBuildFile; fileRef = A4A69B24198E279A003A30A2 /* CPStep.m */; };
 		A4BF7D8E19888CE50055CA95 /* MJArgument.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D7C19888CE50055CA95 /* MJArgument.m */; };
 		A4BF7D8F19888CE50055CA95 /* MJIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D7F19888CE50055CA95 /* MJIvar.m */; };
 		A4BF7D9019888CE50055CA95 /* MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D8119888CE50055CA95 /* MJMember.m */; };
@@ -88,7 +91,6 @@
 		A4BF7D9419888CE50055CA95 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D8919888CE50055CA95 /* NSObject+MJCoding.m */; };
 		A4BF7D9519888CE50055CA95 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D8B19888CE50055CA95 /* NSObject+MJKeyValue.m */; };
 		A4BF7D9619888CE50055CA95 /* NSObject+MJMember.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D8D19888CE50055CA95 /* NSObject+MJMember.m */; };
-		A4BF7D9A19888E050055CA95 /* HFJDish.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D9919888E050055CA95 /* HFJDish.m */; };
 		A4BF7DA119890D9B0055CA95 /* MBProgressHUD+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7D9D19890D9B0055CA95 /* MBProgressHUD+NJ.m */; };
 		A4BF7DA219890D9B0055CA95 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4BF7D9E19890D9B0055CA95 /* MBProgressHUD.bundle */; };
 		A4BF7DA319890D9B0055CA95 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7DA019890D9B0055CA95 /* MBProgressHUD.m */; };
@@ -185,8 +187,8 @@
 		A498E5BD1986925B00E39B19 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		A498E5BE1986925B00E39B19 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		A498E5BF1986925B00E39B19 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		A498E5C11986925B00E39B19 /* HFJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJHttpTool.h; sourceTree = "<group>"; };
-		A498E5C21986925B00E39B19 /* HFJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJHttpTool.m; sourceTree = "<group>"; };
+		A498E5C11986925B00E39B19 /* HFJHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJHttpTool.h; path = "../Lib/AFNetworking/屏蔽AFN风险/HFJHttpTool.h"; sourceTree = "<group>"; };
+		A498E5C21986925B00E39B19 /* HFJHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJHttpTool.m; path = "../Lib/AFNetworking/屏蔽AFN风险/HFJHttpTool.m"; sourceTree = "<group>"; };
 		A498E5CD198698D500E39B19 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		A498E5CE198698D500E39B19 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		A498E5CF198698D500E39B19 /* NSDictionary+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
@@ -241,6 +243,12 @@
 		A4A69B13198DF316003A30A2 /* HFJSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSearchCell.h; sourceTree = "<group>"; };
 		A4A69B14198DF316003A30A2 /* HFJSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSearchCell.m; sourceTree = "<group>"; };
 		A4A69B16198DF3CF003A30A2 /* HFJSearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFJSearchCell.xib; sourceTree = "<group>"; };
+		A4A69B1F198E279A003A30A2 /* CPAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAlbum.h; sourceTree = "<group>"; };
+		A4A69B20198E279A003A30A2 /* CPAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAlbum.m; sourceTree = "<group>"; };
+		A4A69B21198E279A003A30A2 /* CPData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPData.h; sourceTree = "<group>"; };
+		A4A69B22198E279A003A30A2 /* CPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPData.m; sourceTree = "<group>"; };
+		A4A69B23198E279A003A30A2 /* CPStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStep.h; sourceTree = "<group>"; };
+		A4A69B24198E279A003A30A2 /* CPStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPStep.m; sourceTree = "<group>"; };
 		A4BF7D7B19888CE50055CA95 /* MJArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJArgument.h; sourceTree = "<group>"; };
 		A4BF7D7C19888CE50055CA95 /* MJArgument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJArgument.m; sourceTree = "<group>"; };
 		A4BF7D7D19888CE50055CA95 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
@@ -260,8 +268,6 @@
 		A4BF7D8B19888CE50055CA95 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
 		A4BF7D8C19888CE50055CA95 /* NSObject+MJMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJMember.h"; sourceTree = "<group>"; };
 		A4BF7D8D19888CE50055CA95 /* NSObject+MJMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJMember.m"; sourceTree = "<group>"; };
-		A4BF7D9819888E050055CA95 /* HFJDish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJDish.h; sourceTree = "<group>"; };
-		A4BF7D9919888E050055CA95 /* HFJDish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJDish.m; sourceTree = "<group>"; };
 		A4BF7D9C19890D9B0055CA95 /* MBProgressHUD+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+NJ.h"; sourceTree = "<group>"; };
 		A4BF7D9D19890D9B0055CA95 /* MBProgressHUD+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+NJ.m"; sourceTree = "<group>"; };
 		A4BF7D9E19890D9B0055CA95 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -475,13 +481,13 @@
 		A47163421983BF9000A8B769 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				A47163461983BF9000A8B769 /* Category */,
+				A47163451983BF9000A8B769 /* Tool */,
+				A47163441983BF9000A8B769 /* Lib */,
 				A47163431983BF9000A8B769 /* Common.h */,
 				A47163071983BE5500A8B769 /* HFJAppDelegate.h */,
 				A47163081983BE5500A8B769 /* HFJAppDelegate.m */,
 				A471630A1983BE5500A8B769 /* Main.storyboard */,
-				A47163441983BF9000A8B769 /* Lib */,
-				A47163451983BF9000A8B769 /* Tool */,
-				A47163461983BF9000A8B769 /* Category */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -501,7 +507,8 @@
 		A47163451983BF9000A8B769 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				A498E5C01986925B00E39B19 /* 屏蔽AFN风险 */,
+				A498E5C11986925B00E39B19 /* HFJHttpTool.h */,
+				A498E5C21986925B00E39B19 /* HFJHttpTool.m */,
 				A4A69AFD198DD2E8003A30A2 /* HFJHistoryCacheTool.h */,
 				A4A69AFE198DD2E8003A30A2 /* HFJHistoryCacheTool.m */,
 			);
@@ -639,16 +646,6 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		A498E5C01986925B00E39B19 /* 屏蔽AFN风险 */ = {
-			isa = PBXGroup;
-			children = (
-				A498E5C11986925B00E39B19 /* HFJHttpTool.h */,
-				A498E5C21986925B00E39B19 /* HFJHttpTool.m */,
-			);
-			name = "屏蔽AFN风险";
-			path = "../Lib/AFNetworking/屏蔽AFN风险";
-			sourceTree = "<group>";
-		};
 		A498FCF219888394007CD71B /* SDWebImage2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,8 +733,12 @@
 		A4BF7D9719888DEF0055CA95 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4BF7D9819888E050055CA95 /* HFJDish.h */,
-				A4BF7D9919888E050055CA95 /* HFJDish.m */,
+				A4A69B21198E279A003A30A2 /* CPData.h */,
+				A4A69B22198E279A003A30A2 /* CPData.m */,
+				A4A69B1F198E279A003A30A2 /* CPAlbum.h */,
+				A4A69B20198E279A003A30A2 /* CPAlbum.m */,
+				A4A69B23198E279A003A30A2 /* CPStep.h */,
+				A4A69B24198E279A003A30A2 /* CPStep.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -875,6 +876,7 @@
 				A4A69B0E198DD4D1003A30A2 /* FMDatabase.m in Sources */,
 				A498FD1819888394007CD71B /* SDWebImageDecoder.m in Sources */,
 				A4BF7D8F19888CE50055CA95 /* MJIvar.m in Sources */,
+				A4A69B27198E279A003A30A2 /* CPStep.m in Sources */,
 				A498FD1F19888394007CD71B /* UIImage+MultiFormat.m in Sources */,
 				A498FD1619888394007CD71B /* SDImageCache.m in Sources */,
 				A471636F1984FF3300A8B769 /* HFJSearchViewController.m in Sources */,
@@ -889,9 +891,9 @@
 				A4BF7DA119890D9B0055CA95 /* MBProgressHUD+NJ.m in Sources */,
 				A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */,
 				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
+				A4A69B26198E279A003A30A2 /* CPData.m in Sources */,
 				A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */,
 				A471636C1984F6EC00A8B769 /* HFJSearchTableViewController.m in Sources */,
-				A4BF7D9A19888E050055CA95 /* HFJDish.m in Sources */,
 				A4A69B0F198DD4D1003A30A2 /* FMDatabaseAdditions.m in Sources */,
 				A4BF7D9319888CE50055CA95 /* MJTypeEncoding.m in Sources */,
 				A498E5C51986925B00E39B19 /* AFHTTPSessionManager.m in Sources */,
@@ -901,6 +903,7 @@
 				A498E5C91986925B00E39B19 /* AFURLRequestSerialization.m in Sources */,
 				A498FD2319888394007CD71B /* UIView+WebCacheOperation.m in Sources */,
 				A4BF7DA319890D9B0055CA95 /* MBProgressHUD.m in Sources */,
+				A4A69B25198E279A003A30A2 /* CPAlbum.m in Sources */,
 				A498E5CB1986925B00E39B19 /* AFURLSessionManager.m in Sources */,
 				A498FD1419888394007CD71B /* MKAnnotationView+WebCache.m in Sources */,
 				A498FD2219888394007CD71B /* UIImageView+WebCache.m in Sources */,

@@ -46,7 +46,6 @@
     static NSString *ID = @"Like";
     HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
     cell.textLabel.text = @"111";
-    cell.detailTextLabel.text = @"222";
     
     return cell;
 }

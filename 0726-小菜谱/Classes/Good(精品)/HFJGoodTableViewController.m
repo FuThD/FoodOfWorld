@@ -48,7 +48,6 @@
     HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
 
     cell.textLabel.text = @"123";
-    cell.detailTextLabel.text = @"abc";
     
     return cell;
 }
