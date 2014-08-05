@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CPData;
 
 @interface HFJMainCell : UITableViewCell
 
@@ -17,6 +18,7 @@
 + (instancetype)cellWithTableView:(UITableView *)tableView reuseIdentifier:( NSString *)ID ;
 
 
-@property (nonatomic, strong) NSDictionary *dict;
+//@property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, strong) CPData *data;
 
 @end

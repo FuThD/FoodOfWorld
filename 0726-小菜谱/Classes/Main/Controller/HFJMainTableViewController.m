@@ -20,6 +20,7 @@
     
     // 设置表格的y值
     self.tableView.y = 0;
+    self.tableView.height = 381;
     
     // 取消拖拽边界的弹簧效果
     self.tableView.bounces = NO;

@@ -11,6 +11,10 @@
 #import "HFJSearchHeadView.h"
 #import "HFJSearchResultController.h"
 #import "HFJHistoryCacheTool.h"
+#import "HFJSearchParam.h"
+#import "HFJSearchResult.h"
+#import "HFJSearchData.h"
+#import "HFJSearchMenuTool.h"
 
 @interface HFJSearchViewController ()<HFJSearchTableViewControllerDelegate, UITextFieldDelegate>
 
@@ -50,7 +54,7 @@
     if (self) {
 
         self.view.backgroundColor = HFJBasicColor;
-        self.view.frame = HFJViewFrame;
+        self.view.height = HFJViewHeight;
         
         // 设置搜索标题的View
         [self setupTitleView];
@@ -192,17 +196,6 @@
    
 }
 
-#pragma mark - HFJSearchControllerDelegate代理方法,取消搜索框的第一响应者
-- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController searchText:(NSString *)menu
-{
-    [self.searchBar resignFirstResponder];
-    
-    if (menu) {
-        [self searchMenu:menu];
-    }
-}
-
-
 // 布局子视图的frame
 - (void)setupSubviewsFrame
 {
@@ -242,56 +235,91 @@
     // 搜索菜谱
     [self searchMenu:self.searchBar.text];
 
-    // 隐藏表格的headview,即清空历史记录的view
-    //    [self.tableVC hiddenHeadView];
     return YES;
 }
+
+#pragma mark - HFJSearchControllerDelegate代理方法,取消搜索框的第一响应者
+- (void)searchControllerBeginDraggingORDidSelectedCell:(HFJSearchTableViewController *)searchTableViewController searchText:(NSString *)menu
+{
+    [self.searchBar resignFirstResponder];
+    
+    // 如果有搜索关键词, 发送请求搜索
+    if (menu) {
+        
+        [self searchMenu:menu];
+    }
+}
+
 
 // 搜索菜谱
 - (void)searchMenu:(NSString *)menu
 {
+    
     // 搜索结果的表格控制器
-    HFJSearchResultController *searchResutlController = [[HFJSearchResultController alloc] init];
-    [self.navigationController pushViewController:searchResutlController animated:YES];
-    searchResutlController.title = menu;
+    HFJSearchResultController *searchResultController = [[HFJSearchResultController alloc] init];
+    [self.navigationController pushViewController:searchResultController animated:YES];
+    searchResultController.title = menu;
     
-    // 存储为历史搜索, 并存到数据库中
-    if (![self.tableVC.historyMenuList containsObject:menu]) {
+    
+    // 搜索参数模型
+    HFJSearchParam *param = [[HFJSearchParam alloc] init];
+    param.menu = menu;
+    param.key = HFJAppkey;
+    param.rn = @20;
+    
+    // 搜索菜谱工具类, 搜索菜谱
+    [HFJSearchMenuTool searchMenuWithParam:param success:^(HFJSearchData *data, id json) {
         
-        [self.tableVC.historyMenuList addObject:menu];
-        [HFJHistoryCacheTool saveHistorySearchKeyWord:menu];        
-    }
-    
-    // 加载数据
-    NSString *url = @"http://apis.juhe.cn/cook/query?key=&menu=%E8%A5%BF%E7%BA%A2%E6%9F%BF&rn=10&pn=3";
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    
-    params[@"menu"] = menu;
-    params[@"key"] = HFJAppkey;
-    params[@"rn"] = @20;
-    
-    // 发送一个网络请求
-    [HFJHttpTool getWithUrl:url params:params success:^(id json) {
-#warning 访问是否受限了?
-        
-        MyLog(@"%@", json);
-        if ([json[@"reason"] isEqualToString:@"Success"]) {
+        if (data) {
             
-            // 如果有有搜索到数据,就传递数据到表格中.
-            searchResutlController.dataList = json[@"result"][@"data"];
+            // 如果有数据, 设置控制器的数据
+            searchResultController.dataList = data.data;
+            searchResultController.dataArray = json[@"result"][@"data"];
+
+            // 存储为历史搜索, 并存到数据库中
+            if (![self.tableVC.historyMenuList containsObject:menu]) {
+                
+                [self.tableVC.historyMenuList addObject:menu];
+                [HFJHistoryCacheTool saveHistorySearchKeyWord:menu];
+            }
             
         }else{
-        
-            // 如果没有找到菜谱数据, 就提示错误信息
-            [MBProgressHUD showError:@"没有找到数据,请重新输入"];
-        }
-        
-    } failure:^(NSError *error) {
-       
-        MyLog(@"%@", error);
-    }];
-
     
+            // 如果searchResultController存在(网络卡的时候,可能会pop回这个界面,又调用下面的方法)
+            if (searchResultController) {
+                
+                // 隐藏蒙版
+                [MBProgressHUD hideHUD];
+                
+                // 如果没有找到菜谱数据, 就提示错误信息
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"没有找到数据" message:@"请重新输入" delegate:searchResultController cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }
+       
+    } failure:^(NSError *error) {
+        
+        // 如果searchResultController存在(网络卡的时候,可能会pop回这个界面,又调用下面的方法)
+        if (searchResultController) {
+
+            // 隐藏蒙版
+            [MBProgressHUD hideHUD];
+                
+            // 如果网络不给力, 就提示错误信息
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"网络不给力哦!" message:@"稍后再试试" delegate:searchResultController cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            
+            [alert show];
+
+       }
+        
+        MyLog(@"%@", error);
+
+    }];
+    
+    
+    
+   
+
 }
 
 

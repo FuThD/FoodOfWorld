@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CPStep.h"
 
-@interface CPData : NSObject
+@interface CPData : NSObject<NSCoding>
 
 /** 索引 */
 @property (nonatomic, copy) NSString *cid;
@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSString *title;
 
 /** 大图 */
-@property (nonatomic, copy) NSString *albums;
+@property (nonatomic, copy) NSArray *albums;
 
 /** 所需需要食材 */
 @property (nonatomic, copy) NSString *ingredients;
@@ -34,6 +34,8 @@
 
 /** 制作步骤 */
 @property (nonatomic, strong) NSArray *steps;
+
+//@property (nonatomic, strong) NSDictionary *dict;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)dataWithDict:(NSDictionary *)dict;

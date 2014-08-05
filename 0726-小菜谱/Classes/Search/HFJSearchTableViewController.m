@@ -29,6 +29,7 @@
 
 @implementation HFJSearchTableViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -46,8 +47,6 @@
     
     // 简单粗暴的指定几个推荐搜索菜品
      self.recommendedMenu = @[@"西米露", @"红烧肉", @"西瓜", @"小龙虾", @"土豆排骨", @"粥", @"苦瓜", @"油焖大虾"];
-
-
 }
 
 
@@ -109,7 +108,6 @@
     {
         [self.searchDelegate searchControllerBeginDraggingORDidSelectedCell:self searchText:nil];
     }
-    
     
     // segmentControl选中的1
     if (index == 1) {

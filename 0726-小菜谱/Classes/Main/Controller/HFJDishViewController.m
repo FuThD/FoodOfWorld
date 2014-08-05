@@ -8,6 +8,8 @@
 
 #import "HFJDishViewController.h"
 #import "UIBarButtonItem+addItem.h"
+#import "CPData.h"
+#import "HFJCollectMenuTool.h"
 
 @interface HFJDishViewController ()
 
@@ -51,15 +53,25 @@
     
 }
 
-// 收藏 点击事件
+// 收藏/取消收藏按钮 点击事件
 - (void)collect
 {
-#warning 收藏功能的实现
-    // 收藏喜爱的菜谱
+    // 从数据库获取最新的数据
+    NSArray *collectMenus = [HFJCollectMenuTool collectMenus];
+    
+    // 如果数据库中,有本条菜谱数据
+    if ([collectMenus containsObject:self.dictData]) {
+        
+        // 从数据库里面搜索到菜谱, 删除收藏的菜谱
+        [HFJCollectMenuTool deleteMenu:self.dictData];
+    }else{
+    
+        // 如果没有搜索到菜谱收藏喜爱的菜谱
+        [HFJCollectMenuTool saveCollectMenus:self.dictData];
+    }
 }
 
 
-    
 
 
 

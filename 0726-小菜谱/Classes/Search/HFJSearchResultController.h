@@ -13,9 +13,14 @@
 
 
 /**
- *  网络上搜索到的表格的数据
+ *  网络上搜索到的菜品数据数组
  */
 @property (nonatomic, strong) NSArray* dataList;
+
+/**
+ *  对应菜品数据的字典数组
+ */
+@property (nonatomic, strong) NSArray *dataArray;
 
 
 @end

@@ -35,8 +35,8 @@ static NSString *ID = @"sort";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     // 设置frame
     self.collectionView.y = 0;
-    self.collectionView.height = HFJViewFrame.size.height;
-    self.collectionView.width = HFJViewFrame.size.width;
+    self.collectionView.height = HFJViewHeight;
+//    self.collectionView.width = HFJViewFrame.size.width;
     
     self.collectionView.bounces = NO;
     self.collectionView.showsVerticalScrollIndicator = NO;

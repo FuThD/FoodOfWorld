@@ -28,9 +28,9 @@ static FMDatabase *_db;
         // 创建表
         BOOL success = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_historySearch(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, searchKeyWord TEXT NOT NULL);"];
         if (success) {
-            MyLog(@"创建表成功");
+//            MyLog(@"创建表成功");
         }else{
-            MyLog(@"创建表失败");
+//            MyLog(@"创建表失败");
         }
     }
 }
@@ -43,11 +43,11 @@ static FMDatabase *_db;
     
     if (success) {
         
-        MyLog(@"保存成功");
+//        MyLog(@"保存成功");
         return YES;
         
     }else{
-        MyLog(@"保存失败");
+//        MyLog(@"保存失败");
         
         return NO;
     }
@@ -82,12 +82,12 @@ static FMDatabase *_db;
     
     if (success) {
         
-        MyLog(@"删除成功");
+//        MyLog(@"删除成功");
         return YES;
         
     }else
     {
-        MyLog(@"删除失败");
+//        MyLog(@"删除失败");
         
         return NO;
     }

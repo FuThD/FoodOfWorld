@@ -7,6 +7,7 @@
 //
 
 #import "HFJMainCell.h"
+#import "CPData.h"
 
 @interface HFJMainCell()
 /**
@@ -44,13 +45,16 @@
 - (void)awakeFromNib{}
 
 // 重写数据的set方法
-- (void)setDict:(NSDictionary *)dict
+- (void)setData:(CPData *)data
 {
-    _dict = dict;
+    _data = data;
+    
+    // 设置cell的头像,和标题,描述性文字
+    self.menuTitle.text = data.title;
+    self.menuBurden.text = data.imtro;
+    [self.menuIcon sd_setImageWithURL:data.albums[0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
+    
 
-    self.menuTitle.text = dict[@"title"];
-    self.menuBurden.text = dict[@"imtro"];
-    [self.menuIcon sd_setImageWithURL:dict[@"albums"][0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
 }
 
 

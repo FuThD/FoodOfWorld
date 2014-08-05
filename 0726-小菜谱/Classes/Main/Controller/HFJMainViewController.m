@@ -107,7 +107,7 @@
     // 设置frame
     self.menuBtnView.x = 0;
     self.menuBtnView.width = self.view.width;
-    self.menuBtnView.height = 40;
+    self.menuBtnView.height = 35;
     if (iOS7) {
         
         self.menuBtnView.y = CGRectGetMaxY(self.navigationController.navigationBar.frame);
@@ -135,7 +135,7 @@
     
     // 垂直滚动时,左右不能滚动
     self.myScrollView.directionalLockEnabled = YES;
-    
+
     // 设置代理
     self.myScrollView.delegate = self;
 }
@@ -161,7 +161,7 @@
     likeTabVC.tableView.x = CGRectGetMaxX(sortTabVC.collectionView.frame);
     [self.myScrollView addSubview:likeTabVC.tableView];
     [self addChildViewController:likeTabVC];
-    
+
 }
 
 

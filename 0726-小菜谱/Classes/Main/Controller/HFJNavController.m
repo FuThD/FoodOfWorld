@@ -72,7 +72,7 @@
     // 取得全局的nav的item属性 拿到主题对象
     UIBarButtonItem *item = [UIBarButtonItem appearance];
     
-    if (!iOS7) {
+    if (!iOS7) {   //246 96 27
         // 设置ios6的背景图片
         [item setBackgroundImage:[UIImage imageNamed:@"navigationbar_button_background"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
@@ -108,6 +108,8 @@
     // 拿到主题对象
     UINavigationBar *navBar = [UINavigationBar appearance];
     
+//    [navBar setBackgroundImage:[UIImage resizableImageNamed:@"QQ20140803-1"] forBarMetrics:UIBarMetricsDefault];
+    
     // 设置背景颜色和字体颜色
     if (!iOS7) {
         // 设置背景颜色
@@ -122,9 +124,5 @@
         [navBar setTitleTextAttributes:dict];
     }
 }
-
-
-
-
 
 @end

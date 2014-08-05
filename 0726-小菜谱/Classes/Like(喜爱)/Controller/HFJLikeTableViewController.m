@@ -9,10 +9,25 @@
 #import "HFJLikeTableViewController.h"
 #import "HFJMainCell.h"
 #import "HFJDishViewController.h"
+#import "HFJCollectMenuTool.h"
+#import "CPData.h"
 
 @interface HFJLikeTableViewController()
 
+/**
+ *  提示用户收菜菜谱的图片
+ */
+@property (nonatomic, strong) UIImageView *imageView;
 
+/**
+ *  存放模型的数组
+ */
+@property (nonatomic, strong) NSArray *dataList;
+
+/**
+ *  存放字典的数组
+ */
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -31,21 +46,33 @@
 {
     [super viewDidLoad];
 
+    // 如果没有数据, 就显示一个推荐图片,否者不显示
+    if (!self.dataArray.count) {
+        
+        [self.tableView addSubview:self.imageView];
+        
+    }else{
+        
+        [self.imageView removeFromSuperview];
+        
+    }
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.dataList.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#warning ID是否可以和Good/search/cuisine的设置一样的? 待加数据后测试
+
     static NSString *ID = @"Like";
     HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:ID];
-    cell.textLabel.text = @"111";
+    
+    CPData *data = self.dataList[indexPath.row];
+    cell.data = data;
     
     return cell;
 }
@@ -54,12 +81,78 @@
 {
     // 将控制器添加到父控制器
     HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    
+    // 取出数据赋值给dishVC
+    CPData *data = self.dataList[indexPath.row];
+    dishVC.data = data;
+    NSDictionary *dictData = self.dataArray[indexPath.row];
+    dishVC.dictData = dictData;
 
     [self.navigationController pushViewController:dishVC animated:YES];
+ 
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    dishVC.title = cell.textLabel.text;
+    
+   
+}
+
+/**
+ *  界面即将要展示, 就获取数据库数据
+ */
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // 读取数据库
+    _dataArray = [HFJCollectMenuTool collectMenus];
+    
+    _dataList = [CPData objectArrayWithKeyValuesArray:_dataArray];
+    
+    // 刷新表格
+    [self.tableView reloadData];
+
+    // 如果没有数据, 就显示一个推荐图片,否者不显示
+    if (!self.dataArray.count) {
+        
+        [self.tableView addSubview:self.imageView];
+        
+    }else{
+        
+        [self.imageView removeFromSuperview];
+        
+    }
     
     
 }
+
+
+#pragma mark - 懒加载
+- (NSArray *)dataList
+{
+    if (_dataList == nil) {
+        
+        _dataList = [NSArray array];
+    }
+    return _dataList;
+}
+
+- (UIImageView *)imageView
+{
+    if (_imageView == nil) {
+        
+#warning 提示客户去收藏的图片
+        _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"QQ20140804-1"]];
+        
+        _imageView.center = self.tableView.center;
+        _imageView.backgroundColor = [UIColor redColor];
+        
+    }
+    return _imageView;
+}
+
+
 @end
