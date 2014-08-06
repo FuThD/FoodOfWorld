@@ -11,6 +11,7 @@
 #import "HFJDishViewController.h"
 #import "HFJCollectMenuTool.h"
 #import "CPData.h"
+#import "HFJLikeDishViewController.h"
 
 @interface HFJLikeTableViewController()
 
@@ -80,7 +81,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 将控制器添加到父控制器
-    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    HFJLikeDishViewController *dishVC = [[HFJLikeDishViewController alloc] init];
     
     // 取出数据赋值给dishVC
     CPData *data = self.dataList[indexPath.row];
@@ -89,12 +90,7 @@
     dishVC.dictData = dictData;
 
     [self.navigationController pushViewController:dishVC animated:YES];
-    
-    
-//    // 将json数据序列化
-//    NSData *data1 = [NSJSONSerialization dataWithJSONObject:dictData options:NSJSONWritingPrettyPrinted error:nil];
-//
-//    MyLog(@"didSelectRowAtIndexPath/n%@", data1);
+
 }
 
 /**

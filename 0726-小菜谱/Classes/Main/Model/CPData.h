@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CPStep.h"
 
-@interface CPData : NSObject<NSCoding>
+@interface CPData : NSObject
 
 /** 索引 */
 @property (nonatomic, copy) NSString *cid;

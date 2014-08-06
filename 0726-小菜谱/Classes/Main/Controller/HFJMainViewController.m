@@ -8,10 +8,10 @@
 
 #import "HFJMainViewController.h"
 #import "HFJGoodTableViewController.h"
-#import "HFJSortCollectionViewConrtoller.h"
 #import "HFJLikeTableViewController.h"
 #import "HFJMenuButtonView.h"
 #import "HFJSearchViewController.h"
+#import "SWTSortViewController.h"
 
 
 
@@ -151,7 +151,7 @@
     [self addChildViewController:goodTabVC];
 
     // 分类控制器
-    HFJSortCollectionViewConrtoller *sortTabVC = [[HFJSortCollectionViewConrtoller alloc] init];
+    SWTSortViewController *sortTabVC = [[SWTSortViewController alloc] init];
     sortTabVC.collectionView.x = CGRectGetMaxX(goodTabVC.tableView.frame);
     [self.myScrollView addSubview:sortTabVC.collectionView];
     [self addChildViewController:sortTabVC];

@@ -24,13 +24,9 @@
 		A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633C1983BF9000A8B769 /* HFJMainViewController.m */; };
 		A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */; };
 		A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163481983BF9000A8B769 /* UIView+NJ.m */; };
-		A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */ = {isa = PBXBuildFile; fileRef = A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */; };
-		A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A471634F1983BF9000A8B769 /* cellectionViewCell.xib */; };
-		A471635A1983BF9000A8B769 /* HFJSortCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */; };
 		A471635D1983C88300A8B769 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A471635C1983C88300A8B769 /* Images.xcassets */; };
 		A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163681984E15700A8B769 /* UIImage+OS6or7.m */; };
 		A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4716371198528EB00A8B769 /* HFJMainCell.m */; };
-		A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163741985316600A8B769 /* HFJCuisineTableViewController.m */; };
 		A48FB39E198D1CDE004AE50C /* HFJMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A48FB39D198D1CDE004AE50C /* HFJMainTableViewController.m */; };
 		A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A11985E40400E39B19 /* HFJNavController.m */; };
 		A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A498E5A41986099200E39B19 /* UIBarButtonItem+addItem.m */; };
@@ -108,6 +104,21 @@
 		A4E7C7001991D8B4007839A8 /* CPAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FB1991D8B4007839A8 /* CPAlbum.m */; };
 		A4E7C7011991D8B4007839A8 /* CPData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FD1991D8B4007839A8 /* CPData.m */; };
 		A4E7C7021991D8B4007839A8 /* CPStep.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FF1991D8B4007839A8 /* CPStep.m */; };
+		A4E7C705199202FA007839A8 /* HFJLikeDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */; };
+		A4E7C70D199205EF007839A8 /* SWTFoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C707199205EF007839A8 /* SWTFoodCategory.m */; };
+		A4E7C70E199205EF007839A8 /* SWTSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C709199205EF007839A8 /* SWTSortCell.m */; };
+		A4E7C70F199205EF007839A8 /* SWTSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E7C70A199205EF007839A8 /* SWTSortCell.xib */; };
+		A4E7C710199205EF007839A8 /* SWTSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C70C199205EF007839A8 /* SWTSortViewController.m */; };
+		A4E7C71219920615007839A8 /* plist.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4E7C71119920615007839A8 /* plist.bundle */; };
+		A4E7C715199206E4007839A8 /* SWTFoodListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C714199206E4007839A8 /* SWTFoodListViewController.m */; };
+		A4E7C72719920746007839A8 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4E7C71719920746007839A8 /* MJRefresh.bundle */; };
+		A4E7C72819920746007839A8 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C71A19920746007839A8 /* MJRefreshBaseView.m */; };
+		A4E7C72919920746007839A8 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C71C19920746007839A8 /* MJRefreshConst.m */; };
+		A4E7C72A19920746007839A8 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C71E19920746007839A8 /* MJRefreshFooterView.m */; };
+		A4E7C72B19920746007839A8 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72019920746007839A8 /* MJRefreshHeaderView.m */; };
+		A4E7C72C19920746007839A8 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72219920746007839A8 /* UIScrollView+Extension.m */; };
+		A4E7C72D19920746007839A8 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72419920746007839A8 /* UIScrollView+MJRefresh.m */; };
+		A4E7C72E19920746007839A8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72619920746007839A8 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,18 +159,11 @@
 		A47163431983BF9000A8B769 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		A47163471983BF9000A8B769 /* UIView+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NJ.h"; sourceTree = "<group>"; };
 		A47163481983BF9000A8B769 /* UIView+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NJ.m"; sourceTree = "<group>"; };
-		A471634B1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSortCollectionViewConrtoller.h; sourceTree = "<group>"; };
-		A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSortCollectionViewConrtoller.m; sourceTree = "<group>"; };
-		A471634F1983BF9000A8B769 /* cellectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellectionViewCell.xib; sourceTree = "<group>"; };
-		A47163501983BF9000A8B769 /* HFJSortCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJSortCollectionViewCell.h; sourceTree = "<group>"; };
-		A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJSortCollectionViewCell.m; sourceTree = "<group>"; };
 		A471635C1983C88300A8B769 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A47163671984E15700A8B769 /* UIImage+OS6or7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OS6or7.h"; sourceTree = "<group>"; };
 		A47163681984E15700A8B769 /* UIImage+OS6or7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+OS6or7.m"; sourceTree = "<group>"; };
 		A4716370198528EB00A8B769 /* HFJMainCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMainCell.h; sourceTree = "<group>"; };
 		A4716371198528EB00A8B769 /* HFJMainCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMainCell.m; sourceTree = "<group>"; };
-		A47163731985316600A8B769 /* HFJCuisineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFJCuisineTableViewController.h; path = ../Views/HFJCuisineTableViewController.h; sourceTree = "<group>"; };
-		A47163741985316600A8B769 /* HFJCuisineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFJCuisineTableViewController.m; path = ../Views/HFJCuisineTableViewController.m; sourceTree = "<group>"; };
 		A48FB39C198D1CDE004AE50C /* HFJMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMainTableViewController.h; sourceTree = "<group>"; };
 		A48FB39D198D1CDE004AE50C /* HFJMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJMainTableViewController.m; sourceTree = "<group>"; };
 		A498E5A01985E40400E39B19 /* HFJNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJNavController.h; sourceTree = "<group>"; };
@@ -315,6 +319,34 @@
 		A4E7C6FD1991D8B4007839A8 /* CPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPData.m; sourceTree = "<group>"; };
 		A4E7C6FE1991D8B4007839A8 /* CPStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStep.h; sourceTree = "<group>"; };
 		A4E7C6FF1991D8B4007839A8 /* CPStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPStep.m; sourceTree = "<group>"; };
+		A4E7C703199202FA007839A8 /* HFJLikeDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJLikeDishViewController.h; sourceTree = "<group>"; };
+		A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJLikeDishViewController.m; sourceTree = "<group>"; };
+		A4E7C706199205EF007839A8 /* SWTFoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTFoodCategory.h; sourceTree = "<group>"; };
+		A4E7C707199205EF007839A8 /* SWTFoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTFoodCategory.m; sourceTree = "<group>"; };
+		A4E7C708199205EF007839A8 /* SWTSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWTSortCell.h; path = ../Model/SWTSortCell.h; sourceTree = "<group>"; };
+		A4E7C709199205EF007839A8 /* SWTSortCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWTSortCell.m; path = ../Model/SWTSortCell.m; sourceTree = "<group>"; };
+		A4E7C70A199205EF007839A8 /* SWTSortCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SWTSortCell.xib; path = ../Model/SWTSortCell.xib; sourceTree = "<group>"; };
+		A4E7C70B199205EF007839A8 /* SWTSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWTSortViewController.h; path = ../Model/SWTSortViewController.h; sourceTree = "<group>"; };
+		A4E7C70C199205EF007839A8 /* SWTSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWTSortViewController.m; path = ../Model/SWTSortViewController.m; sourceTree = "<group>"; };
+		A4E7C71119920615007839A8 /* plist.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = plist.bundle; sourceTree = "<group>"; };
+		A4E7C713199206E4007839A8 /* SWTFoodListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWTFoodListViewController.h; path = ../Model/SWTFoodListViewController.h; sourceTree = "<group>"; };
+		A4E7C714199206E4007839A8 /* SWTFoodListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWTFoodListViewController.m; path = ../Model/SWTFoodListViewController.m; sourceTree = "<group>"; };
+		A4E7C71719920746007839A8 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		A4E7C71819920746007839A8 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		A4E7C71919920746007839A8 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		A4E7C71A19920746007839A8 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		A4E7C71B19920746007839A8 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		A4E7C71C19920746007839A8 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		A4E7C71D19920746007839A8 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		A4E7C71E19920746007839A8 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		A4E7C71F19920746007839A8 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		A4E7C72019920746007839A8 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		A4E7C72119920746007839A8 /* UIScrollView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extension.h"; sourceTree = "<group>"; };
+		A4E7C72219920746007839A8 /* UIScrollView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extension.m"; sourceTree = "<group>"; };
+		A4E7C72319920746007839A8 /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
+		A4E7C72419920746007839A8 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
+		A4E7C72519920746007839A8 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		A4E7C72619920746007839A8 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				A471635C1983C88300A8B769 /* Images.xcassets */,
+				A4E7C71119920615007839A8 /* plist.bundle */,
 				A47163001983BE5500A8B769 /* 0726-小菜谱导航栏-Info.plist */,
 				A47163011983BE5500A8B769 /* InfoPlist.strings */,
 				A47163041983BE5500A8B769 /* main.m */,
@@ -464,6 +497,8 @@
 			children = (
 				A47163351983BF9000A8B769 /* HFJLikeTableViewController.h */,
 				A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */,
+				A4E7C703199202FA007839A8 /* HFJLikeDishViewController.h */,
+				A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,6 +570,7 @@
 		A47163441983BF9000A8B769 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7C71619920746007839A8 /* MJRefresh刷新 */,
 				A4A69B02198DD4D1003A30A2 /* fmdb */,
 				A4BF7D9B19890D9B0055CA95 /* MBProgressHUD */,
 				A4BF7D7A19888CE50055CA95 /* MJExtension字典转模型 */,
@@ -586,10 +622,10 @@
 		A471634A1983BF9000A8B769 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A471634B1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.h */,
-				A471634C1983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m */,
-				A47163731985316600A8B769 /* HFJCuisineTableViewController.h */,
-				A47163741985316600A8B769 /* HFJCuisineTableViewController.m */,
+				A4E7C70B199205EF007839A8 /* SWTSortViewController.h */,
+				A4E7C70C199205EF007839A8 /* SWTSortViewController.m */,
+				A4E7C713199206E4007839A8 /* SWTFoodListViewController.h */,
+				A4E7C714199206E4007839A8 /* SWTFoodListViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -597,6 +633,8 @@
 		A471634D1983BF9000A8B769 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7C706199205EF007839A8 /* SWTFoodCategory.h */,
+				A4E7C707199205EF007839A8 /* SWTFoodCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -604,9 +642,9 @@
 		A471634E1983BF9000A8B769 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A471634F1983BF9000A8B769 /* cellectionViewCell.xib */,
-				A47163501983BF9000A8B769 /* HFJSortCollectionViewCell.h */,
-				A47163511983BF9000A8B769 /* HFJSortCollectionViewCell.m */,
+				A4E7C708199205EF007839A8 /* SWTSortCell.h */,
+				A4E7C709199205EF007839A8 /* SWTSortCell.m */,
+				A4E7C70A199205EF007839A8 /* SWTSortCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -860,6 +898,29 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		A4E7C71619920746007839A8 /* MJRefresh刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				A4E7C71719920746007839A8 /* MJRefresh.bundle */,
+				A4E7C71819920746007839A8 /* MJRefresh.h */,
+				A4E7C71919920746007839A8 /* MJRefreshBaseView.h */,
+				A4E7C71A19920746007839A8 /* MJRefreshBaseView.m */,
+				A4E7C71B19920746007839A8 /* MJRefreshConst.h */,
+				A4E7C71C19920746007839A8 /* MJRefreshConst.m */,
+				A4E7C71D19920746007839A8 /* MJRefreshFooterView.h */,
+				A4E7C71E19920746007839A8 /* MJRefreshFooterView.m */,
+				A4E7C71F19920746007839A8 /* MJRefreshHeaderView.h */,
+				A4E7C72019920746007839A8 /* MJRefreshHeaderView.m */,
+				A4E7C72119920746007839A8 /* UIScrollView+Extension.h */,
+				A4E7C72219920746007839A8 /* UIScrollView+Extension.m */,
+				A4E7C72319920746007839A8 /* UIScrollView+MJRefresh.h */,
+				A4E7C72419920746007839A8 /* UIScrollView+MJRefresh.m */,
+				A4E7C72519920746007839A8 /* UIView+Extension.h */,
+				A4E7C72619920746007839A8 /* UIView+Extension.m */,
+			);
+			path = "MJRefresh刷新";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -938,9 +999,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47163591983BF9000A8B769 /* cellectionViewCell.xib in Resources */,
 				A4A69B5B198F60CA003A30A2 /* HFJSearchHeadView.xib in Resources */,
+				A4E7C72719920746007839A8 /* MJRefresh.bundle in Resources */,
+				A4E7C70F199205EF007839A8 /* SWTSortCell.xib in Resources */,
 				A471635D1983C88300A8B769 /* Images.xcassets in Resources */,
+				A4E7C71219920615007839A8 /* plist.bundle in Resources */,
 				A4AA87DE1991BDE300D789CE /* SWTMaterialView.xib in Resources */,
 				A47163031983BE5500A8B769 /* InfoPlist.strings in Resources */,
 				A4BF7DA5198925DF0055CA95 /* HFJMainCell.xib in Resources */,
@@ -965,27 +1028,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47163751985316600A8B769 /* HFJCuisineTableViewController.m in Sources */,
 				A498E5A21985E40400E39B19 /* HFJNavController.m in Sources */,
 				A498FD1C19888394007CD71B /* SDWebImagePrefetcher.m in Sources */,
 				A4BF7D9019888CE50055CA95 /* MJMember.m in Sources */,
 				A4A69B5D198F60CA003A30A2 /* HFJSegmentControl.m in Sources */,
 				A498E5C71986925B00E39B19 /* AFSecurityPolicy.m in Sources */,
+				A4E7C70D199205EF007839A8 /* SWTFoodCategory.m in Sources */,
 				A498FD1A19888394007CD71B /* SDWebImageDownloaderOperation.m in Sources */,
 				A498FD2119888394007CD71B /* UIImageView+HighlightedWebCache.m in Sources */,
+				A4E7C710199205EF007839A8 /* SWTSortViewController.m in Sources */,
 				A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */,
 				A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */,
 				A498FD2019888394007CD71B /* UIImage+WebP.m in Sources */,
 				A4AA87DA1991BDE300D789CE /* SWTHeaderView.m in Sources */,
+				A4E7C72919920746007839A8 /* MJRefreshConst.m in Sources */,
 				A4A69B0E198DD4D1003A30A2 /* FMDatabase.m in Sources */,
 				A498FD1819888394007CD71B /* SDWebImageDecoder.m in Sources */,
 				A4BF7D8F19888CE50055CA95 /* MJIvar.m in Sources */,
+				A4E7C72819920746007839A8 /* MJRefreshBaseView.m in Sources */,
 				A498FD1F19888394007CD71B /* UIImage+MultiFormat.m in Sources */,
 				A498FD1619888394007CD71B /* SDImageCache.m in Sources */,
 				A4AA87DB1991BDE300D789CE /* SWTInsetsLabel.m in Sources */,
 				A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */,
 				A47163571983BF9000A8B769 /* UIView+NJ.m in Sources */,
 				A4BF7D9419888CE50055CA95 /* NSObject+MJCoding.m in Sources */,
+				A4E7C72E19920746007839A8 /* UIView+Extension.m in Sources */,
+				A4E7C715199206E4007839A8 /* SWTFoodListViewController.m in Sources */,
 				A498FD1719888394007CD71B /* SDWebImageCompat.m in Sources */,
 				A4E7C7021991D8B4007839A8 /* CPStep.m in Sources */,
 				A4A69B54198F60CA003A30A2 /* HFJSearchTableViewController.m in Sources */,
@@ -994,18 +1062,19 @@
 				A498FD1B19888394007CD71B /* SDWebImageManager.m in Sources */,
 				A4A69B5C198F60CA003A30A2 /* HFJSegment.m in Sources */,
 				A4BF7DA119890D9B0055CA95 /* MBProgressHUD+NJ.m in Sources */,
+				A4E7C72B19920746007839A8 /* MJRefreshHeaderView.m in Sources */,
 				A4A69B70198F7443003A30A2 /* HFJSearchMenuTool.m in Sources */,
 				A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */,
 				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
 				A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */,
 				A4A69B0F198DD4D1003A30A2 /* FMDatabaseAdditions.m in Sources */,
+				A4E7C72D19920746007839A8 /* UIScrollView+MJRefresh.m in Sources */,
 				A4BF7D9319888CE50055CA95 /* MJTypeEncoding.m in Sources */,
 				A498E5C51986925B00E39B19 /* AFHTTPSessionManager.m in Sources */,
 				A4A69B53198F60CA003A30A2 /* HFJSearchResultController.m in Sources */,
 				A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */,
 				A4AA87D61991BDE300D789CE /* HFJDishViewController.m in Sources */,
 				A4A69B58198F60CA003A30A2 /* HFJSearchCell.m in Sources */,
-				A471635A1983BF9000A8B769 /* HFJSortCollectionViewCell.m in Sources */,
 				A498E5C81986925B00E39B19 /* AFURLConnectionOperation.m in Sources */,
 				A4AA87D91991BDE300D789CE /* SWTFrameModel.m in Sources */,
 				A4A69B56198F60CA003A30A2 /* HFJSearchParam.m in Sources */,
@@ -1015,17 +1084,19 @@
 				A4A69B57198F60CA003A30A2 /* HFJSearchResult.m in Sources */,
 				A4AA87D81991BDE300D789CE /* SWTFoodMaterialModel.m in Sources */,
 				A4A69B5A198F60CA003A30A2 /* HFJSearchHeadView.m in Sources */,
+				A4E7C72A19920746007839A8 /* MJRefreshFooterView.m in Sources */,
 				A498E5CB1986925B00E39B19 /* AFURLSessionManager.m in Sources */,
 				A498FD1419888394007CD71B /* MKAnnotationView+WebCache.m in Sources */,
 				A4A69B6A198F61AD003A30A2 /* HFJHistoryCacheTool.m in Sources */,
 				A498FD2219888394007CD71B /* UIImageView+WebCache.m in Sources */,
+				A4E7C705199202FA007839A8 /* HFJLikeDishViewController.m in Sources */,
 				A4BF7D8E19888CE50055CA95 /* MJArgument.m in Sources */,
 				A498E5CA1986925B00E39B19 /* AFURLResponseSerialization.m in Sources */,
 				A4BF7D9519888CE50055CA95 /* NSObject+MJKeyValue.m in Sources */,
 				A4A69B10198DD4D1003A30A2 /* FMDatabasePool.m in Sources */,
-				A47163581983BF9000A8B769 /* HFJSortCollectionViewConrtoller.m in Sources */,
 				A4AA87DD1991BDE300D789CE /* SWTMaterialView.m in Sources */,
 				A47163051983BE5500A8B769 /* main.m in Sources */,
+				A4E7C72C19920746007839A8 /* UIScrollView+Extension.m in Sources */,
 				A4A69B6D198F6B0F003A30A2 /* HFJSearchData.m in Sources */,
 				A4AA87AB198FA6FC00D789CE /* HFJCollectMenuTool.m in Sources */,
 				A498FD1919888394007CD71B /* SDWebImageDownloader.m in Sources */,
@@ -1043,6 +1114,7 @@
 				A47163691984E15700A8B769 /* UIImage+OS6or7.m in Sources */,
 				A4BF7D9219888CE50055CA95 /* MJType.m in Sources */,
 				A498E5C61986925B00E39B19 /* AFNetworkReachabilityManager.m in Sources */,
+				A4E7C70E199205EF007839A8 /* SWTSortCell.m in Sources */,
 				A498FD1D19888394007CD71B /* UIButton+WebCache.m in Sources */,
 				A4BF7D9619888CE50055CA95 /* NSObject+MJMember.m in Sources */,
 				A4E7C7001991D8B4007839A8 /* CPAlbum.m in Sources */,
