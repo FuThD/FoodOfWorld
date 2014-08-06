@@ -28,7 +28,7 @@ static FMDatabase *_db;
     if ([_db open]) {
         
         // 创建表
-        BOOL success = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_collectMenu(iid INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, collectMenu BLOB NOT NULL);"];
+        BOOL success = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_collectMenu(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, collectMenu BLOB NOT NULL, cid TEXT NOT NULL);"];
         if (success) {
             MyLog(@"创建t_collectMenu表成功");
         }else{
@@ -73,9 +73,9 @@ static FMDatabase *_db;
 
     // 将json数据序列化
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-    
+
     // 存储数据
-    BOOL success = [_db executeUpdate:@"INSERT INTO t_collectMenu(collectMenu) VALUES(?)",data];
+    BOOL success = [_db executeUpdate:@"INSERT INTO t_collectMenu(collectMenu, cid) VALUES(?, ?)",data, dict[@"id"]];
     
     if (success) {
         
@@ -97,10 +97,10 @@ static FMDatabase *_db;
 {
 
     // 将json数据序列化
-    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+//    NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
     
     // 删除数据
-    BOOL success = [_db executeUpdate:@"DELETE FROM t_collectMenu WHERE collectMenu = ?",data];
+    BOOL success = [_db executeUpdate:@"DELETE FROM t_collectMenu WHERE cid = ?",dict[@"id"]];
 
     if (success) {
         

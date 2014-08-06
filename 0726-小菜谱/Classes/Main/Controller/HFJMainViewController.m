@@ -7,7 +7,7 @@
 //
 
 #import "HFJMainViewController.h"
-#import "HFJGoodTableViewController.h"
+#import "CPBestTableViewController.h"
 #import "HFJLikeTableViewController.h"
 #import "HFJMenuButtonView.h"
 #import "HFJSearchViewController.h"
@@ -145,7 +145,7 @@
 - (void)setupTableViews
 {
     // 精选控制器
-    HFJGoodTableViewController *goodTabVC = [[HFJGoodTableViewController alloc] init];
+    CPBestTableViewController *goodTabVC = [[CPBestTableViewController alloc] init];
     [self.myScrollView addSubview:goodTabVC.tableView];
     goodTabVC.tableView.x = 0;
     [self addChildViewController:goodTabVC];

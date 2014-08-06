@@ -119,6 +119,9 @@
 		A4E7C72C19920746007839A8 /* UIScrollView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72219920746007839A8 /* UIScrollView+Extension.m */; };
 		A4E7C72D19920746007839A8 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72419920746007839A8 /* UIScrollView+MJRefresh.m */; };
 		A4E7C72E19920746007839A8 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C72619920746007839A8 /* UIView+Extension.m */; };
+		A4E7C7391992136A007839A8 /* CPBestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C7381992136A007839A8 /* CPBestCell.m */; };
+		A4E7C73C19921377007839A8 /* CPBestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C73B19921377007839A8 /* CPBestTableViewController.m */; };
+		A4E7C73E199214EC007839A8 /* allFoodPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4E7C73D199214EC007839A8 /* allFoodPlist.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -347,6 +350,11 @@
 		A4E7C72419920746007839A8 /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
 		A4E7C72519920746007839A8 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		A4E7C72619920746007839A8 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		A4E7C7371992136A007839A8 /* CPBestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBestCell.h; sourceTree = "<group>"; };
+		A4E7C7381992136A007839A8 /* CPBestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBestCell.m; sourceTree = "<group>"; };
+		A4E7C73A19921377007839A8 /* CPBestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBestTableViewController.h; sourceTree = "<group>"; };
+		A4E7C73B19921377007839A8 /* CPBestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBestTableViewController.m; sourceTree = "<group>"; };
+		A4E7C73D199214EC007839A8 /* allFoodPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = allFoodPlist.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				A471635C1983C88300A8B769 /* Images.xcassets */,
+				A4E7C73D199214EC007839A8 /* allFoodPlist.plist */,
 				A4E7C71119920615007839A8 /* plist.bundle */,
 				A47163001983BE5500A8B769 /* 0726-小菜谱导航栏-Info.plist */,
 				A47163011983BE5500A8B769 /* InfoPlist.strings */,
@@ -461,25 +470,10 @@
 		A471632E1983BF9000A8B769 /* Good(精品) */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7C7361992136A007839A8 /* Views */,
 				A471635B1983C0AC00A8B769 /* Controller */,
-				A47163311983BF9000A8B769 /* Model */,
-				A47163321983BF9000A8B769 /* Views */,
 			);
 			path = "Good(精品)";
-			sourceTree = "<group>";
-		};
-		A47163311983BF9000A8B769 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		A47163321983BF9000A8B769 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		A47163331983BF9000A8B769 /* Like(喜爱) */ = {
@@ -652,6 +646,8 @@
 		A471635B1983C0AC00A8B769 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A4E7C73A19921377007839A8 /* CPBestTableViewController.h */,
+				A4E7C73B19921377007839A8 /* CPBestTableViewController.m */,
 				A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */,
 				A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */,
 			);
@@ -921,6 +917,15 @@
 			path = "MJRefresh刷新";
 			sourceTree = "<group>";
 		};
+		A4E7C7361992136A007839A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A4E7C7371992136A007839A8 /* CPBestCell.h */,
+				A4E7C7381992136A007839A8 /* CPBestCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1008,6 +1013,7 @@
 				A47163031983BE5500A8B769 /* InfoPlist.strings in Resources */,
 				A4BF7DA5198925DF0055CA95 /* HFJMainCell.xib in Resources */,
 				A4A69B59198F60CA003A30A2 /* HFJSearchCell.xib in Resources */,
+				A4E7C73E199214EC007839A8 /* allFoodPlist.plist in Resources */,
 				A471630C1983BE5500A8B769 /* Main.storyboard in Resources */,
 				A4BF7DA219890D9B0055CA95 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -1059,6 +1065,7 @@
 				A4A69B54198F60CA003A30A2 /* HFJSearchTableViewController.m in Sources */,
 				A498E5A51986099200E39B19 /* UIBarButtonItem+addItem.m in Sources */,
 				A498FD1E19888394007CD71B /* UIImage+GIF.m in Sources */,
+				A4E7C7391992136A007839A8 /* CPBestCell.m in Sources */,
 				A498FD1B19888394007CD71B /* SDWebImageManager.m in Sources */,
 				A4A69B5C198F60CA003A30A2 /* HFJSegment.m in Sources */,
 				A4BF7DA119890D9B0055CA95 /* MBProgressHUD+NJ.m in Sources */,
@@ -1107,6 +1114,7 @@
 				A4BF7D9119888CE50055CA95 /* MJMethod.m in Sources */,
 				A4A69B11198DD4D1003A30A2 /* FMDatabaseQueue.m in Sources */,
 				A4AA87AE198FA72E00D789CE /* HFJHttpTool.m in Sources */,
+				A4E7C73C19921377007839A8 /* CPBestTableViewController.m in Sources */,
 				A4E7C7011991D8B4007839A8 /* CPData.m in Sources */,
 				A48FB39E198D1CDE004AE50C /* HFJMainTableViewController.m in Sources */,
 				A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */,
