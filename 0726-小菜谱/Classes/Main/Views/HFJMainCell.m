@@ -52,8 +52,8 @@
     // 设置cell的头像,和标题,描述性文字
     self.menuTitle.text = data.title;
     self.menuBurden.text = data.imtro;
-    [self.menuIcon sd_setImageWithURL:data.albums[0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
     
+    [self.menuIcon sd_setImageWithURL:data.albums[0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
 
 }
 

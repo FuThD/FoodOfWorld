@@ -8,7 +8,6 @@
 
 #import "CPData.h"
 
-
 @implementation CPData
 
 - (instancetype)initWithDict:(NSDictionary *)dict

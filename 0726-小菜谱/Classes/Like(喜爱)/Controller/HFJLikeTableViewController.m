@@ -84,20 +84,17 @@
     
     // 取出数据赋值给dishVC
     CPData *data = self.dataList[indexPath.row];
-    dishVC.data = data;
+    dishVC.foodModel = data;
     NSDictionary *dictData = self.dataArray[indexPath.row];
     dishVC.dictData = dictData;
 
     [self.navigationController pushViewController:dishVC animated:YES];
- 
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
     
     
-   
+//    // 将json数据序列化
+//    NSData *data1 = [NSJSONSerialization dataWithJSONObject:dictData options:NSJSONWritingPrettyPrinted error:nil];
+//
+//    MyLog(@"didSelectRowAtIndexPath/n%@", data1);
 }
 
 /**
@@ -111,6 +108,7 @@
     _dataArray = [HFJCollectMenuTool collectMenus];
     
     _dataList = [CPData objectArrayWithKeyValuesArray:_dataArray];
+
     
     // 刷新表格
     [self.tableView reloadData];
@@ -122,11 +120,8 @@
         
     }else{
         
-        [self.imageView removeFromSuperview];
-        
+        [self.imageView removeFromSuperview];        
     }
-    
-    
 }
 
 
@@ -138,6 +133,15 @@
         _dataList = [NSArray array];
     }
     return _dataList;
+}
+
+- (NSArray *)dataArray
+{
+    if (_dataArray == nil) {
+        
+        _dataArray = [NSArray array];
+    }
+    return _dataArray;
 }
 
 - (UIImageView *)imageView

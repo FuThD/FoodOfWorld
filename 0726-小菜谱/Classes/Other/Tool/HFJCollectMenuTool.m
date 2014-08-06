@@ -8,7 +8,7 @@
 
 #import "HFJCollectMenuTool.h"
 #import "FMDB.h"
-#import "CPData.h"
+//#import "CPData.h"
 
 @implementation HFJCollectMenuTool
 
@@ -30,9 +30,9 @@ static FMDatabase *_db;
         // 创建表
         BOOL success = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_collectMenu(iid INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, collectMenu BLOB NOT NULL);"];
         if (success) {
-            MyLog(@"创建表成功");
+            MyLog(@"创建t_collectMenu表成功");
         }else{
-            MyLog(@"创建表失败");
+            MyLog(@"创建t_collectMenu表失败");
         }
     }
 }
@@ -56,10 +56,8 @@ static FMDatabase *_db;
         
         // 反序列化
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        
-        // 将字典转成微博模型
-        // CPData *collectMenu = [CPData dataWithDict:dict];
-        
+
+        MyLog(@"读取收藏的菜谱");
         // 存到数组中
         [arrayM addObject:dict];
     }
@@ -103,7 +101,7 @@ static FMDatabase *_db;
     
     // 删除数据
     BOOL success = [_db executeUpdate:@"DELETE FROM t_collectMenu WHERE collectMenu = ?",data];
-    
+
     if (success) {
         
         MyLog(@"删除成功");

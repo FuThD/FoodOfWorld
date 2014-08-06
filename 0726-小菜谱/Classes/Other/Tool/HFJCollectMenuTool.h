@@ -9,7 +9,7 @@
 //  收藏/取消收藏菜谱工具类(数据库存储)
 
 #import <Foundation/Foundation.h>
-@class CPData;
+
 
 @interface HFJCollectMenuTool : NSObject
 

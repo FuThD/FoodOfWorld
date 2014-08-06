@@ -24,4 +24,12 @@
     return [[self alloc] initWithDict:dict];
 }
 
+
+
+- (NSString *)step
+{
+    return [NSString stringWithFormat:@"    步骤 %@", _step];
+}
+
+
 @end

@@ -306,9 +306,9 @@
             [MBProgressHUD hideHUD];
                 
             // 如果网络不给力, 就提示错误信息
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"网络不给力哦!" message:@"稍后再试试" delegate:searchResultController cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            
-            [alert show];
+            //  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"网络不给力哦!" message:@"稍后再试试" delegate:searchResultController cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                      
+            // [alert show];
 
        }
         

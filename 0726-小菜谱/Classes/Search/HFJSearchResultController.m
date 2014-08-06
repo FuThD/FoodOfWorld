@@ -38,7 +38,7 @@
 {
     [super viewDidAppear:animated];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(10 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(15 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
         // 如果表格没有数据
         if (!self.dataList.count) {
@@ -91,17 +91,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-    // 取得模型, 设置数据
-    CPData *data = self.dataList[indexPath.row];
     
+    // 取得模型, 设置数据
+    NSDictionary *dictData = self.dataArray[indexPath.row];
+    CPData *data = self.dataList[indexPath.row];
+//    NSLog(@"%@, %@", dictData, data);
     // push出Dish控制器
     HFJDishViewController *dish = [[HFJDishViewController alloc] init];
-    dish.data = data;
-    
-    NSDictionary *dictData = self.dataArray[indexPath.row];
+    dish.foodModel = data;
     dish.dictData = dictData;
-
+    
+  
     // push出控制器
     [self.navigationController pushViewController:dish animated:YES];
 }
@@ -120,7 +120,7 @@
 {
     if (_imageView == nil) {
         
-#warning 提示客户去收藏的图片
+#warning 网络不好/没搜到数据的提示图片
         _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"QQ20140804-1"]];
         
         _imageView.center = self.tableView.center;

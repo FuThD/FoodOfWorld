@@ -17,6 +17,6 @@
 
 
 // 请求的结果数据的字典 @{data:菜品数据}
-@property (nonatomic, copy) NSDictionary * result;
+@property (nonatomic, strong) NSDictionary * result;
 
 @end

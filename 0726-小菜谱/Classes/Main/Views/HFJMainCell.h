@@ -17,8 +17,9 @@
  */
 + (instancetype)cellWithTableView:(UITableView *)tableView reuseIdentifier:( NSString *)ID ;
 
-
-//@property (nonatomic, strong) NSDictionary *dict;
+/**
+ *  菜谱模型
+ */
 @property (nonatomic, strong) CPData *data;
 
 @end
