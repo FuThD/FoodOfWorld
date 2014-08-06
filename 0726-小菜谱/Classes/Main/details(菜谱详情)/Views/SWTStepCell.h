@@ -10,6 +10,7 @@
 
 #import <UIKit/UIKit.h>
 @class SWTFrameModel;
+
 @interface SWTStepCell : UITableViewCell
 
 @property (nonatomic, strong) SWTFrameModel *frameModel;

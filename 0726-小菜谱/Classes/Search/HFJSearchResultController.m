@@ -93,14 +93,11 @@
 {
     
     // 取得模型, 设置数据
-    NSDictionary *dictData = self.dataArray[indexPath.row];
     CPData *data = self.dataList[indexPath.row];
-//    NSLog(@"%@, %@", dictData, data);
+
     // push出Dish控制器
     HFJDishViewController *dish = [[HFJDishViewController alloc] init];
     dish.foodModel = data;
-    dish.dictData = dictData;
-    
   
     // push出控制器
     [self.navigationController pushViewController:dish animated:YES];

@@ -52,59 +52,26 @@
     UIView *navBar = [[UIView alloc] init];
     navBar.size = CGSizeMake(220, 44);
     self.navigationItem.titleView = navBar;
+    
+    // 给navBar添加一个文字标签
+    UILabel *label = [[UILabel alloc] init];
+    label.size = CGSizeMake(100, 44);
+    label.center = navBar.center;
+    [navBar addSubview:label];
+    label.text = @"   烹饪步骤";
   
 }
 
-
-
-// 重写字典的set方法, 设置收藏/删除收藏按钮
-- (void)setDictData:(NSDictionary *)dictData
-{
-    _dictData = dictData;
-    
-    // 调用一次模型set方法, 防止赋值模型和字典顺序不一样, 导致字典为空
-    [self setFoodModel:self.foodModel];
-    
-    // 收藏/删除收藏按钮
-    UIButton *collect = nil;
-    
-    // 从数据库获取最新的数据
-    NSArray *collectMenus = [HFJCollectMenuTool collectMenus];
-    
-    // 如果数据库中,有本条菜谱数据
-    if ([collectMenus containsObject:self.dictData]) {
-        
-        // 显示删除按钮
-        collect = [UIBarButtonItem buttonImage:@"navigationbar_back_highlighted" highlightedImage:@"navigationbar_more_highlighted" target:self action:@selector(collectOrDelete)];
-#warning 收藏/删除收藏按钮,等待更换图片
-    }else{
-        
-        // 显示收藏按钮
-        collect = [UIBarButtonItem buttonImage:@"navigationbar_more" highlightedImage:@"navigationbar_more_highlighted" target:self action:@selector(collectOrDelete)];
-    }
-    
-    // 设置按钮的位置,并添加到导航栏
-    collect.center = CGPointMake(190, 22);
-    [self.navigationItem.titleView addSubview:collect];
-    
-    // 设置头部的view
-    SWTHeaderView *headerView = [[SWTHeaderView alloc] initWithFoodModel:_foodModel];
-    
-    self.tableView.tableHeaderView = headerView;
-}
-
-
 // 收藏/取消收藏按钮 点击事件
-- (void)collectOrDelete
+- (void)collectOrDelete:(UIButton *)collect
 {
-    // 从数据库获取最新的数据
-    NSArray *collectMenus = [HFJCollectMenuTool collectMenus];
+    // 隐藏按钮
+    collect.hidden = YES;
     
-    // 如果数据库中,有本条菜谱数据
-    if ([collectMenus containsObject:self.dictData]) {
+    if (collect.tag) {  // 1 表示已经收藏, 0表示未收藏
         
         // 从数据库里面搜索到菜谱, 删除收藏的菜谱
-        BOOL success = [HFJCollectMenuTool deleteMenu:self.dictData];
+        BOOL success = [HFJCollectMenuTool deleteMenu:self.foodModel.keyValues];
         
         // 蒙版提示
         if (success) {
@@ -122,7 +89,7 @@
     }else{
     
         // 如果没有搜索到菜谱收藏喜爱的菜谱
-        BOOL success = [HFJCollectMenuTool saveCollectMenus:self.dictData];
+        BOOL success = [HFJCollectMenuTool saveCollectMenus:self.foodModel.keyValues];
         
         // 蒙版提示
         if (success) {
@@ -140,23 +107,47 @@
 {
     _foodModel = foodModel;
     
-    
+    // 根据不走设置frame模型数组
     NSMutableArray *arrayM = [NSMutableArray array];
-//    for (CPStep *stepModel in _foodModel.steps) {
-//        SWTFrameModel *frameModel = [[SWTFrameModel alloc] init];
-//        frameModel.stepModel = stepModel;
-//        [arrayM addObject:frameModel];
 
-    for (NSDictionary *stepDict in self.dictData[@"steps"]) {
-        
-        CPStep *step = [CPStep stepWithDict:stepDict];
+    for (CPStep *step in self.foodModel.steps) {
         
         SWTFrameModel *frameModel = [[SWTFrameModel alloc] init];
         frameModel.stepModel = step;
-        
         [arrayM addObject:frameModel];
     }
+    
     _frameList = [arrayM copy];
+
+    
+    // 收藏/删除收藏按钮
+    UIButton *collect = nil;
+    
+    // 从数据库获取最新的数据
+    NSArray *collectMenus = [HFJCollectMenuTool collectMenus];
+    
+    // 如果数据库中,有本条菜谱数据
+    if ([collectMenus containsObject:self.foodModel.keyValues]) {
+        
+        // 显示删除按钮
+        collect = [UIBarButtonItem buttonImage:@"navigationbar_back_highlighted" highlightedImage:@"navigationbar_more_highlighted" target:self action:@selector(collectOrDelete:)];
+        collect.tag = 1; // 1 表示已经收藏, 0表示未收藏
+#warning 收藏/删除收藏按钮,等待更换图片
+    }else{
+        
+        // 显示收藏按钮
+        collect = [UIBarButtonItem buttonImage:@"navigationbar_more" highlightedImage:@"navigationbar_more_highlighted" target:self action:@selector(collectOrDelete:)];
+        collect.tag = 0; // 1 表示已经收藏, 0表示未收藏
+    }
+    
+    // 设置按钮的位置,并添加到导航栏
+    collect.center = CGPointMake(190, 22);
+    [self.navigationItem.titleView addSubview:collect];
+    
+    // 设置头部的view
+    SWTHeaderView *headerView = [[SWTHeaderView alloc] initWithFoodModel:_foodModel];
+    
+    self.tableView.tableHeaderView = headerView;
     
 }
 

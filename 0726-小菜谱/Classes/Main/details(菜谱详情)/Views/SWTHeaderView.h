@@ -9,7 +9,11 @@
 
 #import <UIKit/UIKit.h>
 @class CPData;
+
 @interface SWTHeaderView : UIView
+
 @property (nonatomic, strong) CPData *foodModel;
+
 - (instancetype)initWithFoodModel:(CPData *)foodModel;
+
 @end

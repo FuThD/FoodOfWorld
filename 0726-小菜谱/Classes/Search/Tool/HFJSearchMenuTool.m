@@ -13,7 +13,7 @@
 
 @implementation HFJSearchMenuTool
 
-+ (void)searchMenuWithParam:(HFJSearchParam *)param success:(void(^)(HFJSearchData *data, id json))success failure:(void(^)(NSError *error))failure
++ (void)searchMenuWithParam:(HFJSearchParam *)param success:(void(^)(HFJSearchData *data))success failure:(void(^)(NSError *error))failure
 {
 
     // 加载数据
@@ -33,7 +33,7 @@
                 HFJSearchData *data = [HFJSearchData objectWithKeyValues:searchRestul.result];
                 
                 // 返回搜索结果的data模型
-                success(data, json);
+                success(data);
                 
             }else if([searchRestul.reason isEqualToString:@"request ip exceeds the limit"]){
                 
@@ -44,7 +44,7 @@
             }else{
                 
                 // 如果没有找到菜谱数据,
-                success(nil, nil);
+                success(nil);
             }
      }
     } failure:^(NSError *error) {

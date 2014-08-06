@@ -7,6 +7,7 @@
 //
 
 #import "CPData.h"
+#import "CPStep.h"
 
 @implementation CPData
 
@@ -42,43 +43,13 @@
 }
 
 
-/**
- *  解档
- */
-//- (instancetype)initWithCoder:(NSCoder *)aDecoder
-//{
-//    if (self = [super init]) {
-//        
-//        _cid = [aDecoder decodeObjectForKey:@"cid"];
-//        _title = [aDecoder decodeObjectForKey:@"title"];
-//        _albums = [aDecoder decodeObjectForKey:@"albums"];
-//        _ingredients = [aDecoder decodeObjectForKey:@"ingredients"];
-//        _burden = [aDecoder decodeObjectForKey:@"burden"];
-//        _tags = [aDecoder decodeObjectForKey:@"tags"];
-//        _imtro = [aDecoder decodeObjectForKey:@"imtro"];
-//        _steps = [aDecoder decodeObjectForKey:@"steps"];
-//
-//    }
-//
-//    return self;
-//}
-//
-///**
-// *  归档
-// */
-//
-//- (void)encodeWithCoder:(NSCoder *)aCoder
-//{
-//    [aCoder encodeObject:_cid forKey:@"cid"];
-//    [aCoder encodeObject:_title forKey:@"title"];
-//    [aCoder encodeObject:_albums forKey:@"albums"];
-//    [aCoder encodeObject:_ingredients forKey:@"ingredients"];
-//    [aCoder encodeObject:_burden forKey:@"burden"];
-//    [aCoder encodeObject:_tags forKey:@"tags"];
-//    [aCoder encodeObject:_imtro forKey:@"imtro"];
-//    [aCoder encodeObject:_steps forKey:@"steps"];
-//
-//}
+// steps数组里面存得CPStep对象
+- (NSDictionary *)objectClassInArray
+{
+    return @{@"steps" : [CPStep class]};
+}
+
+
 
 
 @end

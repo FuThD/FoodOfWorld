@@ -100,10 +100,8 @@
 		A4BF7DA219890D9B0055CA95 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4BF7D9E19890D9B0055CA95 /* MBProgressHUD.bundle */; };
 		A4BF7DA319890D9B0055CA95 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7DA019890D9B0055CA95 /* MBProgressHUD.m */; };
 		A4BF7DA5198925DF0055CA95 /* HFJMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BF7DA4198925DF0055CA95 /* HFJMainCell.xib */; };
-		A4E7C7001991D8B4007839A8 /* CPAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FB1991D8B4007839A8 /* CPAlbum.m */; };
 		A4E7C7011991D8B4007839A8 /* CPData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FD1991D8B4007839A8 /* CPData.m */; };
 		A4E7C7021991D8B4007839A8 /* CPStep.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FF1991D8B4007839A8 /* CPStep.m */; };
-		A4E7C705199202FA007839A8 /* HFJLikeDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */; };
 		A4E7C70D199205EF007839A8 /* SWTFoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C707199205EF007839A8 /* SWTFoodCategory.m */; };
 		A4E7C70E199205EF007839A8 /* SWTSortCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C709199205EF007839A8 /* SWTSortCell.m */; };
 		A4E7C70F199205EF007839A8 /* SWTSortCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E7C70A199205EF007839A8 /* SWTSortCell.xib */; };
@@ -313,14 +311,10 @@
 		A4BF7D9F19890D9B0055CA95 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A4BF7DA019890D9B0055CA95 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A4BF7DA4198925DF0055CA95 /* HFJMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFJMainCell.xib; sourceTree = "<group>"; };
-		A4E7C6FA1991D8B4007839A8 /* CPAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAlbum.h; sourceTree = "<group>"; };
-		A4E7C6FB1991D8B4007839A8 /* CPAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAlbum.m; sourceTree = "<group>"; };
 		A4E7C6FC1991D8B4007839A8 /* CPData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPData.h; sourceTree = "<group>"; };
 		A4E7C6FD1991D8B4007839A8 /* CPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPData.m; sourceTree = "<group>"; };
 		A4E7C6FE1991D8B4007839A8 /* CPStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStep.h; sourceTree = "<group>"; };
 		A4E7C6FF1991D8B4007839A8 /* CPStep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPStep.m; sourceTree = "<group>"; };
-		A4E7C703199202FA007839A8 /* HFJLikeDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJLikeDishViewController.h; sourceTree = "<group>"; };
-		A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJLikeDishViewController.m; sourceTree = "<group>"; };
 		A4E7C706199205EF007839A8 /* SWTFoodCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTFoodCategory.h; sourceTree = "<group>"; };
 		A4E7C707199205EF007839A8 /* SWTFoodCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTFoodCategory.m; sourceTree = "<group>"; };
 		A4E7C708199205EF007839A8 /* SWTSortCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWTSortCell.h; path = ../Model/SWTSortCell.h; sourceTree = "<group>"; };
@@ -488,8 +482,6 @@
 			children = (
 				A47163351983BF9000A8B769 /* HFJLikeTableViewController.h */,
 				A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */,
-				A4E7C703199202FA007839A8 /* HFJLikeDishViewController.h */,
-				A4E7C704199202FA007839A8 /* HFJLikeDishViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -797,8 +789,6 @@
 				A4E7C6FD1991D8B4007839A8 /* CPData.m */,
 				A4E7C6FE1991D8B4007839A8 /* CPStep.h */,
 				A4E7C6FF1991D8B4007839A8 /* CPStep.m */,
-				A4E7C6FA1991D8B4007839A8 /* CPAlbum.h */,
-				A4E7C6FB1991D8B4007839A8 /* CPAlbum.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1090,7 +1080,6 @@
 				A498FD1419888394007CD71B /* MKAnnotationView+WebCache.m in Sources */,
 				A4A69B6A198F61AD003A30A2 /* HFJHistoryCacheTool.m in Sources */,
 				A498FD2219888394007CD71B /* UIImageView+WebCache.m in Sources */,
-				A4E7C705199202FA007839A8 /* HFJLikeDishViewController.m in Sources */,
 				A4BF7D8E19888CE50055CA95 /* MJArgument.m in Sources */,
 				A498E5CA1986925B00E39B19 /* AFURLResponseSerialization.m in Sources */,
 				A4BF7D9519888CE50055CA95 /* NSObject+MJKeyValue.m in Sources */,
@@ -1119,7 +1108,6 @@
 				A4E7C70E199205EF007839A8 /* SWTSortCell.m in Sources */,
 				A498FD1D19888394007CD71B /* UIButton+WebCache.m in Sources */,
 				A4BF7D9619888CE50055CA95 /* NSObject+MJMember.m in Sources */,
-				A4E7C7001991D8B4007839A8 /* CPAlbum.m in Sources */,
 				A4716372198528EB00A8B769 /* HFJMainCell.m in Sources */,
 				A498E5D1198698D500E39B19 /* NSArray+Log.m in Sources */,
 			);

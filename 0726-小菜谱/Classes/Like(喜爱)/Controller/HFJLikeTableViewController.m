@@ -11,7 +11,7 @@
 #import "HFJDishViewController.h"
 #import "HFJCollectMenuTool.h"
 #import "CPData.h"
-#import "HFJLikeDishViewController.h"
+
 
 @interface HFJLikeTableViewController()
 
@@ -24,11 +24,6 @@
  *  存放模型的数组
  */
 @property (nonatomic, strong) NSArray *dataList;
-
-/**
- *  存放字典的数组
- */
-@property (nonatomic, strong) NSArray *dataArray;
 
 @end
 
@@ -48,7 +43,7 @@
     [super viewDidLoad];
 
     // 如果没有数据, 就显示一个推荐图片,否者不显示
-    if (!self.dataArray.count) {
+    if (!self.dataList.count) {
         
         [self.tableView addSubview:self.imageView];
         
@@ -81,13 +76,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 将控制器添加到父控制器
-    HFJLikeDishViewController *dishVC = [[HFJLikeDishViewController alloc] init];
+    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
     
     // 取出数据赋值给dishVC
     CPData *data = self.dataList[indexPath.row];
     dishVC.foodModel = data;
-    NSDictionary *dictData = self.dataArray[indexPath.row];
-    dishVC.dictData = dictData;
 
     [self.navigationController pushViewController:dishVC animated:YES];
 
@@ -101,16 +94,14 @@
     [super viewDidAppear:animated];
     
     // 读取数据库
-    _dataArray = [HFJCollectMenuTool collectMenus];
-    
-    _dataList = [CPData objectArrayWithKeyValuesArray:_dataArray];
+    _dataList = [CPData objectArrayWithKeyValuesArray:[HFJCollectMenuTool collectMenus]];
 
     
     // 刷新表格
     [self.tableView reloadData];
 
     // 如果没有数据, 就显示一个推荐图片,否者不显示
-    if (!self.dataArray.count) {
+    if (!self.dataList.count) {
         
         [self.tableView addSubview:self.imageView];
         
@@ -129,15 +120,6 @@
         _dataList = [NSArray array];
     }
     return _dataList;
-}
-
-- (NSArray *)dataArray
-{
-    if (_dataArray == nil) {
-        
-        _dataArray = [NSArray array];
-    }
-    return _dataArray;
 }
 
 - (UIImageView *)imageView

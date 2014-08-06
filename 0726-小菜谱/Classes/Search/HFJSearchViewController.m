@@ -268,13 +268,12 @@
     param.rn = @20;
     
     // 搜索菜谱工具类, 搜索菜谱
-    [HFJSearchMenuTool searchMenuWithParam:param success:^(HFJSearchData *data, id json) {
+    [HFJSearchMenuTool searchMenuWithParam:param success:^(HFJSearchData *data) {
         
         if (data) {
             
             // 如果有数据, 设置控制器的数据
             searchResultController.dataList = data.data;
-            searchResultController.dataArray = json[@"result"][@"data"];
 
             // 存储为历史搜索, 并存到数据库中
             if (![self.tableVC.historyMenuList containsObject:menu]) {

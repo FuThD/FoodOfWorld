@@ -19,6 +19,6 @@
  *  @param success 搜索结果
  *  @param failure 错误信息
  */
-+ (void)searchMenuWithParam:(HFJSearchParam *)param success:(void(^)(HFJSearchData *data, id json))success failure:(void(^)(NSError *error))failure;
++ (void)searchMenuWithParam:(HFJSearchParam *)param success:(void(^)(HFJSearchData *data))success failure:(void(^)(NSError *error))failure;
 
 @end

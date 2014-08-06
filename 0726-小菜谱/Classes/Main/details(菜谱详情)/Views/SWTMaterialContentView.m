@@ -5,6 +5,8 @@
 //  Created by czw-apc on 14-8-2.
 //  Copyright (c) 2014年 czw. All rights reserved.
 //
+
+
 #define screenSize [UIScreen mainScreen].bounds.size
 #import "SWTMaterialContentView.h"
 #import "SWTMaterialView.h"
@@ -22,15 +24,6 @@
 @end
 
 @implementation SWTMaterialContentView
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-
-    }
-    return self;
-}
 
 /**
  *  添加子控件

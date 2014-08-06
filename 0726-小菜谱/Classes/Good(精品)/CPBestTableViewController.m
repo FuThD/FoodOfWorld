@@ -19,11 +19,6 @@
 /** 定义数组，保存所有的属性 */
 @property (nonatomic, strong) NSArray *dataList;
 
-/**
- *  存储数据模型的字典数组
- */
-@property (nonatomic, strong) NSMutableArray *dictArray;
-
 @end
 
 @implementation CPBestTableViewController
@@ -41,7 +36,6 @@
         
         //3.遍历数组 arrayM存得500个plist数据
         NSMutableArray *arrayM = [NSMutableArray array];     // 存模型
-        NSMutableArray *dictArrayM = [NSMutableArray array]; // 存字典
         
         for (NSArray *arr in array) {
             
@@ -49,12 +43,10 @@
             
             CPData *data = [CPData dataWithDict:dict];
             
-            [dictArrayM addObject:dict]; // 存入模型
             [arrayM addObject:data];     // 存入模型
-            
         }
         
-        // 从500个数据里面随机抽取10个数据
+        // 从500个数据里面随机抽取10个数据模型和10个字典
         NSMutableArray *dataArray = [NSMutableArray array];
         
         for (int i = 0; i < SWTBestCellCount; i++) {
@@ -63,27 +55,14 @@
             int index = arc4random_uniform(arrayM.count);
             
             [dataArray addObject:arrayM[index]];
-            [self.dictArray addObject:dictArrayM[index]];
         }
         
+        // 赋值字典数组
         _dataList = dataArray;
     }
     return _dataList;
 }
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
 
 #pragma mark - tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -119,9 +98,8 @@
     // 取模型,数据
     CPData *data = self.dataList[indexPath.row];
     dishVC.foodModel = data;
-    NSDictionary *dict = self.dictArray[indexPath.row];
-    dishVC.dictData = dict;
-    
+
+    // 退出控制器
     [self.navigationController pushViewController:dishVC animated:YES];
 }
 

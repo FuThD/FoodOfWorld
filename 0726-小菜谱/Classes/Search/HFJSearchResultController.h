@@ -17,10 +17,6 @@
  */
 @property (nonatomic, strong) NSArray* dataList;
 
-/**
- *  对应菜品数据的字典数组
- */
-@property (nonatomic, strong) NSArray *dataArray;
 
 
 @end

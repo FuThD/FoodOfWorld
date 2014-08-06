@@ -137,13 +137,13 @@
     // 取消选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    // 取出当前选中的模型
-    CPData *foodModel = self.foodList[indexPath.row];
-    
     HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    
+    // 取出当前选中的模型
+    CPData *foodModel = self.foodList[indexPath.row];    
     dishVC.foodModel = foodModel;
     dishVC.title = foodModel.title;
-    dishVC.dictData = self.dictArray[indexPath.row];
+
     [self.navigationController pushViewController:dishVC animated:YES ];
 }
 @end

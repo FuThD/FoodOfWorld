@@ -34,6 +34,7 @@
 {
     
     SWTSortCell *cell = [collectView dequeueReusableCellWithReuseIdentifier:SWTSortCellIdentifier forIndexPath:indexPath];
+    
     if(!cell)
     {
         cell = [[SWTSortCell alloc] init];

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CPStep.h"
+
 
 @interface CPData : NSObject
 
@@ -35,7 +35,6 @@
 /** 制作步骤 */
 @property (nonatomic, strong) NSArray *steps;
 
-//@property (nonatomic, strong) NSDictionary *dict;
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)dataWithDict:(NSDictionary *)dict;

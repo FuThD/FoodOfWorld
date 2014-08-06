@@ -10,7 +10,11 @@
 
 #import <UIKit/UIKit.h>
 @class SWTFoodMaterialModel;
+
 @interface SWTMaterialView : UIView
+
 @property (nonatomic, strong) SWTFoodMaterialModel *materialModel;
+
 + (instancetype)materialView;
+
 @end

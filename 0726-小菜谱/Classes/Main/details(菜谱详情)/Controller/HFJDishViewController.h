@@ -11,9 +11,6 @@
 
 @interface HFJDishViewController : UITableViewController
 
-// 菜品做法的字典数据
-@property (nonatomic, strong) NSDictionary *dictData;
-
 // 菜品做法模型
 @property (nonatomic, strong) CPData *foodModel;
 
