@@ -19,7 +19,6 @@
 		A471631A1983BE5500A8B769 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A47162FC1983BE5500A8B769 /* UIKit.framework */; };
 		A47163221983BE5500A8B769 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A47163201983BE5500A8B769 /* InfoPlist.strings */; };
 		A47163241983BE5500A8B769 /* _726____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163231983BE5500A8B769 /* _726____Tests.m */; };
-		A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */; };
 		A47163531983BF9000A8B769 /* HFJLikeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */; };
 		A47163541983BF9000A8B769 /* HFJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633C1983BF9000A8B769 /* HFJMainViewController.m */; };
 		A47163551983BF9000A8B769 /* HFJMenuButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = A471633F1983BF9000A8B769 /* HFJMenuButtonView.m */; };
@@ -151,8 +150,6 @@
 		A471631F1983BE5500A8B769 /* 0726-小菜谱Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "0726-小菜谱Tests-Info.plist"; sourceTree = "<group>"; };
 		A47163211983BE5500A8B769 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A47163231983BE5500A8B769 /* _726____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_726____Tests.m"; sourceTree = "<group>"; };
-		A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJGoodTableViewController.h; sourceTree = "<group>"; };
-		A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJGoodTableViewController.m; sourceTree = "<group>"; };
 		A47163351983BF9000A8B769 /* HFJLikeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJLikeTableViewController.h; sourceTree = "<group>"; };
 		A47163361983BF9000A8B769 /* HFJLikeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFJLikeTableViewController.m; sourceTree = "<group>"; };
 		A471633B1983BF9000A8B769 /* HFJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFJMainViewController.h; sourceTree = "<group>"; };
@@ -648,8 +645,6 @@
 			children = (
 				A4E7C73A19921377007839A8 /* CPBestTableViewController.h */,
 				A4E7C73B19921377007839A8 /* CPBestTableViewController.m */,
-				A471632F1983BF9000A8B769 /* HFJGoodTableViewController.h */,
-				A47163301983BF9000A8B769 /* HFJGoodTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1072,7 +1067,6 @@
 				A4E7C72B19920746007839A8 /* MJRefreshHeaderView.m in Sources */,
 				A4A69B70198F7443003A30A2 /* HFJSearchMenuTool.m in Sources */,
 				A4A69B12198DD4D1003A30A2 /* FMResultSet.m in Sources */,
-				A47163521983BF9000A8B769 /* HFJGoodTableViewController.m in Sources */,
 				A498E5D2198698D500E39B19 /* NSDictionary+Log.m in Sources */,
 				A4A69B0F198DD4D1003A30A2 /* FMDatabaseAdditions.m in Sources */,
 				A4E7C72D19920746007839A8 /* UIScrollView+MJRefresh.m in Sources */,

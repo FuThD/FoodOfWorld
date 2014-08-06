@@ -73,7 +73,7 @@
     //3.1创建Label视图
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor redColor];
+    titleLabel.textColor = [UIColor whiteColor];
     
     //3.2设置frame
     CGFloat titleLabelX = 0;

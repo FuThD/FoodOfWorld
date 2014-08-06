@@ -9,6 +9,7 @@
 #import "CPBestTableViewController.h"
 #import "CPBestCell.h"
 #import "CPData.h"
+#import "HFJDishViewController.h"
 
 #define cellHeight 135
 #define SWTBestCellCount 10
@@ -17,6 +18,11 @@
 
 /** 定义数组，保存所有的属性 */
 @property (nonatomic, strong) NSArray *dataList;
+
+/**
+ *  存储数据模型的字典数组
+ */
+@property (nonatomic, strong) NSMutableArray *dictArray;
 
 @end
 
@@ -33,8 +39,9 @@
         //2.取出数据
         NSArray *array = [NSArray arrayWithContentsOfFile:fullPath];
         
-        //3.遍历数组
-        NSMutableArray *arrayM = [NSMutableArray array];
+        //3.遍历数组 arrayM存得500个plist数据
+        NSMutableArray *arrayM = [NSMutableArray array];     // 存模型
+        NSMutableArray *dictArrayM = [NSMutableArray array]; // 存字典
         
         for (NSArray *arr in array) {
             
@@ -42,16 +49,21 @@
             
             CPData *data = [CPData dataWithDict:dict];
             
-            [arrayM addObject:data];
+            [dictArrayM addObject:dict]; // 存入模型
+            [arrayM addObject:data];     // 存入模型
             
         }
         
+        // 从500个数据里面随机抽取10个数据
         NSMutableArray *dataArray = [NSMutableArray array];
         
         for (int i = 0; i < SWTBestCellCount; i++) {
             
+            // 随机数据
             int index = arc4random_uniform(arrayM.count);
+            
             [dataArray addObject:arrayM[index]];
+            [self.dictArray addObject:dictArrayM[index]];
         }
         
         _dataList = dataArray;
@@ -64,7 +76,6 @@
     self = [super initWithStyle:style];
     if (self) {
 
-        
     }
     return self;
 }
@@ -83,7 +94,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     
     // 1.创建自定义cell
     CPBestCell *cell = [CPBestCell cellWithTabelView:tableView];
@@ -104,13 +114,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 跳转到下一个控制器
-//    CPFlowViewController *vc = [[CPFlowViewController alloc] init];
-//    
-//    CPData *data = self.dataList[indexPath.row];
-//    vc.data = data;
-//    
-//    vc.view.backgroundColor = [UIColor purpleColor];
-//    [self.navigationController pushViewController:vc animated:YES];
+    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    
+    // 取模型,数据
+    CPData *data = self.dataList[indexPath.row];
+    dishVC.foodModel = data;
+    NSDictionary *dict = self.dictArray[indexPath.row];
+    dishVC.dictData = dict;
+    
+    [self.navigationController pushViewController:dishVC animated:YES];
 }
 
 
