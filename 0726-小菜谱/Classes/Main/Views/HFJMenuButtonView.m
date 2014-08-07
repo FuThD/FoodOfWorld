@@ -27,7 +27,7 @@
 @property (nonatomic, strong) UIButton *selectedBtn;
 
 /**
- *  选中标题按钮底部的绿线
+ *  选中标题按钮底部的橙色的线
  */
 @property (nonatomic, strong) UIView *titleBtnLineView;
 
@@ -52,7 +52,7 @@
         // 3.设置标题按钮
         [self setButtons];
         
-        // 4.设置标题按钮底部绿色的先
+        // 4.设置标题按钮底部橙色的线
         [self setTitleBtnLineView];
     }
     return self;
@@ -78,16 +78,14 @@
     
     // 动画移动标题按钮底部橙色的线
     [UIView animateWithDuration:HFJViewMovedTime animations:^{
-       
-        self.titleBtnLineView.centerX = btn.centerX;
-        
+
+        // 代理方调用代理方法
+        if ([self.delegate respondsToSelector:@selector(titleButtonViewDidClickButton:)]) {
+            
+            [self.delegate titleButtonViewDidClickButton:btn.tag];
+        }
     }];
     
-    // 代理方调用代理方法
-    if ([self.delegate respondsToSelector:@selector(titleButtonViewDidClickButton:)]) {
-        
-        [self.delegate titleButtonViewDidClickButton:btn.tag];
-    }
 }
 
 
@@ -137,7 +135,7 @@
 
 }
 
-// 4.设置标题按钮底部橙色的先
+// 4.设置标题按钮底部橙色的线
 - (void)setTitleBtnLineView
 {
     self.titleBtnLineView = [[UIView alloc] init];
@@ -166,7 +164,7 @@
         btn.x = i * btn.width;
     }
     
-    // 设置标题按钮底部橙色的先
+    // 设置标题按钮底部橙色的线
     self.titleBtnLineView.frame = CGRectMake(5, self.height - 4, 100, 3);
 
 }

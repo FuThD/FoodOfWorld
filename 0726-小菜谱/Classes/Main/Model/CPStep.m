@@ -28,7 +28,7 @@
 
 - (NSString *)step
 {
-    return [NSString stringWithFormat:@"    步骤 %@", _step];
+    return [NSString stringWithFormat:@"       步骤 %@", _step];
 }
 
 

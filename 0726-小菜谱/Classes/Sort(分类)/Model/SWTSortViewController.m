@@ -82,7 +82,6 @@
 {
     // 取出当前模型
     SWTFoodCategory *category = self.dataList[indexPath.item];
-    NSLog(@"%@ -- %@", category.sortID, category.name);
     // 实例化列表控制器
     SWTFoodListViewController *listVC = [[SWTFoodListViewController alloc] init];
     listVC.title = category.name;

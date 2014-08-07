@@ -100,6 +100,8 @@
 		A4BF7DA219890D9B0055CA95 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4BF7D9E19890D9B0055CA95 /* MBProgressHUD.bundle */; };
 		A4BF7DA319890D9B0055CA95 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BF7DA019890D9B0055CA95 /* MBProgressHUD.m */; };
 		A4BF7DA5198925DF0055CA95 /* HFJMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4BF7DA4198925DF0055CA95 /* HFJMainCell.xib */; };
+		A4E00AE319930DDA00E94118 /* CPBestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4E00AE219930DDA00E94118 /* CPBestCell.xib */; };
+		A4E00AE6199337F100E94118 /* NSDate+NJ.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E00AE5199337F100E94118 /* NSDate+NJ.m */; };
 		A4E7C7011991D8B4007839A8 /* CPData.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FD1991D8B4007839A8 /* CPData.m */; };
 		A4E7C7021991D8B4007839A8 /* CPStep.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C6FF1991D8B4007839A8 /* CPStep.m */; };
 		A4E7C70D199205EF007839A8 /* SWTFoodCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = A4E7C707199205EF007839A8 /* SWTFoodCategory.m */; };
@@ -311,6 +313,9 @@
 		A4BF7D9F19890D9B0055CA95 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A4BF7DA019890D9B0055CA95 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A4BF7DA4198925DF0055CA95 /* HFJMainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HFJMainCell.xib; sourceTree = "<group>"; };
+		A4E00AE219930DDA00E94118 /* CPBestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPBestCell.xib; sourceTree = "<group>"; };
+		A4E00AE4199337F100E94118 /* NSDate+NJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+NJ.h"; sourceTree = "<group>"; };
+		A4E00AE5199337F100E94118 /* NSDate+NJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+NJ.m"; sourceTree = "<group>"; };
 		A4E7C6FC1991D8B4007839A8 /* CPData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPData.h; sourceTree = "<group>"; };
 		A4E7C6FD1991D8B4007839A8 /* CPData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPData.m; sourceTree = "<group>"; };
 		A4E7C6FE1991D8B4007839A8 /* CPStep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPStep.h; sourceTree = "<group>"; };
@@ -449,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				A47163391983BF9000A8B769 /* Main */,
+				A4AA87BF1991BDE300D789CE /* details(菜谱详情) */,
 				A4A69B3B198F60CA003A30A2 /* Search */,
 				A471632E1983BF9000A8B769 /* Good(精品) */,
 				A47163491983BF9000A8B769 /* Sort(分类) */,
@@ -503,7 +509,6 @@
 		A47163391983BF9000A8B769 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A4AA87BF1991BDE300D789CE /* details(菜谱详情) */,
 				A4A69B5E198F6112003A30A2 /* Model */,
 				A471633A1983BF9000A8B769 /* Controller */,
 				A471633D1983BF9000A8B769 /* Views */,
@@ -577,6 +582,8 @@
 		A47163461983BF9000A8B769 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A4E00AE4199337F100E94118 /* NSDate+NJ.h */,
+				A4E00AE5199337F100E94118 /* NSDate+NJ.m */,
 				A498E5CD198698D500E39B19 /* NSArray+Log.h */,
 				A498E5CE198698D500E39B19 /* NSArray+Log.m */,
 				A498E5CF198698D500E39B19 /* NSDictionary+Log.h */,
@@ -800,7 +807,8 @@
 				A4AA87C51991BDE300D789CE /* Model */,
 				A4AA87CA1991BDE300D789CE /* Views */,
 			);
-			path = "details(菜谱详情)";
+			name = "details(菜谱详情)";
+			path = "Main/details(菜谱详情)";
 			sourceTree = "<group>";
 		};
 		A4AA87C01991BDE300D789CE /* Controller */ = {
@@ -907,6 +915,7 @@
 			children = (
 				A4E7C7371992136A007839A8 /* CPBestCell.h */,
 				A4E7C7381992136A007839A8 /* CPBestCell.m */,
+				A4E00AE219930DDA00E94118 /* CPBestCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1001,6 +1010,7 @@
 				A4E7C73E199214EC007839A8 /* allFoodPlist.plist in Resources */,
 				A471630C1983BE5500A8B769 /* Main.storyboard in Resources */,
 				A4BF7DA219890D9B0055CA95 /* MBProgressHUD.bundle in Resources */,
+				A4E00AE319930DDA00E94118 /* CPBestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1031,6 +1041,7 @@
 				A498E5C41986925B00E39B19 /* AFHTTPRequestOperationManager.m in Sources */,
 				A498E5C31986925B00E39B19 /* AFHTTPRequestOperation.m in Sources */,
 				A498FD2019888394007CD71B /* UIImage+WebP.m in Sources */,
+				A4E00AE6199337F100E94118 /* NSDate+NJ.m in Sources */,
 				A4AA87DA1991BDE300D789CE /* SWTHeaderView.m in Sources */,
 				A4E7C72919920746007839A8 /* MJRefreshConst.m in Sources */,
 				A4A69B0E198DD4D1003A30A2 /* FMDatabase.m in Sources */,

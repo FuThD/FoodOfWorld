@@ -10,8 +10,9 @@
 #import "CPBestCell.h"
 #import "CPData.h"
 #import "HFJDishViewController.h"
+#import "NSDate+NJ.h"
 
-#define cellHeight 135
+#define cellHeight 190
 #define SWTBestCellCount 10
 
 @interface CPBestTableViewController ()
@@ -49,10 +50,11 @@
         // 从500个数据里面随机抽取10个数据模型和10个字典
         NSMutableArray *dataArray = [NSMutableArray array];
         
+        // 随机数据
         for (int i = 0; i < SWTBestCellCount; i++) {
             
-            // 随机数据
-            int index = arc4random_uniform(arrayM.count);
+            // 取一个随机数据
+            int index = arc4random_uniform(arrayM.count / 10) * (i + 1);
             
             [dataArray addObject:arrayM[index]];
         }
@@ -63,6 +65,10 @@
     return _dataList;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
 
 #pragma mark - tableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -101,6 +107,24 @@
 
     // 退出控制器
     [self.navigationController pushViewController:dishVC animated:YES];
+}
+
+#warning 今天
+- (BOOL)isToday
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
+    
+    // 告诉系统时间格式所属的区域
+    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+    NSDate *createdTime = [NSData data];
+
+        // 今天
+        if ([createdTime isToday]) {
+            return YES;
+        }else{
+            return NO;
+        }
 }
 
 

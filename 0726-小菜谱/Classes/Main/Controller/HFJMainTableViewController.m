@@ -20,14 +20,12 @@
     
     // 设置表格的y值
     self.tableView.y = 0;
-    self.tableView.height = 381;
-    
-    // 取消拖拽边界的弹簧效果
-    self.tableView.bounces = NO;
-    
+    self.tableView.height = HFJViewHeight;
+
     self.tableView.rowHeight = 80;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
 
 }
 

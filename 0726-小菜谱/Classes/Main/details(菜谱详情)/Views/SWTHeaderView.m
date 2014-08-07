@@ -68,6 +68,7 @@
     UIImageView *picView = [[UIImageView alloc] init];
     picView.layer.cornerRadius = 5;
     picView.clipsToBounds = YES;
+    picView.contentMode = UIViewContentModeScaleAspectFill;
     self.picView = picView;
     [self addSubview:picView];
     
@@ -158,7 +159,7 @@
 {
     self.titleLabel.text = _foodModel.title;
     [self.picView sd_setImageWithURL:[NSURL URLWithString:_foodModel.albums[0]] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
-    self.imtroLabel.text = _foodModel.imtro;
+    self.imtroLabel.text = [NSString stringWithFormat:@"       %@", _foodModel.imtro];
 }
 
 - (instancetype)initWithFoodModel:(CPData *)foodModel

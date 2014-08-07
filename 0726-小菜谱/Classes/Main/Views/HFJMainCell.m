@@ -37,6 +37,8 @@
     
     // 设置cell的选中状态
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.menuIcon.layer.cornerRadius = 5;
+    cell.menuIcon.clipsToBounds = YES;
     
     return cell;
 

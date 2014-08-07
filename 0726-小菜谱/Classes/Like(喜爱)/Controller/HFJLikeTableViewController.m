@@ -94,9 +94,8 @@
     [super viewDidAppear:animated];
     
     // 读取数据库
-    _dataList = [CPData objectArrayWithKeyValuesArray:[HFJCollectMenuTool collectMenus]];
+    _dataList = [HFJCollectMenuTool collectMenus];
 
-    
     // 刷新表格
     [self.tableView reloadData];
 
@@ -128,10 +127,8 @@
         
 #warning 提示客户去收藏的图片
         _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"QQ20140804-1"]];
-        
         _imageView.center = self.tableView.center;
         _imageView.backgroundColor = [UIColor redColor];
-        
     }
     return _imageView;
 }

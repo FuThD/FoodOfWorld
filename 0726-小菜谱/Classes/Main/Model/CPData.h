@@ -12,7 +12,7 @@
 @interface CPData : NSObject
 
 /** 索引 */
-@property (nonatomic, copy) NSString *cid;
+//@property (nonatomic, copy) NSString *cid;
 
 /** 标题 */
 @property (nonatomic, copy) NSString *title;
@@ -27,7 +27,7 @@
 @property (nonatomic, copy) NSString *burden;
 
 /** 搜索的关键字 */
-@property (nonatomic, copy) NSString *tags;
+//@property (nonatomic, copy) NSString *tags;
 
 /** 事务简介 */
 @property (nonatomic, copy) NSString *imtro;

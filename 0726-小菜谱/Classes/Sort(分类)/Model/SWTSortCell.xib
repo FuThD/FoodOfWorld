@@ -29,7 +29,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.87938630020403741" green="1" blue="0.83036570311576452" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <size key="customSize" width="60" height="61"/>
             <connections>
                 <outlet property="titleLabel" destination="W2F-Ql-u7b" id="DDe-wi-k7l"/>
@@ -37,6 +37,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="collect" width="49" height="34"/>
+        <image name="collect" width="60" height="60"/>
     </resources>
 </document>

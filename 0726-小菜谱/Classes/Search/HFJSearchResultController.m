@@ -22,6 +22,14 @@
 
 @implementation HFJSearchResultController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);    
+}
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

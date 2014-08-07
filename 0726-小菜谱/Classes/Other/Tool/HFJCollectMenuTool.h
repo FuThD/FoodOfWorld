@@ -9,6 +9,7 @@
 //  收藏/取消收藏菜谱工具类(数据库存储)
 
 #import <Foundation/Foundation.h>
+@class CPData;
 
 
 @interface HFJCollectMenuTool : NSObject
@@ -16,7 +17,7 @@
 /**
  *  存储喜爱的菜谱
  */
-+ (BOOL)saveCollectMenus:(NSDictionary *)dict;
++ (BOOL)saveCollectMenus:(CPData *)foodModel;
 
 
 /**
@@ -28,12 +29,12 @@
 /**
  *  删除收藏的菜谱
  */
-+ (BOOL)deleteMenu:(NSDictionary *)dict;
++ (BOOL)deleteMenu:(CPData *)foodModel;
 
 /**
  *  查询收藏的菜谱
  */
-//+ (BOOL)searchMenu:(NSDictionary *)dict;
++ (BOOL)searchMenu:(CPData *)foodModel;
 
 
 

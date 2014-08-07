@@ -15,12 +15,12 @@
 {
     if (self = [super init]) {
         
-        self.cid = dict[@"id"];
+//        self.cid = dict[@"id"];
         self.title = dict[@"title"];
         self.ingredients = dict[@"ingredients"];
         self.imtro = dict[@"imtro"];
         self.burden = dict[@"burden"];
-        self.tags = dict[@"tags"];
+//        self.tags = dict[@"tags"];
         self.steps = dict[@"steps"];
         
         NSMutableArray *arrayM = [NSMutableArray array];

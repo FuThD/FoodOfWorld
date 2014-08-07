@@ -33,6 +33,7 @@
         UIImageView *picView = [[UIImageView alloc] init];
         picView.layer.cornerRadius = 5;
         picView.clipsToBounds = YES;
+        picView.contentMode = UIViewContentModeScaleAspectFill;
         self.picView = picView;
         [self.contentView addSubview:picView];
         

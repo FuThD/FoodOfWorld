@@ -28,7 +28,7 @@
     _picF = CGRectMake(picX, picY, picW, picH);
     
     // 文字
-    CGFloat descX = margin;
+    CGFloat descX = picX;
     CGFloat descY = CGRectGetMaxY(_picF) + margin;
     CGFloat descW = viewSize.width - 2 * descX;
     CGSize descSize = [stepModel.step sizeWithFont:SWTFrameModelDescFont constrainedToSize:CGSizeMake(descW, MAXFLOAT)];

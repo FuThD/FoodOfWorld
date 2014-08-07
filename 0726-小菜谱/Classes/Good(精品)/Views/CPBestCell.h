@@ -11,6 +11,9 @@
 
 @interface CPBestCell : UITableViewCell
 
+/**
+ *  菜谱模型
+ */
 @property (nonatomic, strong) CPData *data;
 
 + (instancetype)cellWithTabelView:(UITableView *)tableView;

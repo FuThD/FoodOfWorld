@@ -70,6 +70,8 @@
     [self.tableView registerNib:nib forCellReuseIdentifier:@"MainCell"];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
 //    [self.tableView addFooterWithTarget:self action:@selector(loadMore)];
     
 }
