@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
     
-    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);    
+    self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
 }
 
 

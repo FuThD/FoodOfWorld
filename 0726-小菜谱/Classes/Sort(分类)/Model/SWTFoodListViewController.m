@@ -11,7 +11,6 @@
 #import "CPData.h"
 #import "HFJMainCell.h"
 #import "MJExtension.h"
-#import "MJRefresh.h"
 #import "HFJDishViewController.h"
 
 
@@ -63,8 +62,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // 加载对应类别的菜谱列表
-//    [self loadFoodList];
+
     // 注册NIB
     UINib *nib = [UINib nibWithNibName:@"HFJMainCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"MainCell"];
@@ -72,7 +70,6 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
-//    [self.tableView addFooterWithTarget:self action:@selector(loadMore)];
     
 }
 
