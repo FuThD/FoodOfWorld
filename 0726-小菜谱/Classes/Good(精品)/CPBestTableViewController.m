@@ -8,17 +8,23 @@
 
 #import "CPBestTableViewController.h"
 #import "CPBestCell.h"
-#import "CPData.h"
-#import "HFJDishViewController.h"
+#import "SWTData.h"
+#import "FTDJDishViewController.h"
 #import "NSDate+NJ.h"
+#import "MJRefresh.h"
 
-#define cellHeight 190
+#define cellHeight 185
 #define SWTBestCellCount 10
 
 @interface CPBestTableViewController ()
 
 /** 定义数组，保存所有的属性 */
 @property (nonatomic, strong) NSArray *dataList;
+
+/**
+ *  用于存储随机选中的菜谱的头像url, 防止选出重复的
+ */
+@property (nonatomic, strong) NSMutableArray *list;
 
 @end
 
@@ -28,7 +34,7 @@
 - (NSArray *)dataList
 {
     if (!_dataList) {
-        
+    
         //1.获取plist地址
         NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"allFoodPlist.plist" ofType:nil];
         
@@ -42,7 +48,7 @@
             
             NSDictionary *dict = arr[0];
             
-            CPData *data = [CPData dataWithDict:dict];
+            SWTData *data = [SWTData dataWithDict:dict];
             
             [arrayM addObject:data];     // 存入模型
         }
@@ -54,10 +60,28 @@
         for (int i = 0; i < SWTBestCellCount; i++) {
             
             // 取一个随机数据
-            int index = arc4random_uniform(arrayM.count / 10) * (i + 1);
+            int index = arc4random_uniform((int)arrayM.count / 10) * (i + 1);
             
-            [dataArray addObject:arrayM[index]];
+            // 判断self.list是否包含index
+            while ([self.list containsObject:[arrayM[index] albums][0]]) {
+                
+                index = index + 1;
+                
+                // 防止数组越界
+                if (index == arrayM.count) {
+                    index = 0;
+                }
+            }
+            
+            // 存到记录的数组
+            SWTData *data = arrayM[index];
+            [self.list addObject:data.albums[0]];
+            
+            [dataArray addObject:data];
         }
+        
+        // 清空记录的数组
+        [self.list removeAllObjects];
         
         // 赋值字典数组
         _dataList = dataArray;
@@ -67,7 +91,25 @@
 
 - (void)viewDidLoad
 {
+  
     [super viewDidLoad];
+   
+    
+    // 用MJ框架上拉刷新,
+    [self.tableView addHeaderWithTarget:self action:@selector(refreshing)];
+    
+    //  加载新浪数据
+    [self.tableView headerBeginRefreshing];
+}
+
+// 下拉刷新
+- (void)refreshing
+{
+    self.dataList = nil;
+    
+    [self.tableView reloadData];
+    
+    [self.tableView headerEndRefreshing];
 }
 
 #pragma mark - tableViewDelegate
@@ -88,7 +130,6 @@
     
     // 3.返回cell
     return cell;
-
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -99,32 +140,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // 跳转到下一个控制器
-    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    FTDJDishViewController *dishVC = [[FTDJDishViewController alloc] init];
     
     // 取模型,数据
-    CPData *data = self.dataList[indexPath.row];
+    SWTData *data = self.dataList[indexPath.row];
     dishVC.foodModel = data;
 
     // 退出控制器
     [self.navigationController pushViewController:dishVC animated:YES];
-}
-
-#warning 今天
-- (BOOL)isToday
-{
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"EEE MMM dd HH:mm:ss Z yyyy";
-    
-    // 告诉系统时间格式所属的区域
-    formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-    NSDate *createdTime = [NSData data];
-
-        // 今天
-        if ([createdTime isToday]) {
-            return YES;
-        }else{
-            return NO;
-        }
 }
 
 

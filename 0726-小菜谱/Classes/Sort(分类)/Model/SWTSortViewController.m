@@ -41,9 +41,9 @@
     // 布局
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     // Item大小
-    layout.itemSize = CGSizeMake(80, 80);
+    layout.itemSize = CGSizeMake(60, 60);
     // 边距
-    layout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+    layout.sectionInset = UIEdgeInsetsMake(10, 20, 10, 20);
     return  [self initWithCollectionViewLayout:layout];
 }
 
@@ -51,9 +51,8 @@
 {
     [super viewDidLoad];
     // 背景颜色
-    self.collectionView.backgroundColor = [UIColor whiteColor];
-    self.title = @"所有类别";
-    self.collectionView.height = HFJViewHeight;
+    self.collectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"io6background"]];
+    self.collectionView.height = FTDJViewHeight;
     
     
     
@@ -85,6 +84,7 @@
     // 实例化列表控制器
     SWTFoodListViewController *listVC = [[SWTFoodListViewController alloc] init];
     listVC.title = category.name;
+    
     // 传递分类ID
     listVC.sortID = category.sortID;
     // 跳转

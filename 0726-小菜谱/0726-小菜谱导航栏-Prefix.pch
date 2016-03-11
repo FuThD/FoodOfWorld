@@ -17,22 +17,22 @@
 #import"Common.h"
 #import "UIView+NJ.h"
 #import "UIImage+OS6or7.h"
-#import "HFJHttpTool.h"
+#import "FTDJHttpTool.h"
 #import "UIImageView+WebCache.h"
 #import"MJExtension.h"
 #import "MBProgressHUD+NJ.h"
 
 // 2e6d924974f9dc108c04c9c5ff1491cb
 // d042fccba82da1d6e93f5f2e67215568  me
-#define HFJAppkey @"d042fccba82da1d6e93f5f2e67215568"
+#define FTDJAppkey @"d042fccba82da1d6e93f5f2e67215568"
 
 
-#define HFJViewMovedTime 0.3
+#define FTDJViewMovedTime 0.3
 
 
-#define HFJViewFrame CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-#define HFJViewHeight [UIScreen mainScreen].bounds.size.height - 99
+#define FTDJViewFrame CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+#define FTDJViewHeight [UIScreen mainScreen].bounds.size.height - 99
 
-#define HFJBasicColor [UIColor colorWithRed:247/255. green:247/255. blue:247/255. alpha:1]
+//#define FTDJBasicColor [UIColor colorWithRed:247/255. green:247/255. blue:247/255. alpha:1]
 
 #endif

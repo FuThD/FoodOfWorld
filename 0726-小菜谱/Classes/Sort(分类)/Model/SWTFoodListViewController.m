@@ -8,10 +8,10 @@
 
 #import "SWTFoodListViewController.h"
 #import "AFNetworking.h"
-#import "CPData.h"
-#import "HFJMainCell.h"
+#import "SWTData.h"
+#import "FTDJMainCell.h"
 #import "MJExtension.h"
-#import "HFJDishViewController.h"
+#import "FTDJDishViewController.h"
 
 
 @interface SWTFoodListViewController ()
@@ -38,7 +38,7 @@
         
         // 字典转模型
         for (NSDictionary *dict in self.dictArray) {
-            [_foodList addObject:[CPData dataWithDict:dict]];
+            [_foodList addObject:[SWTData dataWithDict:dict]];
         }
     }
     return _foodList;
@@ -67,48 +67,50 @@
     UINib *nib = [UINib nibWithNibName:@"HFJMainCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"MainCell"];
     
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"io6background"]];
+    
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     self.tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0);
-    
+
 }
 
-- (void)loadMore
-{
-    _pn = self.foodList.count;
-    [self loadFoodList];
-}
+//- (void)loadMore
+//{
+//    _pn = self.foodList.count;
+//    [self loadFoodList];
+//}
 
 /**
  *  加载对应类别的菜谱列表
  */
-- (void)loadFoodList
-{
-    // 操作管理器
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    // 封装参数
-    NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
-    paramDict[@"key"] = HFJAppkey;
-    paramDict[@"cid"] = _sortID;
-    paramDict[@"pn"] = @(_pn);
-    // 发送请求
-    NSString *urlStr = @"http://apis.juhe.cn/cook/index";
-    [manager POST:urlStr parameters:paramDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *resultDict = responseObject[@"result"];
-        NSArray *dictArray = resultDict[@"data"];
-        
-        for (NSDictionary *dict in dictArray) {
-            [self.foodList addObject:[CPData dataWithDict:dict]];
-        }
-        // 刷新表格
-        [self.tableView reloadData];
-        // 关闭菊花
-//        [self.tableView footerEndRefreshing];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%@", error);
-    }];
-}
+//- (void)loadFoodList
+//{
+//    // 操作管理器
+//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    // 封装参数
+//    NSMutableDictionary *paramDict = [NSMutableDictionary dictionary];
+//    paramDict[@"key"] = HFJAppkey;
+//    paramDict[@"cid"] = _sortID;
+//    paramDict[@"pn"] = @(_pn);
+//    // 发送请求
+//    NSString *urlStr = @"http://apis.juhe.cn/cook/index";
+//    [manager POST:urlStr parameters:paramDict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *resultDict = responseObject[@"result"];
+//        NSArray *dictArray = resultDict[@"data"];
+//        
+//        for (NSDictionary *dict in dictArray) {
+//            [self.foodList addObject:[CPData dataWithDict:dict]];
+//        }
+//        // 刷新表格
+//        [self.tableView reloadData];
+//        // 关闭菊花
+////        [self.tableView footerEndRefreshing];
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
+//}
 
 #pragma mark 表格数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -119,7 +121,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    HFJMainCell *cell = [HFJMainCell cellWithTableView:tableView reuseIdentifier:@"MainCell"];
+    FTDJMainCell *cell = [FTDJMainCell cellWithTableView:tableView reuseIdentifier:@"MainCell"];
     // 取出当前模型, 赋值
     cell.data = self.foodList[indexPath.row];
     return cell;
@@ -136,10 +138,10 @@
     // 取消选中效果
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    HFJDishViewController *dishVC = [[HFJDishViewController alloc] init];
+    FTDJDishViewController *dishVC = [[FTDJDishViewController alloc] init];
     
     // 取出当前选中的模型
-    CPData *foodModel = self.foodList[indexPath.row];    
+    SWTData *foodModel = self.foodList[indexPath.row];    
     dishVC.foodModel = foodModel;
     dishVC.title = foodModel.title;
 

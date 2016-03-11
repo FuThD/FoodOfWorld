@@ -2,13 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "SegmentedControl_Right_Normal.png"
+      "filename" : "SegmentedControl_Right_Normal.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "SegmentedControl_Right_Normal@2x.png"
+      "filename" : "SegmentedControl_Right_Normal@2x.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

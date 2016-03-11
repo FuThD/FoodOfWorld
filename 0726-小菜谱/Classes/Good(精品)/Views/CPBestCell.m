@@ -1,4 +1,4 @@
-//
+ //
 //  CPBestCell.m
 //  Best
 //
@@ -7,7 +7,7 @@
 //
 
 #import "CPBestCell.h"
-#import "CPData.h"
+#import "SWTData.h"
 
 @interface CPBestCell()
 
@@ -50,16 +50,17 @@
     self.menuTitle.shadowColor = [UIColor blackColor];
     self.menuTitle.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:19];  // 粗体
     self.menuTitle.shadowOffset =  CGSizeMake(1, 1);
-
+    
 }
 
-- (void)setData:(CPData *)data
+- (void)setData:(SWTData *)data
 {
     _data = data;
     
     // 设置图片和标题
     self.menuTitle.text = self.data.title;
     [self.menuImageView sd_setImageWithURL:self.data.albums[0] placeholderImage:[UIImage imageNamed:@"placeholder_Pic"]];
+    
 }
 
 + (instancetype)cellWithTabelView:(UITableView *)tableView
@@ -76,7 +77,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"CPBestCell" owner:nil options:nil] lastObject];
     }
     
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
 }

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CPData;
+@class SWTData;
 
 @interface CPBestCell : UITableViewCell
 
 /**
  *  菜谱模型
  */
-@property (nonatomic, strong) CPData *data;
+@property (nonatomic, strong) SWTData *data;
 
 + (instancetype)cellWithTabelView:(UITableView *)tableView;
 
